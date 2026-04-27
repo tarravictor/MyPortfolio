@@ -1,325 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyPortfolio | Victor Tarra</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="protection.js"></script>
-    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Tarra | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300d4aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3Cpolyline points='9 22 9 12 15 12 15 22'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- NAVIGATION -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="#" class="nav-logo">My.Portfolio | Victor Tarra </a>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#cv">CV</a></li>
-                    <li><a href="#certificates">Certificates</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </button>
+
+    <!-- ===== CUSTOM CURSOR ===== -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">MyPortfolio | Victor Tarra</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link-active">Home</a>
+                <a href="#about">About</a>
+                <a href="#credentials">Credentials</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
+        <div class="nav-indicator"></div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero-section">
-        <div class="container">
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-orb"></div>
+        <div class="section-container">
             <div class="hero-content">
-                <div class="hero-image">
-                    <div class="image-container">
-                        <img src="profile.jpg" alt="Your Photo" class="profile-photo">
-                        <div class="image-border"></div>
-                    </div>
+                <div class="hero-eyebrow">
+                    <span class="hero-line"></span>
+                    <span>WELCOME</span>
+                    <span class="hero-line"></span>
                 </div>
-                <h1 class="hero-title">Victor Tarra</h1>
-                <p class="hero-subtitle">College Student • Aspiring Professional</p>
-                <p class="hero-description">
-                    Passionate about Technology. 
-                    Currently pursuing excellence in Bachelor of Science in Information Systems at De La Salle - College of Saint Benilde.
-                </p>
-                <div class="hero-buttons">
+                <p class="greeting">Hi, I'm</p>
+                <h1>
+                    <span class="name-row">Victor</span>
+                    <span class="name-row highlight-wrapper">
+                        <span class="highlight-bg"></span>
+                        <span class="highlight">Tarra</span>
+                    </span>
+                </h1>
+                <div class="typewriter-wrapper">
+                    <p class="subtitle">and I'm an Information Systems Student.</p>
+                </div>
+                <div class="hero-cta">
                     <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i> Contact Me
+                        <span>CONTACT ME</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </a>
-                    <a href="#cv" class="btn btn-secondary">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
+                    <a href="#about" class="btn btn-ghost">SCROLL DOWN ↓</a>
                 </div>
-                <div class="hero-social">
-                    <a href="www.linkedin.com/in/victor-tarra-2511092b4" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/tarravictor" class="social-link"><i class="fab fa-github"></i></a>
-                </div>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Certificates</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">BSIS</span>
+                <span class="stat-label">Degree Pursuing</span>
             </div>
         </div>
     </section>
 
-    <!-- EDUCATION SECTION -->
-    <section id="education" class="section education-section">
-        <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-graduation-cap"></i> Educational Background
-            </h2>
-            
-            <div class="education-cards">
-                <!-- University Education -->
-                <div class="education-card card">
-                    <div class="education-header">
-                        <div class="education-logo">
-                            <img src="BENILDE.jpeg" alt="University Logo" class="color-logo">
-                        </div>
-                        <div class="education-badge">
-                            <span class="badge">Current</span>
-                        </div>
-                    </div>
-                    <div class="education-details">
-                        <h3>Bachelor of Science in Information Systems</h3>
-                        <p class="institution"><i class="fas fa-university"></i> De La Salle - College of Saint Benilde</p>
-                        <p class="duration"><i class="far fa-calendar"></i> 2025 – 2030 (Expected)</p>
-                        <div class="education-highlights">
-                            <div class="highlight">
-                                
-                            </div>
-                            <div class="highlight">
-                                
-                            </div>
-                            <div class="highlight">
-                                
-                            </div>
-                        </div>
-                        <p class="description">
-                            
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- High School Education -->
-                <div class="education-card card">
-                    <div class="education-header">
-                        <div class="education-logo">
-                            <img src="https://sanbeda-alabang.edu.ph/wp-content/uploads/2024/12/San-Beda-College-Alabang-Logo.png" alt="School Logo" class="color-logo">
-                        </div>
-                        <div class="education-badge">
-                            <span class="badge completed">Completed</span>
-                        </div>
-                    </div>
-                    <div class="education-details">
-                        <h3>Senior High School TVL-ICT Computer Programming with Systems Servicing </h3>
-                        <p class="institution"><i class="fas fa-school"></i> San Beda College Alabang | Technical HighSchool </p>
-                        <p class="duration"><i class="far fa-calendar"></i> 2022-2025</p>
-                        <div class="education-highlights">
-                            <div class="highlight">
-                                <i class="fas fa-award"></i>
-                                <span>With High Honors</span>
-                            </div>
-                            <div class="highlight">
-                                <i class="fas fa-trophy"></i>
-                                <span>National Certificate Level II in CSS</span>
-                            </div>
-                            <div class="highlight">
-                                <i class="fas fa-chart-line"></i>
-                                <span>Certificate of Competency</span>
-                            </div>
-                        </div>
-                        <p class="description">
-                            
-                        </p>
-                    </div>
-                </div>
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <span class="section-tag">About Me</span>
             </div>
-        </div>
-    </section>
-
-    <!-- CERTIFICATES SECTION -->
-    <section id="certificates" class="section certificates-section">
-        <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-certificate"></i> Certificates & Achievements
-            </h2>
-
-
-        <div class="certificates-grid">
-
-    <div class="certificate-card card">
-
-        <div class="certificate-header">
-            <div class="certificate-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                <i class="fa-solid fa-computer"></i>
-            </div>
-            <span class="certificate-date">March 2026</span>
-        </div>
-
-        <div class="certificate-content">
-            <h3>HTML Fundamentals</h3>
-
-            <p class="issuer">Issuer: CodeCred (Developed by Sir Bryl Lim)</p>
-
-            <p class="description">
-                A comprehensive assessment of foundational HTML concepts, including structure,
-                elements, and semantic markup. This certification confirms the ability to create
-                accessible, well-structured, and standards-compliant web pages.
-            </p>
-
-            <div class="certificate-frame">
-                <iframe src="https://www.codecred.dev/verify/9bf28ee4-9af4-4ae7-bde2-7be6ca0adc53"></iframe>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-            
-            <div class="certificates-grid">
-                <!-- Certificate 2 -->
-                <div class="certificate-card card">
-                    <div class="certificate-header">
-                        <div class="certificate-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                            <i class="fa-solid fa-computer"></i>
-                        </div>
-                        <span class="certificate-date">March 2025</span>
-                    </div>
-                    <div class="certificate-content">
-                        <h3>
-National Certificate II in Computer Systems Servicing</h3>
-                        <p class="issuer">TESDA: Technical Education and Skills Development Authority</p>
-                        <p class="description">
-                            Computer Systems Servicing NC II (CSS NC II) is a TESDA TVET qualification in the Philippines that trains individuals to install, configure, maintain, and repair computer systems and networks, covering hardware, software, troubleshooting, and basic IT services.
-                        </p>
-                        
-                        <a href="https://t2mis.tesda.gov.ph/Learners/S/770052006700780058007600450079003900550037006C00720079007100320031006800420035002B007700710030006400460075007A0074004F0064004900770078006500450046006200630058005A0075006B003D00#menu1" class="certificate-link">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Certificate 3 -->
-                <div class="certificate-card card">
-                    <div class="certificate-header">
-                        <div class="certificate-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <span class="certificate-date">June 2023</span>
-                    </div>
-                    <div class="certificate-content">
-                        <h3>Responsive Web Design</h3>
-                        <p class="issuer">freeCodeCamp</p>
-                        <p class="description">
-                            This course teaches the fundamentals of HTML and CSS, including modern layout, design, accessibility, and responsive web development. You'll build practical projects and gain the skills to create professional, user-friendly webpages.
-                        </p>
-                        <a href="https://freecodecamp.org/certification/tarra/responsive-web-design " class="certificate-link">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </a>
-                    </div>
-                </div>
-                
-                
-            </div>
-            
-            
-                    
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-envelope"></i> Get In Touch
-            </h2>
-            
-            <div class="contact-container">
-                <div class="contact-card card">
-                    <h3>Contact Information</h3>
-                    <p class="contact-description">
-                        I'm always open to discussing new opportunities, 
-                        collaborations, or just having a friendly chat!
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Passionate about <span class="text-highlight">Technology</span>.</h2>
+                    <p>
+                        Currently pursuing excellence in 
+                        <strong>Bachelor of Science in Information Systems</strong> 
+                        at <strong>De La Salle - College of Saint Benilde</strong>.
                     </p>
-                    
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Email</h4>
-                                <p>tarravdc@proton.me</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Location</h4>
-                                <p>Metro Manila (NCR)</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-social">
-                        <h4>Connect with me</h4>
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/tarravictor" class="social-btn linkedin">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/tarravictor" class="social-btn github">
-                                <i class="fab fa-github"></i>
-                            
-                            </a>
-                        </div>
+                    <div class="about-tags">
+                        <span class="tag">Information Systems</span> 
+                        <span class="tag">Web Design</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Tech Enthusiast</span>
                     </div>
                 </div>
-                
-                
-           
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Victor Tarra</h3>
-                    <p>Aspiring Professional & Lifelong Learner</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Quick Links</h4>
-                        <a href="#home">Home</a>
-                        <a href="#education">Education</a>
-                        <a href="#cv">CV</a>
-                        <a href="#certificates">Certificates</a>
+                <div class="about-visual">
+                    <div class="about-image-wrapper">
+                        <div class="about-image">
+                             <img src="profile.jpg" alt="Victor Tarra">
+                        </div>
+                        <div class="about-glow"></div>
                     </div>
-                    <div class="link-group">
-                        <h4>Resources</h4>
-                        <a href="#cv">Download CV</a>
-                        <a href="#certificates">View Certificates</a>
-                        <a href="#contact">Contact</a>
-                    </div>
+                    <div class="about-dots"></div>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Victor Tarra. All rights reserved.</p>
-                <p>Made with <i class="fas fa-heart"></i> and passion</p>
+        </div>
+    </section>
+
+    <!-- ===== CREDENTIALS SECTION ===== -->
+    <section id="credentials">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <span class="section-tag">Credentials</span>
+            </div>
+            <div class="credentials-grid">
+                <!-- Education Card -->
+                <div class="credentials-card card-education">
+                    <div class="card-icon">🎓</div>
+                    <h3>Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>De La Salle - College of Saint Benilde (Current)</h4>
+                                <span class="years">Course: Bachelor of Science in Information Systems</span>
+                                <br>
+                                 <p class="timeline-detail">AY 2025 – 2030 (Expected)</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>San Beda College Alabang - Technical High School</h4>
+                                 <span class="years">Strand: Technical Vocational Livelihood (TVL) Information and Communications Technology Computer Programming with Computer Systems Servicing</span>
+                                <br>
+                                <p class="timeline-detail">AY 2022 – 2025 (Graduated)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificates Card -->
+                <div class="credentials-card card-certificates">
+                    <div class="card-icon">📜</div>
+                    <h3>Certificates</h3>
+                    <ul class="cert-list">
+                        <li>
+                            <span class="cert-marker"></span>
+                            <div class="cert-content">
+                                <span>Tesda National Certificate Level II in CSS</span>
+                                <a href="https://passport.tesda.gov.ph/atlas/eyJpdiI6ImptZXRwdCs4RGFadGNuazErTWVRaEE9PSIsInZhbHVlIjoiK2hEc1VoRWNRYzlhZG81Uk9ISTllcmFUMGc0c01yUmJpM0k3TklKcmlDYWhDUVdRcFRxbER4ejMwRC9oaGxRalVRNkRHcm02UmNFbnc4U0tXTUgxWHJmUlZsbjJaVWZyNzYrQWp6NS9pZDA9IiwibWFjIjoiNGRmOGYwM2RiODcyZWM1N2E1MTIxNDVkYjI5Y2ZiN2U3ZDYzOWI1MThkYzhlNzdiNjgzMTZiY2Y1MWI3NWM2YyIsInRhZyI6IiJ9" class="cert-link" target="_blank">Click to view certification →</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="cert-marker"></span>
+                            <div class="cert-content">
+                                <span>Certificate of Competency</span>
+                                <a href="https://passport.tesda.gov.ph/atlas/eyJpdiI6ImptZXRwdCs4RGFadGNuazErTWVRaEE9PSIsInZhbHVlIjoiK2hEc1VoRWNRYzlhZG81Uk9ISTllcmFUMGc0c01yUmJpM0k3TklKcmlDYWhDUVdRcFRxbER4ejMwRC9oaGxRalVRNkRHcm02UmNFbnc4U0tXTUgxWHJmUlZsbjJaVWZyNzYrQWp6NS9pZDA9IiwibWFjIjoiNGRmOGYwM2RiODcyZWM1N2E1MTIxNDVkYjI5Y2ZiN2U3ZDYzOWI1MThkYzhlNzdiNjgzMTZiY2Y1MWI3NWM2YyIsInRhZyI6IiJ9" class="cert-link" target="_blank">Click to view certification →</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="cert-marker"></span>
+                            <div class="cert-content">
+                                <span>Legacy Responsive Web Design V2 <small>(FreeCodeCamp)</small></span>
+                                <a href="https://www.freecodecamp.org/certification/tarravictor/responsive-web-design" class="cert-link" target="_blank">Click to view certification →</a>
+                            </div>
+                        </li>
+                         <li>
+                            <span class="cert-marker"></span>
+                            <div class="cert-content">
+                                <span>HTML Fundamentals <small>(CodeCred Developed by: Sir Bryl Lim)</small></span> 
+                                <a href="https://www.codecred.dev/verify/9bf28ee4-9af4-4ae7-bde2-7be6ca0adc53" class="cert-link" target="_blank">Click to view certification →</a>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <span class="section-tag">Get In Touch</span>
+            </div>
+            <h2>Let's <span class="text-highlight">Connect</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <div class="contact-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 4L12 13L2 4"/>
+                        </svg>
+                    </div>
+                    <p class="contact-label">Email</p>
+                    <p class="contact-value">
+                        <a href="mailto:victordanielle.tarra@proton.me">victordanielle.tarra@proton.me</a>
+                    </p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="10" r="7"/>
+                            <path d="M12 2V6M12 22V18M2 10H6M22 10H18"/>
+                        </svg>
+                    </div>
+                    <p class="contact-label">Location</p>
+                    <p class="contact-value">Metro Manila (NCR)</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </div>
+                    <p class="contact-label">LinkedIn</p>
+                    <p class="contact-value">
+                        <a href="https://www.linkedin.com/in/tarravictor" target="_blank">linkedin.com/in/tarravictor</a>
+                    </p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                    </div>
+                    <p class="contact-label">GitHub</p>
+                    <p class="contact-value">
+                        <a href="https://github.com/tarravictor" target="_blank">github.com/tarravictor</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Victor Tarra. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#credentials">Credentials</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script src="protection.js"></script>
-     
 </body>
 </html>
