@@ -1,7 +1,3 @@
-// ============================================
-// ===== SECURITY & PRIVACY PROTECTION =====
-// ============================================
-
 // 1. Disable Right Click
 document.addEventListener('contextmenu', (e) => {
     e.preventDefault();
