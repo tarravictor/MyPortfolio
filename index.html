@@ -5,17 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Victor Tarra | Portfolio 2026</title>
 
-  <!-- Favicon (black SVG house) -->
-  <link
-    rel="icon"
-    type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3Cpolyline points='9 22 9 12 15 12 15 22'/%3E%3C/svg%3E"
-  />
+  <!-- Favicon: optional but safe -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
+  <!-- CSS: make sure style.css is in the root of the repo -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ===== SIDEBAR ===== -->
+  <!-- SIDEBAR -->
   <nav class="sidebar">
     <div class="sidebar-brand">
       <span class="brand-mark">◆</span>
@@ -34,7 +31,7 @@
     </div>
   </nav>
 
-  <!-- ===== MAIN CONTENT ===== -->
+  <!-- MAIN CONTENT -->
   <main class="main-content">
     <!-- HERO -->
     <section id="hero" class="section">
@@ -64,6 +61,7 @@
 
           <div class="hero-card">
             <div class="image-frame">
+              <!-- Put profile.jpg in the root of the repo -->
               <img src="profile.jpg" alt="Profile picture of Victor Tarra" />
             </div>
             <div class="image-accent"></div>
@@ -89,36 +87,30 @@
               at <strong>De La Salle – College of Saint Benilde</strong>.
             </p>
             <p>
-              I enjoy exploring how technology, design, and systems thinking intersect to
-              solve real problems.
+              I enjoy exploring how technology, design, and systems thinking intersect
+              to solve real problems.
             </p>
           </div>
 
           <div class="card-grid">
             <article class="info-card">
               <div class="icon-wrap">
-                <!-- star / focus icon -->
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2l2.5 6.5H21l-5.5 4 2 6.5L12 15l-5.5 4 2-6.5L3 8.5h6.5L12 2z" />
                 </svg>
               </div>
               <h3>Current Focus</h3>
-              <p>
-                Achieving certificates while pursuing my degree in Information Systems.
-              </p>
+              <p>Achieving certificates while pursuing my degree in Information Systems.</p>
             </article>
 
             <article class="info-card">
               <div class="icon-wrap">
-                <!-- monitor / layout icon -->
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M4 5h16v11H4V5zm3 13h10v2H7v-2z" />
                 </svg>
               </div>
               <h3>Interest Areas</h3>
-              <p>
-                Web development, system design, user experience, and emerging technologies.
-              </p>
+              <p>Web development, system design, user experience, and emerging technologies.</p>
             </article>
           </div>
         </div>
@@ -135,11 +127,9 @@
         </div>
 
         <div class="creds-grid">
-          <!-- Education -->
           <article class="creds-block">
             <div class="creds-header">
               <span class="icon-wrap small">
-                <!-- education / shield icon -->
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2l9 4v6c0 5.25-4 9.5-9 10-5-0.5-9-4.75-9-10V6l9-4z" />
                 </svg>
@@ -164,11 +154,9 @@
             </div>
           </article>
 
-          <!-- Certificates -->
           <article class="creds-block">
             <div class="creds-header">
               <span class="icon-wrap small">
-                <!-- certificate / doc icon -->
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M6 3h9l3 3v15H6V3zm3 4h4v2H9V7zm0 4h6v2H9v-2zm0 4h6v2H9v-2z" />
                 </svg>
@@ -233,7 +221,6 @@
           <div class="contact-grid">
             <a href="mailto:victordanielle.tarra@proton.me" class="contact-item">
               <span class="icon-wrap small">
-                <!-- mail icon -->
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M4 5h16v14H4V5zm2 2l6 4 6-4" />
                 </svg>
@@ -244,7 +231,6 @@
 
             <a href="https://www.linkedin.com/in/tarravictor" target="_blank" rel="noopener" class="contact-item">
               <span class="icon-wrap small">
-                <!-- LinkedIn-like icon -->
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M4 4h4v16H4V4zm2 2a2 2 0 1 0 0.001 4.001A2 2 0 0 0 6 6zm5 4h4v2h.1c.6-1.1 2-2.3 4-2.3 3 0 4.9 1.9 4.9 6.1V20h-4v-4.7c0-1.6-0.3-2.8-1.9-2.8-1.9 0-2.7 1.3-2.7 2.8V20h-4v-10z" />
                 </svg>
@@ -255,7 +241,6 @@
 
             <a href="https://github.com/tarravictor" target="_blank" rel="noopener" class="contact-item">
               <span class="icon-wrap small">
-                <!-- GitHub icon -->
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.67c-2.78.6-3.37-1.17-3.37-1.17-.46-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.05 1.53 1.05.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.64-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.04-2.68-.1-.26-.45-1.28.1-2.65 0 0 .84-.27 2.75 1.03a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.65.65.7 1.04 1.59 1.04 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z" />
                 </svg>
@@ -266,7 +251,6 @@
 
             <div class="contact-item">
               <span class="icon-wrap small">
-                <!-- location pin -->
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
                 </svg>
@@ -289,6 +273,7 @@
     </footer>
   </main>
 
+  <!-- Optional JS; safe to include even if empty -->
   <script src="script.js"></script>
 </body>
 </html>
