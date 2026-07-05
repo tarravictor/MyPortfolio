@@ -3,16 +3,19 @@
     font-family: 'Hagrid';
     src: url('fonts/Hagrid-Regular.woff2') format('woff2');
     font-weight: 400;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Hagrid';
     src: url('fonts/Hagrid-Bold.woff2') format('woff2');
     font-weight: 700;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Hagrid';
     src: url('fonts/Hagrid-ExtraBold.woff2') format('woff2');
     font-weight: 800;
+    font-display: swap;
 }
 
 /* ===== VARIABLES ===== */
@@ -24,7 +27,7 @@
     --text-muted: #8a8a8a;
     --border: #eaeaea;
     --border-dark: #c0c0c0;
-    --font: 'Hagrid', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font: 'Hagrid', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --sidebar-width: 200px;
 }
@@ -47,6 +50,7 @@ body {
     line-height: 1.5;
     display: flex;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -57,6 +61,7 @@ a {
 img {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 ::selection {
@@ -77,6 +82,7 @@ img {
     flex-direction: column;
     justify-content: space-between;
     z-index: 100;
+    overflow-y: auto;
 }
 
 .sidebar-brand {
@@ -112,6 +118,7 @@ img {
     text-transform: uppercase;
     transition: color var(--transition);
     position: relative;
+    cursor: pointer;
 }
 
 .sidebar-nav a::before {
@@ -299,6 +306,7 @@ section {
     cursor: pointer;
     transition: all var(--transition);
     border: none;
+    text-align: center;
 }
 
 .btn.primary {
@@ -358,6 +366,23 @@ section {
     height: 100%;
     border: 1px solid var(--border-dark);
     z-index: 1;
+}
+
+/* ===== CONTAINER REVEAL ===== */
+.container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.container.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#hero .container {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ===== ABOUT ===== */
@@ -646,6 +671,8 @@ footer .container {
     flex-wrap: wrap;
     font-size: 0.65rem;
     color: var(--text-muted);
+    opacity: 1;
+    transform: none;
 }
 
 .footer-divider {
