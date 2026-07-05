@@ -12,7 +12,7 @@
     <!-- ===== NAVIGATION ===== -->
     <nav>
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">VT</a>
+            <a href="#hero" class="nav-logo">Victor Tarra</a>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
@@ -20,7 +20,7 @@
             <div class="nav-links">
                 <a href="#hero" class="nav-link-active">Home</a>
                 <a href="#about">About</a>
-                <a href="#credentials">Creds</a>
+                <a href="#credentials">Credentials</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -29,23 +29,41 @@
     <!-- ===== HERO ===== -->
     <section id="hero">
         <div class="section-container">
-            <div class="hero-content">
-                <span class="hero-label">Victor Tarra · 2026</span>
-                <h1>
-                    <span>Information</span>
-                    <span>Systems</span>
-                    <span class="highlight">Student</span>
-                </h1>
-                <p class="hero-desc">Building digital systems &amp; meaningful experiences.</p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn-primary">Contact</a>
-                    <a href="#about" class="btn-ghost">About ↓</a>
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span>Information Systems · 2026</span>
+                    </div>
+                    <h1>
+                        <span>Victor</span>
+                        <span class="highlight">Tarra</span>
+                    </h1>
+                    <p class="hero-desc">
+                        Building digital systems &amp; meaningful experiences
+                        at <strong>De La Salle – College of Saint Benilde</strong>.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Get in touch</a>
+                        <a href="#about" class="btn btn-ghost">Learn more ↓</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-meta">
-                <span>BSIS · CSB</span>
-                <span>3 Certifications</span>
-                <span>Metro Manila</span>
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <span class="meta-number">3</span>
+                        <span class="meta-label">Certifications</span>
+                    </div>
+                    <div class="meta-divider"></div>
+                    <div class="meta-item">
+                        <span class="meta-number">BSIS</span>
+                        <span class="meta-label">Degree Program</span>
+                    </div>
+                    <div class="meta-divider"></div>
+                    <div class="meta-item">
+                        <span class="meta-number">2026</span>
+                        <span class="meta-label">Portfolio</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -53,28 +71,39 @@
     <!-- ===== ABOUT ===== -->
     <section id="about">
         <div class="section-container">
-            <span class="section-label">01</span>
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <span class="section-title">About</span>
+            </div>
             <div class="about-grid">
                 <div class="about-text">
-                    <h2>About</h2>
+                    <h2>Building the future,<br />one system at a time.</h2>
                     <p>
-                        I'm pursuing a <strong>Bachelor of Science in Information Systems</strong>
-                        at <strong>De La Salle - College of Saint Benilde</strong>.
+                        I'm currently pursuing a <strong>Bachelor of Science in Information Systems</strong>
+                        at <strong>De La Salle – College of Saint Benilde</strong>.
                     </p>
                     <p>
-                        I'm passionate about web technologies, system design, and creating
-                        clean digital experiences.
+                        I'm passionate about web technologies, system architecture, and
+                        creating clean, user-centered digital experiences that make a difference.
                     </p>
                     <div class="about-skills">
                         <span>Information Systems</span>
                         <span>Web Design</span>
-                        <span>CSS</span>
-                        <span>Tech</span>
+                        <span>Frontend Development</span>
+                        <span>System Analysis</span>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <img src="profile.jpg" alt="Victor Tarra" />
+                <div class="about-visual">
+                    <div class="about-frame">
+                        <div class="about-image">
+                            <img src="profile.jpg" alt="Victor Tarra" />
+                        </div>
+                    </div>
+                    <div class="about-marks">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
             </div>
@@ -84,51 +113,78 @@
     <!-- ===== CREDENTIALS ===== -->
     <section id="credentials">
         <div class="section-container">
-            <span class="section-label">02</span>
-            <h2>Credentials</h2>
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <span class="section-title">Credentials</span>
+            </div>
             <div class="creds-grid">
                 <!-- Education -->
                 <div class="creds-card">
-                    <h3>Education</h3>
-                    <div class="creds-item">
-                        <span class="creds-year">2025–30</span>
-                        <div>
-                            <strong>BS Information Systems</strong>
-                            <span>De La Salle - CSB</span>
-                        </div>
+                    <div class="creds-card-header">
+                        <span class="creds-icon">◆</span>
+                        <h3>Education</h3>
                     </div>
-                    <div class="creds-item">
-                        <span class="creds-year">2022–25</span>
-                        <div>
-                            <strong>TVL-ICT Programming</strong>
-                            <span>San Beda College Alabang</span>
+                    <div class="creds-timeline">
+                        <div class="creds-item">
+                            <span class="creds-year">2025 – 2030</span>
+                            <div class="creds-info">
+                                <strong>BS Information Systems</strong>
+                                <span>De La Salle – College of Saint Benilde</span>
+                            </div>
+                        </div>
+                        <div class="creds-item">
+                            <span class="creds-year">2022 – 2025</span>
+                            <div class="creds-info">
+                                <strong>TVL-ICT Computer Programming</strong>
+                                <span>San Beda College Alabang</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Certificates -->
                 <div class="creds-card">
-                    <h3>Certificates</h3>
-                    <div class="creds-item">
-                        <span>Google AI Fundamentals</span>
-                        <a href="#" target="_blank">View →</a>
+                    <div class="creds-card-header">
+                        <span class="creds-icon">◇</span>
+                        <h3>Certificates</h3>
                     </div>
-                    <div class="creds-item">
-                        <span>Tesda NC II in CSS</span>
-                        <a href="#" target="_blank">View →</a>
-                    </div>
-                    <div class="creds-item">
-                        <span>Certificate of Competency</span>
-                        <a href="#" target="_blank">View →</a>
-                    </div>
-                    <div class="creds-item">
-                        <span>Responsive Web Design</span>
-                        <a href="#" target="_blank">View →</a>
-                    </div>
-                    <div class="creds-item">
-                        <span>HTML Fundamentals</span>
-                        <a href="#" target="_blank">View →</a>
-                    </div>
+                    <ul class="creds-list">
+                        <li>
+                            <span class="creds-dot"></span>
+                            <div class="creds-cert">
+                                <span>Google AI Fundamentals</span>
+                                <a href="#" target="_blank">Verify →</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="creds-dot"></span>
+                            <div class="creds-cert">
+                                <span>Tesda NC II in CSS</span>
+                                <a href="#" target="_blank">Verify →</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="creds-dot"></span>
+                            <div class="creds-cert">
+                                <span>Certificate of Competency</span>
+                                <a href="#" target="_blank">Verify →</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="creds-dot"></span>
+                            <div class="creds-cert">
+                                <span>Legacy Responsive Web Design</span>
+                                <a href="#" target="_blank">Verify →</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="creds-dot"></span>
+                            <div class="creds-cert">
+                                <span>HTML Fundamentals</span>
+                                <a href="#" target="_blank">Verify →</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -137,24 +193,31 @@
     <!-- ===== CONTACT ===== -->
     <section id="contact">
         <div class="section-container">
-            <span class="section-label">03</span>
-            <h2>Contact</h2>
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <span class="section-title">Contact</span>
+            </div>
+            <h2 class="contact-headline">Let's work together.</h2>
             <div class="contact-grid">
-                <a href="mailto:victordanielle.tarra@proton.me" class="contact-link">
-                    <span>Email</span>
-                    <span>victordanielle.tarra@proton.me</span>
+                <a href="mailto:victordanielle.tarra@proton.me" class="contact-card">
+                    <span class="contact-icon">✉</span>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">victordanielle.tarra@proton.me</span>
                 </a>
-                <a href="https://www.linkedin.com/in/tarravictor" target="_blank" class="contact-link">
-                    <span>LinkedIn</span>
-                    <span>@tarravictor</span>
+                <a href="https://www.linkedin.com/in/tarravictor" target="_blank" class="contact-card">
+                    <span class="contact-icon">◈</span>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">linkedin.com/in/tarravictor</span>
                 </a>
-                <a href="https://github.com/tarravictor" target="_blank" class="contact-link">
-                    <span>GitHub</span>
-                    <span>@tarravictor</span>
+                <a href="https://github.com/tarravictor" target="_blank" class="contact-card">
+                    <span class="contact-icon">◉</span>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">github.com/tarravictor</span>
                 </a>
-                <div class="contact-link">
-                    <span>Location</span>
-                    <span>Metro Manila</span>
+                <div class="contact-card">
+                    <span class="contact-icon">◆</span>
+                    <span class="contact-label">Location</span>
+                    <span class="contact-value">Metro Manila, Philippines</span>
                 </div>
             </div>
         </div>
@@ -164,10 +227,14 @@
     <footer>
         <div class="footer-container">
             <span>© 2026 Victor Tarra</span>
-            <div class="footer-nav">
+            <span class="footer-divider">·</span>
+            <span>De La Salle – College of Saint Benilde</span>
+            <span class="footer-divider">·</span>
+            <span>BS Information Systems</span>
+            <div class="footer-links">
                 <a href="#hero">Home</a>
                 <a href="#about">About</a>
-                <a href="#credentials">Creds</a>
+                <a href="#credentials">Credentials</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
