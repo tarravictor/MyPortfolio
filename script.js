@@ -2,78 +2,105 @@
 // ===== SECURITY PROTECTION =====
 // ============================================
 
-document.addEventListener('contextmenu', (e) => e.preventDefault());
+// Disable right click
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
 
-document.addEventListener('keydown', (e) => {
-    const blocked = ['F12', 'I', 'J', 'C', 'U', 'S', 'P'];
-    const ctrl = e.ctrlKey || e.metaKey;
-    const shift = e.shiftKey;
+// Disable keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+    var blocked = ['F12', 'I', 'J', 'C', 'U', 'S', 'P'];
+    var ctrl = e.ctrlKey || e.metaKey;
+    var shift = e.shiftKey;
 
-    if (e.key === 'F12') return e.preventDefault();
-    if (ctrl && shift && blocked.slice(0, 4).includes(e.key.toUpperCase())) {
+    if (e.key === 'F12') {
         e.preventDefault();
+        return false;
     }
-    if (ctrl && blocked.slice(4).includes(e.key.toUpperCase())) {
+    if (ctrl && shift && blocked.slice(0, 4).indexOf(e.key.toUpperCase()) !== -1) {
         e.preventDefault();
+        return false;
+    }
+    if (ctrl && blocked.slice(4).indexOf(e.key.toUpperCase()) !== -1) {
+        e.preventDefault();
+        return false;
     }
 });
 
-document.addEventListener('dragstart', (e) => e.preventDefault());
+// Disable drag
+document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+});
 
-document.addEventListener('copy', (e) => {
-    const areas = document.querySelectorAll('#hero h1, .about-text, .creds-card, .contact-link');
-    areas.forEach(area => {
-        if (area.contains(e.target)) {
-            e.preventDefault();
-            e.clipboardData.setData('text/plain', '© Victor Tarra 2026');
+// Disable copy on protected areas
+document.addEventListener('copy', function(e) {
+    var areas = document.querySelectorAll('#hero h1, .about-main, .creds-block, .contact-item');
+    var target = e.target;
+    var protected = false;
+    areas.forEach(function(area) {
+        if (area.contains(target)) {
+            protected = true;
         }
     });
+    if (protected) {
+        e.preventDefault();
+        e.clipboardData.setData('text/plain', '© Victor Tarra 2026');
+    }
 });
 
 // ============================================
 // ===== NAVIGATION =====
 // ============================================
 
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-const navAnchors = document.querySelectorAll('.nav-links a');
+var navLinks = document.querySelectorAll('.sidebar-nav a');
+var sections = document.querySelectorAll('section');
 
-navToggle?.addEventListener('click', () => {
-    navToggle.classList.toggle('active');
-    navLinks.classList.toggle('active');
-});
-
-navAnchors.forEach(link => {
-    link.addEventListener('click', () => {
-        navToggle?.classList.remove('active');
-        navLinks?.classList.remove('active');
+// Smooth scroll for sidebar links
+navLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+        // Update active state
+        navLinks.forEach(function(l) { l.classList.remove('active'); });
+        link.classList.add('active');
     });
 });
 
 // ===== SCROLL REVEAL =====
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
         if (entry.isIntersecting) {
             entry.target.classList.add('revealed');
         }
     });
 }, { threshold: 0.15 });
 
-document.querySelectorAll('.section-container').forEach(el => {
-    if (!el.closest('#hero')) observer.observe(el);
-    else el.classList.add('revealed');
+document.querySelectorAll('.container').forEach(function(el) {
+    var section = el.closest('section');
+    if (section && section.id !== 'hero') {
+        observer.observe(el);
+    } else if (section && section.id === 'hero') {
+        el.classList.add('revealed');
+    }
 });
 
-// ===== ACTIVE NAV =====
-const sections = document.querySelectorAll('section');
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        if (window.scrollY >= section.offsetTop - 120) {
+// ===== ACTIVE NAV ON SCROLL =====
+window.addEventListener('scroll', function() {
+    var current = '';
+    sections.forEach(function(section) {
+        if (window.scrollY >= section.offsetTop - 200) {
             current = section.id;
         }
     });
-    navAnchors.forEach(link => {
-        link.classList.toggle('nav-link-active', link.getAttribute('href') === `#${current}`);
+    navLinks.forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === '#' + current) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
     });
 });
