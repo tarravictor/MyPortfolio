@@ -72,7 +72,6 @@ nav {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
-    transition: all var(--transition);
 }
 
 .nav-container {
@@ -89,7 +88,6 @@ nav {
     font-weight: 800;
     font-size: 1rem;
     letter-spacing: -0.3px;
-    color: var(--text);
 }
 
 .nav-links {
@@ -287,6 +285,7 @@ h2 {
 }
 
 .btn {
+    display: inline-block;
     padding: 0.6rem 1.8rem;
     font-size: 0.7rem;
     font-weight: 700;
@@ -436,7 +435,7 @@ h2 {
 
 .about-marks {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
     margin-top: 0.5rem;
 }
@@ -780,5 +779,9 @@ footer {
     }
     .meta-divider {
         display: none;
+    }
+
+    .about-marks {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
