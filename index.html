@@ -10,12 +10,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- FAVICON (Coding Icon) -->
+    <!-- FAVICON -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="alternate icon" href="favicon.ico">
 
     <!-- ICONS -->
     <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src = "script.js"></script>
 </head>
 
 <body>
@@ -33,8 +33,6 @@
     </div>
 </header>
 
-
-<!-- MAIN -->
 <main>
 
 <!-- HERO -->
@@ -43,7 +41,6 @@
 
         <div class="hero-text">
             <p class="tag">Information Systems Student</p>
-
             <h1>Victor Tarra</h1>
 
             <p class="sub">
@@ -70,11 +67,9 @@
     </div>
 </section>
 
-
 <!-- ABOUT -->
 <section id="about" class="section">
     <div class="container">
-
         <h2>About</h2>
 
         <p class="desc">
@@ -98,10 +93,8 @@
             </div>
 
         </div>
-
     </div>
 </section>
-
 
 <!-- CREDENTIALS -->
 <section id="credentials" class="section alt">
@@ -114,7 +107,6 @@
             <!-- EDUCATION -->
             <div class="card">
                 <i data-lucide="graduation-cap"></i>
-
                 <h3>Education</h3>
 
                 <p><strong>BS Information Systems</strong><br>2025–2030</p>
@@ -124,7 +116,6 @@
             <!-- CERTIFICATES -->
             <div class="card">
                 <i data-lucide="award"></i>
-
                 <h3>Certificates</h3>
 
                 <div class="cert">
@@ -132,7 +123,7 @@
                         <i data-lucide="badge-check"></i>
                         <span>Google AI Fundamentals</span>
                     </div>
-                    <a href="#" onclick="return false;">Verify</a>
+                    <a href="#">Verify</a>
                 </div>
 
                 <div class="cert">
@@ -140,7 +131,7 @@
                         <i data-lucide="badge-check"></i>
                         <span>TESDA NC II</span>
                     </div>
-                    <a href="#" onclick="return false;">Verify</a>
+                    <a href="#">Verify</a>
                 </div>
 
                 <div class="cert">
@@ -148,16 +139,14 @@
                         <i data-lucide="badge-check"></i>
                         <span>Responsive Web Design</span>
                     </div>
-                    <a href="#" onclick="return false;">Verify</a>
+                    <a href="#">Verify</a>
                 </div>
 
             </div>
 
         </div>
-
     </div>
 </section>
-
 
 <!-- CONTACT -->
 <section id="contact" class="section">
@@ -183,22 +172,19 @@
             </a>
 
         </div>
-
     </div>
 </section>
 
 </main>
-
 
 <!-- FOOTER -->
 <footer class="footer">
     <p>© 2026 Victor Tarra</p>
 </footer>
 
-
-<!-- ICON INIT -->
+<!-- SAFE SCRIPT -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
     if (window.lucide) {
         lucide.createIcons();
     }
