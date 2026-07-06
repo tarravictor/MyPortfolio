@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- REQUIRED for GitHub Pages + mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Victor Tarra | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Lucide Icons (DEFER FIX) -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 
 <body>
@@ -19,9 +24,9 @@
 
         <div class="logo">VT</div>
 
-        <div class="menu-toggle" id="menu-toggle">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
             <i data-lucide="menu"></i>
-        </div>
+        </button>
 
         <nav id="nav-menu">
             <a href="#about">About</a>
@@ -48,17 +53,19 @@
 
             <div class="actions">
                 <a href="#contact" class="btn primary">
-                    <i data-lucide="mail"></i> Contact
+                    <i data-lucide="mail"></i>
+                    <span>Contact</span>
                 </a>
 
                 <a href="#about" class="btn ghost">
-                    <i data-lucide="arrow-right"></i> Learn More
+                    <i data-lucide="arrow-right"></i>
+                    <span>Learn More</span>
                 </a>
             </div>
         </div>
 
         <div class="hero-img">
-            <img src="profile.jpg" alt="Profile photo of Victor Tarra">
+            <img src="profile.jpg" alt="Victor Tarra profile photo">
         </div>
 
     </div>
@@ -71,9 +78,8 @@
 
         <p class="desc">
             I’m currently pursuing a Bachelor of Science in Information Systems at 
-            <strong style="font-weight:700; color:#000;">
-                De La Salle College of Saint Benilde
-            </strong>. I focus on building clean, efficient, and user-centered digital solutions.
+            <strong>De La Salle College of Saint Benilde</strong>. 
+            I focus on building clean, efficient, and user-centered digital solutions.
         </p>
 
         <div class="cards">
@@ -104,11 +110,9 @@
                 <h3>Education</h3>
 
                 <div class="school">
-                    <img src="dlscsb.svg" class="school-logo-dlscsb" alt="Benilde logo">
+                    <img src="dlscsb.svg" class="school-logo" alt="Benilde logo">
                     <p>
-                        <strong style="font-weight:700; color:#000;">
-                            De La Salle College of Saint Benilde
-                        </strong><br>
+                        <strong>De La Salle College of Saint Benilde</strong><br>
                         Bachelor of Science in Information Systems<br>
                         2025–2030
                     </p>
@@ -117,7 +121,7 @@
                 <div class="edu-divider"></div>
 
                 <div class="school">
-                    <img src="sbca.png" class="school-logo-sbca" alt="San Beda College Alabang logo">
+                    <img src="sbca.png" class="school-logo" alt="San Beda College Alabang logo">
                     <p>
                         <strong>San Beda College Alabang</strong><br>
                         TVL–ICT Computer Programming with Computer Systems Servicing<br>
@@ -184,15 +188,18 @@
 
         <div class="contact">
             <a href="mailto:tarravdc@proton.me">
-                <i data-lucide="mail"></i> Email
+                <i data-lucide="mail"></i>
+                <span>Email</span>
             </a>
 
-            <a href="https://linkedin.com" target="_blank">
-                <i data-lucide="linkedin"></i> LinkedIn
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="linkedin"></i>
+                <span>LinkedIn</span>
             </a>
 
-            <a href="https://github.com" target="_blank">
-                <i data-lucide="github"></i> GitHub
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="github"></i>
+                <span>GitHub</span>
             </a>
         </div>
     </div>
@@ -201,25 +208,26 @@
 </main>
 
 <footer class="footer">
-    <p>© 2026 Victor Tarra | All Rights Reserved.</p>
+    <p>© 2026 Victor Tarra</p>
 </footer>
 
-<!-- SCRIPT -->
+<!-- SAFE SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Icons
-    lucide.createIcons();
+    if (window.lucide) {
+        lucide.createIcons();
+    }
 
-    // Mobile menu
     const toggle = document.getElementById("menu-toggle");
     const nav = document.getElementById("nav-menu");
 
-    toggle.addEventListener("click", function () {
-        nav.classList.toggle("active");
-    });
+    if (toggle && nav) {
+        toggle.addEventListener("click", function () {
+            nav.classList.toggle("active");
+        });
+    }
 
-    // Fade animation
     const faders = document.querySelectorAll(".fade");
 
     const observer = new IntersectionObserver(function (entries) {
