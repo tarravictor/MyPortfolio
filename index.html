@@ -2,30 +2,32 @@
 <html lang="en">
 
 <head>
-    <!-- META -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor Tarra | Portfolio</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- FAVICON -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-    <!-- ICONS -->
+    <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest" defer></script>
-    <script src = "script.js"></script>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <header class="nav">
     <div class="nav-container">
         <div class="logo">VT</div>
 
-        <nav>
+        <!-- Hamburger -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i data-lucide="menu"></i>
+        </div>
+
+        <nav id="nav-menu">
             <a href="#about">About</a>
             <a href="#credentials">Credentials</a>
             <a href="#contact">Contact</a>
@@ -33,13 +35,14 @@
     </div>
 </header>
 
+
 <main>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero fade">
     <div class="container hero-grid">
 
-        <div class="hero-text">
+        <div>
             <p class="tag">Information Systems Student</p>
             <h1>Victor Tarra</h1>
 
@@ -61,25 +64,25 @@
         </div>
 
         <div class="hero-img">
-            <img src="profile.jpg" alt="Profile photo of Victor Tarra">
+            <img src="profile.jpg" alt="Profile photo">
         </div>
 
     </div>
 </section>
 
+
 <!-- ABOUT -->
-<section id="about" class="section">
+<section id="about" class="section fade">
     <div class="container">
         <h2>About</h2>
 
         <p class="desc">
-            I’m currently pursuing a Bachelor of Science in Information Systems 
-            at De La Salle – College of Saint Benilde. I focus on building clean, 
+            I’m currently pursuing a Bachelor of Science in Information Systems at 
+            <strong>De La Salle College of Saint Benilde</strong>. I focus on building clean, 
             efficient, and user-centered digital solutions.
         </p>
 
         <div class="cards">
-
             <div class="card">
                 <i data-lucide="target"></i>
                 <h3>Focus</h3>
@@ -91,13 +94,13 @@
                 <h3>Interests</h3>
                 <p>Web development, UI/UX, and system design.</p>
             </div>
-
         </div>
     </div>
 </section>
 
+
 <!-- CREDENTIALS -->
-<section id="credentials" class="section alt">
+<section id="credentials" class="section alt fade">
     <div class="container">
 
         <h2>Credentials</h2>
@@ -106,11 +109,20 @@
 
             <!-- EDUCATION -->
             <div class="card">
-                <i data-lucide="graduation-cap"></i>
+                <img src="benilde-logo.png" class="school-logo" alt="Benilde Logo">
+
                 <h3>Education</h3>
 
-                <p><strong>BS Information Systems</strong><br>2025–2030</p>
-                <p><strong>TVL-ICT Programming</strong><br>2022–2025</p>
+                <p>
+                    <strong>De La Salle College of Saint Benilde</strong><br>
+                    BS Information Systems<br>
+                    2025–2030
+                </p>
+
+                <p>
+                    <strong>TVL-ICT Programming</strong><br>
+                    2022–2025
+                </p>
             </div>
 
             <!-- CERTIFICATES -->
@@ -148,47 +160,62 @@
     </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-    <div class="container">
 
+<!-- CONTACT -->
+<section id="contact" class="section fade">
+    <div class="container">
         <h2>Contact</h2>
 
         <div class="contact">
-
             <a href="mailto:tarravdc@proton.me">
-                <i data-lucide="mail"></i>
-                Email
+                <i data-lucide="mail"></i> Email
             </a>
 
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <i data-lucide="linkedin"></i>
-                LinkedIn
+            <a href="https://linkedin.com" target="_blank">
+                <i data-lucide="linkedin"></i> LinkedIn
             </a>
 
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <i data-lucide="github"></i>
-                GitHub
+            <a href="https://github.com" target="_blank">
+                <i data-lucide="github"></i> GitHub
             </a>
-
         </div>
     </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
+
 <footer class="footer">
     <p>© 2026 Victor Tarra</p>
 </footer>
 
-<!-- SAFE SCRIPT -->
+
+<!-- SCRIPTS -->
 <script>
-window.addEventListener("load", function () {
-    if (window.lucide) {
-        lucide.createIcons();
-    }
+window.addEventListener("load", () => {
+    if (window.lucide) lucide.createIcons();
 });
+
+/* MOBILE MENU */
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-menu");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+/* FADE IN */
+const faders = document.querySelectorAll(".fade");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+faders.forEach(el => observer.observe(el));
 </script>
 
 </body>
