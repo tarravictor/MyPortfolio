@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor Tarra | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
 
 <header class="nav">
     <div class="nav-container">
+
         <div class="logo">VT</div>
 
         <div class="menu-toggle" id="menu-toggle">
@@ -30,6 +28,7 @@
             <a href="#credentials">Credentials</a>
             <a href="#contact">Contact</a>
         </nav>
+
     </div>
 </header>
 
@@ -102,25 +101,29 @@
 
             <!-- EDUCATION -->
             <div class="card">
-                <img src="dlscsb.svg" class="school-logo" alt="Benilde logo">
-
                 <h3>Education</h3>
 
-                <p>
-                    <strong style="font-weight:700; color:#000;">
-                        De La Salle College of Saint Benilde
-                    </strong><br>
-                    Bachelor of Science in Information Systems<br>
-                    2025–2030
-                </p>
+                <div class="school">
+                    <img src="dlscsb.svg" class="school-logo-dlscsb" alt="Benilde logo">
+                    <p>
+                        <strong style="font-weight:700; color:#000;">
+                            De La Salle College of Saint Benilde
+                        </strong><br>
+                        Bachelor of Science in Information Systems<br>
+                        2025–2030
+                    </p>
+                </div>
 
                 <div class="edu-divider"></div>
 
-                <p>
-                    <strong>San Beda College Alabang</strong><br>
-                    TVL–ICT Programming<br>
-                    2022–2025
-                </p>
+                <div class="school">
+                    <img src="sbca.png" class="school-logo-sbca" alt="San Beda College Alabang logo">
+                    <p>
+                        <strong>San Beda College Alabang</strong><br>
+                        TVL–ICT Computer Programming with Computer Systems Servicing<br>
+                        2022–2025
+                    </p>
+                </div>
             </div>
 
             <!-- CERTIFICATES -->
@@ -136,7 +139,6 @@
                             <small>freeCodeCamp · Issued Jun 2023 · ID: tarravictor-rwd</small>
                         </div>
                     </div>
-                    <a href="#">Verify</a>
                 </div>
 
                 <div class="cert">
@@ -147,7 +149,6 @@
                             <small>TESDA · Issued Mar 2025 · Expires Mar 2030</small>
                         </div>
                     </div>
-                    <a href="#">Verify</a>
                 </div>
 
                 <div class="cert">
@@ -158,7 +159,6 @@
                             <small>Google · Issued May 2026 · ID: 2HVX7AD55M5G</small>
                         </div>
                     </div>
-                    <a href="#">Verify</a>
                 </div>
 
                 <div class="cert">
@@ -169,7 +169,6 @@
                             <small>Sir Bryl Lim · Issued Mar 2026 · ID: 9bf28ee4-9af4-4ae7-bde2-7be6ca0adc53</small>
                         </div>
                     </div>
-                    <a href="#">Verify</a>
                 </div>
 
             </div>
@@ -188,11 +187,11 @@
                 <i data-lucide="mail"></i> Email
             </a>
 
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com" target="_blank">
                 <i data-lucide="linkedin"></i> LinkedIn
             </a>
 
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com" target="_blank">
                 <i data-lucide="github"></i> GitHub
             </a>
         </div>
@@ -202,26 +201,25 @@
 </main>
 
 <footer class="footer">
-    <p>© 2026 Victor Tarra</p>
+    <p>© 2026 Victor Tarra | All Rights Reserved.</p>
 </footer>
 
-<!-- SAFE SCRIPT -->
+<!-- SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    if (window.lucide) {
-        lucide.createIcons();
-    }
+    // Icons
+    lucide.createIcons();
 
+    // Mobile menu
     const toggle = document.getElementById("menu-toggle");
     const nav = document.getElementById("nav-menu");
 
-    if (toggle && nav) {
-        toggle.addEventListener("click", function () {
-            nav.classList.toggle("active");
-        });
-    }
+    toggle.addEventListener("click", function () {
+        nav.classList.toggle("active");
+    });
 
+    // Fade animation
     const faders = document.querySelectorAll(".fade");
 
     const observer = new IntersectionObserver(function (entries) {
