@@ -63,14 +63,6 @@ body {
     color: var(--text);
 }
 
-/* HAMBURGER */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 /* HERO */
 .hero {
     padding: 6rem 1rem;
@@ -206,22 +198,26 @@ body {
 .cert {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     padding: 16px 0;
     border-bottom: 1px solid #eee;
-    gap: 4px;
+    gap: 6px;
 }
 
 .cert-left {
     display: flex;
+    align-items: center;
     gap: 12px;
 }
 
-.cert-left div {
-    display: flex;
-    flex-direction: column;
+/* 🔥 FIXED LOGO SIZE (GLOBAL, NOT JUST MOBILE) */
+.cert-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
+/* TEXT */
 .cert span {
     font-weight: 600;
     line-height: 1.4;
@@ -230,12 +226,11 @@ body {
 .cert small {
     font-size: 12px;
     color: var(--muted);
-    margin-top: 2px;
 }
 
-/* VERIFY BUTTON BELOW */
+/* VERIFY BUTTON */
 .verify {
-    margin-top: 8px;
+    margin-top: 6px;
     font-size: 13px;
     font-weight: 600;
     color: var(--accent);
@@ -248,13 +243,18 @@ body {
     padding: 5px 12px;
     border-radius: 999px;
 
-    white-space: nowrap;
     transition: all 0.2s ease;
 }
 
 .verify:hover {
     background: rgba(0, 113, 227, 0.1);
     transform: translateY(-1px);
+}
+
+/* ✨ MICRO INTERACTIONS */
+.cert:hover {
+    transform: translateX(4px);
+    transition: 0.2s ease;
 }
 
 /* CONTACT */
@@ -318,49 +318,12 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .menu-toggle {
-        display: block;
-    }
-
-    nav {
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: #fff;
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 1rem;
-        display: none;
-        flex-direction: column;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    nav a {
-        margin: 0.6rem 0;
-        font-weight: 500;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .cert-left {
-        width: 100%;
-    }
-
-    .verify {
-        margin-top: 10px;
+    .cert {
+        padding: 14px 0;
     }
 
     .cert-logo {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    margin-right: 10px;
-}
-.cert-left {
-    display: flex;
-    align-items: center;
-}
-    
+        width: 28px;
+        height: 28px;
+    }
 }
