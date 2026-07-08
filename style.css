@@ -351,4 +351,16 @@ body {
     .verify {
         margin-top: 10px;
     }
+
+    .cert-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+.cert-left {
+    display: flex;
+    align-items: center;
+}
+    
 }
