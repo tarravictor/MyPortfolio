@@ -221,20 +221,42 @@ svg {
     color: var(--muted);
 }
 
+/* CREDENTIALS */
+#credentials .grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    align-items: start;
+}
+
+#credentials .card {
+    padding: 1.6rem;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    height: auto;
+}
+
+#credentials .card h3 {
+    margin-bottom: 1rem;
+}
+
 /* EDUCATION */
 .school {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
 .school p {
     color: var(--text);
+    line-height: 1.45;
 }
 
 .school-logo {
-    width: 45px;
-    height: 45px;
+    width: 44px;
+    height: 44px;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -242,27 +264,36 @@ svg {
 .edu-divider {
     height: 1px;
     background: var(--border);
-    margin: 15px 0;
+    margin: 18px 0;
 }
 
 /* CERTIFICATES */
 .cert {
     display: flex;
     flex-direction: column;
-    padding: 16px 0;
-    border-bottom: 1px solid #eeeeee;
-    gap: 6px;
+    gap: 7px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
     transition: transform 0.2s ease;
+}
+
+.cert:first-of-type {
+    padding-top: 4px;
 }
 
 .cert:last-child {
     border-bottom: none;
+    padding-bottom: 0;
 }
 
 .cert-left {
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+.cert-left > div {
+    min-width: 0;
 }
 
 .cert-logo {
@@ -275,28 +306,26 @@ svg {
 .cert span {
     display: block;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.35;
 }
 
 .cert small {
     display: block;
     margin-top: 2px;
     font-size: 12px;
+    line-height: 1.4;
     color: var(--muted);
 }
 
 .verify {
     width: fit-content;
-    margin-top: 6px;
+    margin-top: 2px;
+    padding: 4px 10px;
+    border-radius: 999px;
     font-size: 13px;
     font-weight: 600;
     color: var(--accent);
     text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 5px 12px;
-    border-radius: 999px;
     transition:
         background 0.2s ease,
         transform 0.2s ease;
@@ -308,7 +337,7 @@ svg {
 }
 
 .cert:hover {
-    transform: translateX(4px);
+    transform: translateX(3px);
 }
 
 /* PROJECTS */
@@ -519,8 +548,22 @@ svg {
     }
 
     .cards,
-    .grid {
+    .grid,
+    #credentials .grid {
         grid-template-columns: 1fr;
+    }
+
+    #credentials .card {
+        padding: 1.4rem;
+    }
+
+    .school {
+        align-items: flex-start;
+    }
+
+    .school-logo {
+        width: 40px;
+        height: 40px;
     }
 
     .cert {
@@ -559,10 +602,6 @@ svg {
 
     .card {
         padding: 1.3rem;
-    }
-
-    .school {
-        align-items: flex-start;
     }
 
     .contact {
