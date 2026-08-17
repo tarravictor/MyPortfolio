@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Victor Tarra | Portfolio</title>
     
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     
     <script>
         if (window.top !== window.self) {
@@ -15,501 +15,11 @@
         }
     </script>
 
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233498db'%3E%3Ctext x='0' y='20' font-size='20' font-weight='bold'%3EVT%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://unpkg.com/lucide@latest" defer></script>
-
-    <style>
-        /* ===== RESET & BASE ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: #f8fafc;
-            color: #0f172a;
-            line-height: 1.6;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        img {
-            max-width: 100%;
-            display: block;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* ===== NAV ===== */
-        .nav {
-            background: #ffffff;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-            padding: 16px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: #1e293b;
-            letter-spacing: -1px;
-        }
-        #nav-menu {
-            display: flex;
-            gap: 32px;
-        }
-        #nav-menu a {
-            font-size: 15px;
-            font-weight: 500;
-            color: #475569;
-            transition: color 0.2s;
-        }
-        #nav-menu a:hover {
-            color: #0f172a;
-        }
-        @media (max-width: 640px) {
-            #nav-menu {
-                gap: 16px;
-            }
-            #nav-menu a {
-                font-size: 13px;
-            }
-        }
-
-        /* ===== SECTIONS ===== */
-        .section {
-            padding: 80px 0;
-        }
-        .section.alt {
-            background: #ffffff;
-        }
-        .section h2 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-        .section .desc {
-            color: #475569;
-            max-width: 640px;
-            margin-bottom: 40px;
-            font-size: 18px;
-        }
-
-        /* ===== HERO ===== */
-        .hero {
-            padding: 60px 0 80px;
-        }
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: center;
-        }
-        .hero .tag {
-            font-size: 14px;
-            font-weight: 600;
-            color: #3498db;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 24px;
-            color: #0f172a;
-        }
-        .actions {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 28px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 15px;
-            transition: all 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-        .btn.primary {
-            background: #0f172a;
-            color: #ffffff;
-        }
-        .btn.primary:hover {
-            background: #1e293b;
-        }
-        .btn.ghost {
-            background: transparent;
-            color: #0f172a;
-            border: 2px solid #e2e8f0;
-        }
-        .btn.ghost:hover {
-            background: #f1f5f9;
-        }
-        .hero-img {
-            border-radius: 16px;
-            overflow: hidden;
-            background: #e2e8f0;
-            aspect-ratio: 1 / 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 80px;
-            color: #94a3b8;
-        }
-        .hero-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        @media (max-width: 768px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .hero h1 {
-                font-size: 36px;
-            }
-            .actions {
-                justify-content: center;
-            }
-        }
-
-        /* ===== CARDS ===== */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 24px;
-            margin-top: 16px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
-        }
-        .card {
-            background: #ffffff;
-            border: 1px solid #eef2f6;
-            border-radius: 16px;
-            padding: 24px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-            transition: box-shadow 0.2s;
-        }
-        .card:hover {
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-        }
-        .card i[data-lucide] {
-            width: 28px;
-            height: 28px;
-            color: #3498db;
-            margin-bottom: 12px;
-        }
-        .card h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .card p {
-            color: #475569;
-            font-size: 15px;
-        }
-
-        /* ===== CREDENTIALS ===== */
-        .school {
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-            margin-top: 12px;
-        }
-        .school-logo {
-            width: 48px;
-            height: 48px;
-            flex-shrink: 0;
-            background: #f1f5f9;
-            border-radius: 8px;
-            padding: 6px;
-            object-fit: contain;
-        }
-        .edu-divider {
-            height: 1px;
-            background: #eef2f6;
-            margin: 16px 0;
-        }
-        .cert {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid #f1f5f9;
-            gap: 12px;
-        }
-        .cert:last-child {
-            border-bottom: none;
-        }
-        .cert-left {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            flex: 1;
-        }
-        .cert-logo {
-            width: 32px;
-            height: 32px;
-            flex-shrink: 0;
-            background: #f1f5f9;
-            border-radius: 6px;
-            padding: 4px;
-            object-fit: contain;
-        }
-        .cert-left div {
-            display: flex;
-            flex-direction: column;
-        }
-        .cert-left span {
-            font-weight: 500;
-            font-size: 14px;
-        }
-        .cert-left small {
-            color: #94a3b8;
-            font-size: 12px;
-        }
-        .verify {
-            font-size: 13px;
-            font-weight: 600;
-            color: #3498db;
-            white-space: nowrap;
-            padding: 4px 12px;
-            border: 1px solid #3498db;
-            border-radius: 6px;
-            transition: all 0.2s;
-        }
-        .verify:hover {
-            background: #3498db;
-            color: #fff;
-        }
-        @media (max-width: 640px) {
-            .cert {
-                flex-wrap: wrap;
-            }
-            .cert-left {
-                flex-wrap: wrap;
-            }
-            .verify {
-                margin-left: auto;
-            }
-        }
-
-        /* ===== PROJECTS ===== */
-        .project-card .project-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-        .project-card .project-header i[data-lucide] {
-            width: 18px;
-            height: 18px;
-            color: #3498db;
-            margin-bottom: 0;
-        }
-        .project-course {
-            font-size: 12px;
-            font-weight: 600;
-            color: #3498db;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .project-card h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-        .project-card p {
-            color: #475569;
-            font-size: 14px;
-            margin-bottom: 16px;
-        }
-        .project-preview {
-            background: #f1f5f9;
-            border-radius: 8px;
-            overflow: hidden;
-            aspect-ratio: 16 / 9;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #94a3b8;
-            font-size: 14px;
-        }
-        .project-preview img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .project-visit-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: 600;
-            color: #3498db;
-            margin-bottom: 12px;
-        }
-        .project-visit-btn:hover {
-            text-decoration: underline;
-        }
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-        .project-tags span {
-            background: #f1f5f9;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            color: #475569;
-        }
-
-        /* ===== CONTACT ===== */
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 16px;
-        }
-        .contact-form {
-            background: #ffffff;
-            border: 1px solid #eef2f6;
-            border-radius: 16px;
-            padding: 24px;
-            min-height: 400px;
-        }
-        .contact-form iframe {
-            width: 100%;
-            min-height: 500px;
-            border: none;
-        }
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 16px 20px;
-            background: #ffffff;
-            border: 1px solid #eef2f6;
-            border-radius: 12px;
-            transition: all 0.2s;
-        }
-        .contact-link:hover {
-            border-color: #cbd5e1;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        }
-        .contact-icon {
-            width: 44px;
-            height: 44px;
-            background: #f1f5f9;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .contact-icon i[data-lucide] {
-            width: 20px;
-            height: 20px;
-            color: #0f172a;
-        }
-        .contact-icon .fa {
-            color: #0f172a;
-        }
-        .contact-info {
-            flex: 1;
-        }
-        .contact-label {
-            font-size: 12px;
-            font-weight: 600;
-            color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: block;
-        }
-        .contact-value {
-            font-weight: 500;
-            color: #0f172a;
-        }
-        .contact-arrow {
-            width: 18px;
-            height: 18px;
-            color: #94a3b8;
-        }
-        @media (max-width: 768px) {
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            text-align: center;
-            padding: 32px 24px;
-            color: #94a3b8;
-            font-size: 14px;
-            border-top: 1px solid #eef2f6;
-        }
-
-        /* ===== FADE ANIMATION ===== */
-        .fade {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-        .fade.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ===== RESPONSIVE HELPERS ===== */
-        @media (max-width: 480px) {
-            .section {
-                padding: 48px 0;
-            }
-            .grid {
-                grid-template-columns: 1fr;
-            }
-            .cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
-
 <body>
 
 <header class="nav">
@@ -543,7 +53,7 @@
                 </div>
             </div>
             <div class="hero-img">
-                <span style="font-size: 80px; color: #94a3b8;">📸</span>
+                <img src="profile.jpg" alt="Victor Tarra profile photo" loading="lazy" />
             </div>
         </div>
     </section>
@@ -577,19 +87,19 @@
                 <div class="card">
                     <h3>Education</h3>
                     <div class="school">
-                        <div class="school-logo" style="display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;background:#0f172a;color:#fff;">DLSCSB</div>
+                        <img src="dlscsb.svg" class="school-logo" alt="Benilde logo" loading="lazy" />
                         <p>
-                            <strong>De La Salle College of Saint Benilde</strong><br>
-                            Bachelor of Science in Information Systems<br>
+                            <strong>De La Salle College of Saint Benilde</strong><br />
+                            Bachelor of Science in Information Systems<br />
                             2025–2030
                         </p>
                     </div>
                     <div class="edu-divider"></div>
                     <div class="school">
-                        <div class="school-logo" style="display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;background:#8b0000;color:#fff;">SBCA</div>
+                        <img src="sbca.png" class="school-logo" alt="San Beda College Alabang logo" loading="lazy" />
                         <p>
-                            <strong>San Beda College Alabang</strong><br>
-                            TVL–ICT Computer Programming with Computer Systems Servicing<br>
+                            <strong>San Beda College Alabang</strong><br />
+                            TVL–ICT Computer Programming with Computer Systems Servicing<br />
                             2022–2025
                         </p>
                     </div>
@@ -598,7 +108,7 @@
                     <h3>Certificates</h3>
                     <div class="cert">
                         <div class="cert-left">
-                            <div class="cert-logo" style="display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;background:#0f172a;color:#fff;">AI</div>
+                            <img src="anthropic-logo.png" alt="Anthropic Logo" class="cert-logo" loading="lazy" />
                             <div>
                                 <span>Certificate of Completion: Claude Platform 101</span>
                                 <small>Anthropic · Issued Jul 2026 · Credential ID xs5cea5qj36u</small>
@@ -608,7 +118,7 @@
                     </div>
                     <div class="cert">
                         <div class="cert-left">
-                            <div class="cert-logo" style="display:flex;align-items:center;justify-content:center;font-weight:700;font-size:8px;background:#0a0a23;color:#fff;">FCC</div>
+                            <img src="freecodecamp-logo.svg" alt="freeCodeCamp Logo" class="cert-logo" loading="lazy" />
                             <div>
                                 <span>Legacy Responsive Web Design V8</span>
                                 <small>freeCodeCamp · Issued Jun 2023 · ID: tarravictor-rwd</small>
@@ -618,7 +128,7 @@
                     </div>
                     <div class="cert">
                         <div class="cert-left">
-                            <div class="cert-logo" style="display:flex;align-items:center;justify-content:center;font-weight:700;font-size:8px;background:#1a237e;color:#fff;">TESDA</div>
+                            <img src="tesda-logo.png" alt="TESDA Logo" class="cert-logo" loading="lazy" />
                             <div>
                                 <span>National Certificate II in Computer Systems Servicing</span>
                                 <small>TESDA · Issued Mar 2025 · Expires Mar 2030</small>
@@ -628,7 +138,7 @@
                     </div>
                     <div class="cert">
                         <div class="cert-left">
-                            <div class="cert-logo" style="display:flex;align-items:center;justify-content:center;font-weight:700;font-size:8px;background:#4285f4;color:#fff;">G</div>
+                            <img src="google-logo.png" alt="Google Logo" class="cert-logo" loading="lazy" />
                             <div>
                                 <span>AI Fundamentals</span>
                                 <small>Google · Issued May 2026 · ID: 2HVX7AD55M5G</small>
@@ -638,7 +148,7 @@
                     </div>
                     <div class="cert">
                         <div class="cert-left">
-                            <div class="cert-logo" style="display:flex;align-items:center;justify-content:center;font-weight:700;font-size:8px;background:#6c2bd9;color:#fff;">CC</div>
+                            <img src="code-cred.jpg" alt="CodeCred Logo" class="cert-logo" loading="lazy" />
                             <div>
                                 <span>CodeCred</span>
                                 <small>Sir Bryl Lim · Issued Mar 2026 · ID: 9bf28ee4</small>
@@ -669,7 +179,7 @@
                         <strong>Disclaimer:</strong> BeepAlerts.PH is a student prototype from De La Salle-College of Saint Benilde and is not affiliated with LRTA, LRMC, or any government agency.
                     </p>
                     <div class="project-preview">
-                        <span>📱 BeepAlerts.PH Preview</span>
+                        <img src="beepalerts-preview.png" alt="BeepAlerts.PH website preview" loading="lazy" />
                     </div>
                     <a href="http://beepalertsph.runasp.net/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
                         <i data-lucide="external-link"></i>
@@ -694,7 +204,7 @@
                         and improve customer experience.
                     </p>
                     <div class="project-preview">
-                        <span>☕ TommyCo Preview</span>
+                        <img src="tommyco-preview.png" alt="TommyCo Coffee Shop website preview" loading="lazy" />
                     </div>
                     <a href="https://tarravictor.github.io/TommyCo---FUNDSYS-Project/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
                         <i data-lucide="external-link"></i>
