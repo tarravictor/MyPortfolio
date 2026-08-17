@@ -2,7 +2,22 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor Tarra | Portfolio</title>
+    
+    <!-- Security Headers via Meta Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Prevent page from being displayed in iframe -->
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.self.location;
+        }
+    </script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script src="https://unpkg.com/lucide@latest" defer></script>
@@ -46,7 +61,7 @@
             </div>
 
             <div class="hero-img">
-                <img src="profile.jpg" alt="Victor Tarra profile photo">
+                <img src="profile.jpg" alt="Victor Tarra profile photo" loading="lazy">
             </div>
 
         </div>
@@ -58,7 +73,7 @@
             <h2>About</h2>
 
             <p class="desc">
-                I’m currently pursuing a Bachelor of Science in Information Systems at
+                I'm currently pursuing a Bachelor of Science in Information Systems at
                 <strong>De La Salle College of Saint Benilde</strong>.
             </p>
 
@@ -93,7 +108,7 @@
                     <h3>Education</h3>
 
                     <div class="school">
-                        <img src="dlscsb.svg" class="school-logo" alt="Benilde logo">
+                        <img src="dlscsb.svg" class="school-logo" alt="Benilde logo" loading="lazy">
 
                         <p>
                             <strong>De La Salle College of Saint Benilde</strong><br>
@@ -105,7 +120,7 @@
                     <div class="edu-divider"></div>
 
                     <div class="school">
-                        <img src="sbca.png" class="school-logo" alt="San Beda College Alabang logo">
+                        <img src="sbca.png" class="school-logo" alt="San Beda College Alabang logo" loading="lazy">
 
                         <p>
                             <strong>San Beda College Alabang</strong><br>
@@ -122,7 +137,7 @@
 
                     <div class="cert">
                         <div class="cert-left">
-                            <img src="anthropic-logo.png" alt="Anthropic Logo" class="cert-logo">
+                            <img src="anthropic-logo.png" alt="Anthropic Logo" class="cert-logo" loading="lazy">
 
                             <div>
                                 <span>Certificate of Completion: Claude Platform 101</span>
@@ -140,7 +155,7 @@
 
                     <div class="cert">
                         <div class="cert-left">
-                            <img src="freecodecamp-logo.svg" alt="freeCodeCamp Logo" class="cert-logo">
+                            <img src="freecodecamp-logo.svg" alt="freeCodeCamp Logo" class="cert-logo" loading="lazy">
 
                             <div>
                                 <span>Legacy Responsive Web Design V8</span>
@@ -158,7 +173,7 @@
 
                     <div class="cert">
                         <div class="cert-left">
-                            <img src="tesda-logo.png" alt="TESDA Logo" class="cert-logo">
+                            <img src="tesda-logo.png" alt="TESDA Logo" class="cert-logo" loading="lazy">
 
                             <div>
                                 <span>National Certificate II in Computer Systems Servicing</span>
@@ -176,7 +191,7 @@
 
                     <div class="cert">
                         <div class="cert-left">
-                            <img src="google-logo.png" alt="Google Logo" class="cert-logo">
+                            <img src="google-logo.png" alt="Google Logo" class="cert-logo" loading="lazy">
 
                             <div>
                                 <span>AI Fundamentals</span>
@@ -194,7 +209,7 @@
 
                     <div class="cert">
                         <div class="cert-left">
-                            <img src="code-cred.jpg" alt="CodeCred Logo" class="cert-logo">
+                            <img src="code-cred.jpg" alt="CodeCred Logo" class="cert-logo" loading="lazy">
 
                             <div>
                                 <span>CodeCred</span>
@@ -247,7 +262,7 @@
                     </p>
 
                     <div class="project-preview">
-                        <img src="beepalerts-preview.png" alt="BeepAlerts.PH website preview">
+                        <img src="beepalerts-preview.png" alt="BeepAlerts.PH website preview" loading="lazy">
                     </div>
 
                     <a href="http://beepalertsph.runasp.net/"
@@ -286,7 +301,7 @@
                     </p>
 
                     <div class="project-preview">
-                        <img src="tommyco-preview.png" alt="TommyCo Coffee Shop website preview">
+                        <img src="tommyco-preview.png" alt="TommyCo Coffee Shop website preview" loading="lazy">
                     </div>
 
                     <a href="https://tarravictor.github.io/TommyCo---FUNDSYS-Project/"
@@ -324,8 +339,17 @@
 
             <div class="contact-wrapper">
 
-                <div class="contact-form">
-                    <script type="text/javascript" src="https://form.jotform.com/jsform/262283000382043"></script>
+                <!-- FIXED: JotForm using iframe instead of script to prevent duplication -->
+                <div class="contact-form" id="jotform-container">
+                    <iframe 
+                        id="jotform-iframe"
+                        src="https://form.jotform.com/262283000382043" 
+                        frameborder="0" 
+                        style="width:100%;min-height:600px;border:none;"
+                        scrolling="yes"
+                        title="Contact Form"
+                        loading="lazy">
+                    </iframe>
                 </div>
 
                 <div class="contact-links">
@@ -385,15 +409,69 @@
 </main>
 
 <footer class="footer">
-    <p>© 2026 Victor Tarra</p>
+    <p>&copy; 2026 Victor Tarra</p>
 </footer>
 
 <script>
+// Security: Disable right-click context menu
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    return false;
+});
+
+// Security: Disable keyboard shortcuts for viewing source
+document.addEventListener('keydown', function(e) {
+    // Disable Ctrl+U (View Source)
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        return false;
+    }
+    // Disable Ctrl+Shift+I (DevTools)
+    if (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I')) {
+        e.preventDefault();
+        return false;
+    }
+    // Disable Ctrl+Shift+J (Console)
+    if (e.ctrlKey && e.shiftKey && (e.key === 'j' || e.key === 'J')) {
+        e.preventDefault();
+        return false;
+    }
+    // Disable F12 (DevTools)
+    if (e.key === 'F12') {
+        e.preventDefault();
+        return false;
+    }
+    // Disable Ctrl+S (Save)
+    if (e.ctrlKey && e.key === 's') {
+        e.preventDefault();
+        return false;
+    }
+    // Disable Ctrl+C (Copy) - can be annoying, consider removing
+    // if (e.ctrlKey && e.key === 'c') {
+    //     e.preventDefault();
+    //     return false;
+    // }
+});
+
+// Security: Warn before leaving page with unsaved changes
+window.addEventListener('beforeunload', function(e) {
+    // Only trigger if form has been interacted with
+    const form = document.querySelector('#jotform-iframe');
+    if (form) {
+        e.preventDefault();
+        e.returnValue = 'You have unsaved changes. Are you sure you want to leave?';
+        return e.returnValue;
+    }
+});
+
+// Main functionality
 document.addEventListener("DOMContentLoaded", function () {
+    // Initialize Lucide icons
     if (window.lucide) {
         lucide.createIcons();
     }
 
+    // Intersection Observer for fade animations
     const faders = document.querySelectorAll(".fade");
 
     const observer = new IntersectionObserver(function (entries) {
@@ -402,12 +480,47 @@ document.addEventListener("DOMContentLoaded", function () {
                 entry.target.classList.add("show");
             }
         });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
     });
 
     faders.forEach(function (element) {
         observer.observe(element);
     });
+
+    // Prevent JotForm iframe from being cloned or duplicated
+    const jotformContainer = document.getElementById('jotform-container');
+    if (jotformContainer) {
+        // Ensure only one iframe exists
+        const existingIframe = jotformContainer.querySelector('iframe');
+        if (!existingIframe) {
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://form.jotform.com/262283000382043';
+            iframe.style.width = '100%';
+            iframe.style.minHeight = '600px';
+            iframe.style.border = 'none';
+            iframe.title = 'Contact Form';
+            iframe.loading = 'lazy';
+            jotformContainer.appendChild(iframe);
+        }
+    }
+
+    // Additional security: Prevent selection of text
+    document.addEventListener('selectstart', function(e) {
+        // Allow selection only in input fields and textareas
+        const tagName = e.target.tagName.toLowerCase();
+        if (tagName !== 'input' && tagName !== 'textarea') {
+            e.preventDefault();
+        }
+    });
 });
+
+// Console warning to deter casual inspection
+console.log('%c⚠️ This website is protected. Unauthorized copying or reproduction is prohibited. ⚠️', 
+    'color: red; font-size: 16px; font-weight: bold;');
+console.log('%c© 2026 Victor Tarra. All Rights Reserved.', 
+    'color: #666; font-size: 12px;');
 </script>
 
 </body>
