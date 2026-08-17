@@ -27,8 +27,7 @@ body {
     line-height: 1.6;
 }
 
-img,
-iframe {
+img {
     max-width: 100%;
 }
 
@@ -356,21 +355,25 @@ svg {
 
 /* PROJECT PREVIEW */
 .project-preview {
-    position: relative;
     width: 100%;
-    height: 320px;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     border: 1px solid var(--border);
     border-radius: 14px;
-    background: var(--soft-bg);
+    background: #ffffff;
 }
 
-.project-preview iframe {
+.project-preview img {
     width: 100%;
     height: 100%;
     display: block;
-    border: 0;
-    background: #ffffff;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.35s ease;
+}
+
+.project-card:hover .project-preview img {
+    transform: scale(1.015);
 }
 
 /* PROJECT BUTTON */
@@ -477,13 +480,6 @@ svg {
     transform: translateY(0);
 }
 
-/* TABLET */
-@media (max-width: 900px) {
-    .project-preview {
-        height: 280px;
-    }
-}
-
 /* MOBILE */
 @media (max-width: 768px) {
 
@@ -536,10 +532,6 @@ svg {
         height: 28px;
     }
 
-    .project-preview {
-        height: 240px;
-    }
-
     .project-visit-btn {
         width: 100%;
     }
@@ -567,10 +559,6 @@ svg {
 
     .card {
         padding: 1.3rem;
-    }
-
-    .project-preview {
-        height: 210px;
     }
 
     .school {
