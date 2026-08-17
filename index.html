@@ -15,16 +15,16 @@
 
 <body>
 
+<!-- NAVIGATION -->
 <header class="nav">
     <div class="nav-container">
 
         <div class="logo">VT</div>
 
-        <!-- Hamburger toggle removed as requested -->
-
         <nav id="nav-menu">
             <a href="#about">About</a>
             <a href="#credentials">Credentials</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
 
@@ -33,204 +33,496 @@
 
 <main>
 
-<!-- HERO -->
-<section class="hero fade">
-    <div class="container hero-grid">
+    <!-- HERO -->
+    <section class="hero fade">
+        <div class="container hero-grid">
 
-        <div>
-            <p class="tag">Information Systems Student</p>
-            <h1>Victor Tarra</h1>
+            <div>
+                <p class="tag">Information Systems Student</p>
 
-            <div class="actions">
-                <a href="#contact" class="btn primary">
+                <h1>Victor Tarra</h1>
+
+                <div class="actions">
+
+                    <a href="#contact" class="btn primary">
+                        <i data-lucide="mail"></i>
+                        <span>Contact</span>
+                    </a>
+
+                    <a href="#about" class="btn ghost">
+                        <i data-lucide="arrow-right"></i>
+                        <span>Learn More</span>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="hero-img">
+                <img src="profile.jpg" alt="Victor Tarra profile photo">
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section fade">
+        <div class="container">
+
+            <h2>About</h2>
+
+            <p class="desc">
+                I’m currently pursuing a Bachelor of Science in Information Systems at
+                <strong>De La Salle College of Saint Benilde</strong>.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <i data-lucide="target"></i>
+
+                    <h3>Focus (Current)</h3>
+
+                    <p>
+                        Certifications, development, and continuous learning.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <i data-lucide="sparkles"></i>
+
+                    <h3>Interests</h3>
+
+                    <p>
+                        Web development, UI/UX, and system design.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CREDENTIALS -->
+    <section id="credentials" class="section alt fade">
+        <div class="container">
+
+            <h2>Credentials</h2>
+
+            <div class="grid">
+
+                <!-- EDUCATION -->
+                <div class="card">
+
+                    <h3>Education</h3>
+
+                    <div class="school">
+
+                        <img
+                            src="dlscsb.svg"
+                            class="school-logo"
+                            alt="Benilde logo"
+                        >
+
+                        <p>
+                            <strong>De La Salle College of Saint Benilde</strong><br>
+                            Bachelor of Science in Information Systems<br>
+                            2025–2030
+                        </p>
+
+                    </div>
+
+                    <div class="edu-divider"></div>
+
+                    <div class="school">
+
+                        <img
+                            src="sbca.png"
+                            class="school-logo"
+                            alt="San Beda College Alabang logo"
+                        >
+
+                        <p>
+                            <strong>San Beda College Alabang</strong><br>
+                            TVL–ICT Computer Programming with Computer Systems Servicing<br>
+                            2022–2025
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CERTIFICATES -->
+                <div class="card">
+
+                    <h3>Certificates</h3>
+
+
+                    <!-- ANTHROPIC -->
+                    <div class="cert">
+
+                        <div class="cert-left">
+
+                            <img
+                                src="anthropic-logo.png"
+                                alt="Anthropic Logo"
+                                class="cert-logo"
+                            >
+
+                            <div>
+                                <span>
+                                    Certificate of Completion: Claude Platform 101
+                                </span>
+
+                                <small>
+                                    Anthropic · Issued Jul 2026 · Credential ID xs5cea5qj36u
+                                </small>
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="https://verify.skilljar.com/c/xs5cea5qj36u"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="verify"
+                        >
+                            Verify
+                        </a>
+
+                    </div>
+
+
+                    <!-- FREECODECAMP -->
+                    <div class="cert">
+
+                        <div class="cert-left">
+
+                            <img
+                                src="freecodecamp-logo.svg"
+                                alt="freeCodeCamp Logo"
+                                class="cert-logo"
+                            >
+
+                            <div>
+                                <span>
+                                    Legacy Responsive Web Design V8
+                                </span>
+
+                                <small>
+                                    freeCodeCamp · Issued Jun 2023 · ID: tarravictor-rwd
+                                </small>
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="https://www.freecodecamp.org/certification/tarravictor/responsive-web-design"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="verify"
+                        >
+                            Verify
+                        </a>
+
+                    </div>
+
+
+                    <!-- TESDA -->
+                    <div class="cert">
+
+                        <div class="cert-left">
+
+                            <img
+                                src="tesda-logo.png"
+                                alt="TESDA Logo"
+                                class="cert-logo"
+                            >
+
+                            <div>
+                                <span>
+                                    National Certificate II in Computer Systems Servicing
+                                </span>
+
+                                <small>
+                                    TESDA · Issued Mar 2025 · Expires Mar 2030
+                                </small>
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="https://t2mis.tesda.gov.ph/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="verify"
+                        >
+                            Verify
+                        </a>
+
+                    </div>
+
+
+                    <!-- GOOGLE -->
+                    <div class="cert">
+
+                        <div class="cert-left">
+
+                            <img
+                                src="google-logo.png"
+                                alt="Google Logo"
+                                class="cert-logo"
+                            >
+
+                            <div>
+                                <span>
+                                    AI Fundamentals
+                                </span>
+
+                                <small>
+                                    Google · Issued May 2026 · ID: 2HVX7AD55M5G
+                                </small>
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="https://www.coursera.org/account/accomplishments/verify/2HVX7AD55M5G"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="verify"
+                        >
+                            Verify
+                        </a>
+
+                    </div>
+
+
+                    <!-- CODECRED -->
+                    <div class="cert">
+
+                        <div class="cert-left">
+
+                            <img
+                                src="code-cred.jpg"
+                                alt="CodeCred Logo"
+                                class="cert-logo"
+                            >
+
+                            <div>
+                                <span>
+                                    CodeCred
+                                </span>
+
+                                <small>
+                                    Sir Bryl Lim · Issued Mar 2026 · ID: 9bf28ee4
+                                </small>
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="https://www.codecred.dev/verify/9bf28ee4-9af4-4ae7-bde2-7be6ca0adc53"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="verify"
+                        >
+                            Verify
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section fade">
+        <div class="container">
+
+            <h2>Projects</h2>
+
+            <p class="desc">
+                Selected academic projects developed as part of my Information Systems coursework.
+            </p>
+
+            <div class="grid">
+
+
+                <!-- BEEPALERTS PH -->
+                <div class="card project-card">
+
+                    <div class="project-header">
+
+                        <i data-lucide="bell-ring"></i>
+
+                        <span class="project-course">
+                            ENTPROG
+                        </span>
+
+                    </div>
+
+                    <h3>BeepAlerts.PH</h3>
+
+                    <p>
+                        A web-based commuter reporting and public transportation
+                        alert platform designed to help users report incidents
+                        and view transportation-related updates.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>ASP.NET Core MVC</span>
+
+                        <span>C#</span>
+
+                        <span>Entity Framework</span>
+
+                        <span>Bootstrap</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOMMYCO COFFEE SHOP -->
+                <div class="card project-card">
+
+                    <div class="project-header">
+
+                        <i data-lucide="coffee"></i>
+
+                        <span class="project-course">
+                            FUNDSYS
+                        </span>
+
+                    </div>
+
+                    <h3>TommyCo Coffee Shop</h3>
+
+                    <p>
+                        A coffee shop information system developed for
+                        Fundamentals of Information Systems, demonstrating
+                        how information systems and technology can support
+                        business operations and improve process management.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>Information Systems</span>
+
+                        <span>Business Process</span>
+
+                        <span>System Design</span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section fade">
+        <div class="container">
+
+            <h2>Contact</h2>
+
+            <div class="contact">
+
+                <a href="mailto:tarravdc@proton.me">
+
                     <i data-lucide="mail"></i>
-                    <span>Contact</span>
+
+                    <span>Email</span>
+
                 </a>
 
-                <a href="#about" class="btn ghost">
-                    <i data-lucide="arrow-right"></i>
-                    <span>Learn More</span>
+
+                <a
+                    href="https://linkedin.com/in/tarravictor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i data-lucide="linkedin"></i>
+
+                    <span>LinkedIn</span>
+
                 </a>
-            </div>
-        </div>
 
-        <div class="hero-img">
-            <img src="profile.jpg" alt="Victor Tarra profile photo">
-        </div>
 
-    </div>
-</section>
+                <a
+                    href="https://github.com/tarravictor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-<!-- ABOUT -->
-<section id="about" class="section fade">
-    <div class="container">
-        <h2>About</h2>
+                    <i data-lucide="github"></i>
 
-        <p class="desc">
-            I’m currently pursuing a Bachelor of Science in Information Systems at 
-            <strong>De La Salle College of Saint Benilde</strong>. 
-        </p>
+                    <span>GitHub</span>
 
-        <div class="cards">
-            <div class="card">
-                <i data-lucide="target"></i>
-                <h3>Focus (Current)</h3>
-                <p>Certifications, development, and continuous learning.</p>
+                </a>
+
             </div>
 
-            <div class="card">
-                <i data-lucide="sparkles"></i>
-                <h3>Interests</h3>
-                <p>Web development, UI/UX, and system design.</p>
-            </div>
         </div>
-    </div>
-</section>
-
-<!-- CREDENTIALS -->
-<section id="credentials" class="section alt fade">
-    <div class="container">
-        <h2>Credentials</h2>
-
-        <div class="grid">
-
-            <!-- EDUCATION -->
-            <div class="card">
-                <h3>Education</h3>
-
-                <div class="school">
-                    <img src="dlscsb.svg" class="school-logo" alt="Benilde logo">
-                    <p>
-                        <strong>De La Salle College of Saint Benilde</strong><br>
-                        Bachelor of Science in Information Systems<br>
-                        2025–2030
-                    </p>
-                </div>
-
-                <div class="edu-divider"></div>
-
-                <div class="school">
-                    <img src="sbca.png" class="school-logo" alt="San Beda College Alabang logo">
-                    <p>
-                        <strong>San Beda College Alabang</strong><br>
-                        TVL–ICT Computer Programming with Computer Systems Servicing<br>
-                        2022–2025
-                    </p>
-                </div>
-            </div>
-
-<!-- CERTIFICATES -->
-<div class="card">
-    <h3>Certificates</h3>
-
-    <div class="cert">
-        <div class="cert-left">
-            <img src="anthropic-logo.png" alt="Anthropic Logo" class="cert-logo">
-            <div>
-                <span>Certificate of Completion: Claude Platform 101</span>
-                <small>Anthropic · Issued Jul 2026 · Credential ID xs5cea5qj36u</small>
-            </div>
-        </div>
-        <a href="https://verify.skilljar.com/c/xs5cea5qj36u" target="_blank" class="verify">Verify</a>
-    </div>
-
-    <div class="cert">
-        <div class="cert-left">
-            <img src="freecodecamp-logo.svg" alt="freeCodeCamp Logo" class="cert-logo">
-            <div>
-                <span>Legacy Responsive Web Design V8</span>
-                <small>freeCodeCamp · Issued Jun 2023 · ID: tarravictor-rwd</small>
-            </div>
-        </div>
-        <a href="https://www.freecodecamp.org/certification/tarravictor/responsive-web-design" target="_blank" class="verify">Verify</a>
-    </div>
-
-    <div class="cert">
-        <div class="cert-left">
-            <img src="tesda-logo.png" alt="TESDA Logo" class="cert-logo">
-            <div>
-                <span>National Certificate II in Computer Systems Servicing</span>
-                <small>TESDA · Issued Mar 2025 · Expires Mar 2030</small>
-            </div>
-        </div>
-        <a href="https://t2mis.tesda.gov.ph/" target="_blank" class="verify">Verify</a>
-    </div>
-
-    <div class="cert">
-        <div class="cert-left">
-            <img src="google-logo.png" alt="Google Logo" class="cert-logo">
-            <div>
-                <span>AI Fundamentals</span>
-                <small>Google · Issued May 2026 · ID: 2HVX7AD55M5G</small>
-            </div>
-        </div>
-        <a href="https://www.coursera.org/account/accomplishments/verify/2HVX7AD55M5G" target="_blank" class="verify">Verify</a>
-    </div>
-
-    <div class="cert">
-        <div class="cert-left">
-            <img src="code-cred.jpg" alt="CodeCred Logo" class="cert-logo">
-            <div>
-                <span>CodeCred</span>
-                <small>Sir Bryl Lim · Issued Mar 2026 · ID: 9bf28ee4</small>
-            </div>
-        </div>
-        <a href="https://www.codecred.dev/verify/9bf28ee4-9af4-4ae7-bde2-7be6ca0adc53" target="_blank" class="verify">Verify</a>
-    </div>
-
-</div>
-<!-- CONTACT -->
-<section id="contact" class="section fade">
-    <div class="container">
-        <h2>Contact</h2>
-
-        <div class="contact">
-            <a href="mailto:tarravdc@proton.me">
-                <i data-lucide="mail"></i>
-                <span>Email</span>
-            </a>
-
-            <a href="https://linkedin.com/in/tarravictor" target="_blank" rel="noopener noreferrer">
-                <i data-lucide="linkedin"></i>
-                <span>LinkedIn</span>
-            </a>
-
-            <a href="https://github.com/tarravictor" target="_blank" rel="noopener noreferrer">
-                <i data-lucide="github"></i>
-                <span>GitHub</span>
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
 </main>
 
+
+<!-- FOOTER -->
 <footer class="footer">
+
     <p>© 2026 Victor Tarra</p>
+
 </footer>
+
 
 <!-- SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Initialize Lucide icons
     if (window.lucide) {
         lucide.createIcons();
     }
 
-    // Hamburger toggle functionality removed since the button is gone
 
+    // Fade-in animation
     const faders = document.querySelectorAll(".fade");
 
+
     const observer = new IntersectionObserver(function (entries) {
+
         entries.forEach(function (entry) {
+
             if (entry.isIntersecting) {
+
                 entry.target.classList.add("show");
+
             }
+
         });
+
     });
 
+
     faders.forEach(function (el) {
+
         observer.observe(el);
+
     });
 
 });
