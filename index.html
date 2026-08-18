@@ -16,9 +16,12 @@
     </script>
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="github-credentials.css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://unpkg.com/lucide@latest" defer></script>
+
+
 </head>
 <body>
 
@@ -83,29 +86,109 @@
     <section id="credentials" class="section alt fade">
         <div class="container">
             <h2>Credentials</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Education</h3>
-                    <div class="school">
-                        <img src="dlscsb.svg" class="school-logo" alt="Benilde logo" loading="lazy" />
-                        <p>
-                            <strong>De La Salle College of Saint Benilde</strong><br />
-                            Bachelor of Science in Information Systems<br />
-                            2025–2030
-                        </p>
+
+            <div class="credentials-grid">
+
+                <!-- LEFT COLUMN -->
+                <div class="credentials-left">
+
+                    <!-- EDUCATION -->
+                    <div class="card">
+                        <h3>Education</h3>
+
+                        <div class="school">
+                            <img src="dlscsb.svg" class="school-logo" alt="Benilde logo" loading="lazy" />
+                            <p>
+                                <strong>De La Salle College of Saint Benilde</strong><br />
+                                Bachelor of Science in Information Systems<br />
+                                2025–2030
+                            </p>
+                        </div>
+
+                        <div class="edu-divider"></div>
+
+                        <div class="school">
+                            <img src="sbca.png" class="school-logo" alt="San Beda College Alabang logo" loading="lazy" />
+                            <p>
+                                <strong>San Beda College Alabang</strong><br />
+                                TVL–ICT Computer Programming with Computer Systems Servicing<br />
+                                2022–2025
+                            </p>
+                        </div>
                     </div>
-                    <div class="edu-divider"></div>
-                    <div class="school">
-                        <img src="sbca.png" class="school-logo" alt="San Beda College Alabang logo" loading="lazy" />
-                        <p>
-                            <strong>San Beda College Alabang</strong><br />
-                            TVL–ICT Computer Programming with Computer Systems Servicing<br />
-                            2022–2025
-                        </p>
+
+                    <!-- GITHUB ACTIVITY -->
+                    <div class="card github-card">
+                        <div class="github-title-row">
+                            <div>
+                                <h3>GitHub Activity</h3>
+                                <p class="github-subtitle">Live contribution activity for <strong>@tarravictor</strong></p>
+                            </div>
+
+                            <a
+                                href="https://github.com/tarravictor"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="github-profile-icon"
+                                aria-label="Open Victor Tarra's GitHub profile"
+                            >
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </div>
+
+                        <div class="github-year-line">
+                            <span>Contribution Calendar</span>
+                            <span id="github-year"></span>
+                        </div>
+
+                        <a
+                            href="https://github.com/tarravictor"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="github-chart-link"
+                            aria-label="View GitHub contribution activity"
+                        >
+                            <img
+                                src="https://ghchart.rshah.org/tarravictor"
+                                alt="GitHub contribution graph for tarravictor"
+                                class="github-chart"
+                                loading="lazy"
+                            />
+                        </a>
+
+                        <div class="github-card-actions">
+                            <a
+                                href="https://github.com/tarravictor"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="verify github-view-profile"
+                            >
+                                View GitHub Profile
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="github-org-section">
+                            <div class="github-org-heading">
+                                <h4>Organizations</h4>
+                                <span>Public GitHub organizations</span>
+                            </div>
+
+                            <div id="github-organizations" class="github-org-list" aria-live="polite">
+                                <div class="github-org-status">
+                                    <span class="github-org-spinner"></span>
+                                    <span>Loading organizations...</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
-                <div class="card">
+
+                <!-- RIGHT COLUMN: CERTIFICATES -->
+                <div class="card certificates-card">
                     <h3>Certificates</h3>
+
                     <div class="cert">
                         <div class="cert-left">
                             <img src="anthropic-logo.png" alt="Anthropic Logo" class="cert-logo" loading="lazy" />
@@ -116,6 +199,7 @@
                         </div>
                         <a href="https://verify.skilljar.com/c/xs5cea5qj36u" target="_blank" rel="noopener noreferrer" class="verify">Verify</a>
                     </div>
+
                     <div class="cert">
                         <div class="cert-left">
                             <img src="freecodecamp-logo.svg" alt="freeCodeCamp Logo" class="cert-logo" loading="lazy" />
@@ -126,6 +210,7 @@
                         </div>
                         <a href="https://www.freecodecamp.org/certification/tarravictor/responsive-web-design" target="_blank" rel="noopener noreferrer" class="verify">Verify</a>
                     </div>
+
                     <div class="cert">
                         <div class="cert-left">
                             <img src="tesda-logo.png" alt="TESDA Logo" class="cert-logo" loading="lazy" />
@@ -136,6 +221,7 @@
                         </div>
                         <a href="https://t2mis.tesda.gov.ph/" target="_blank" rel="noopener noreferrer" class="verify">Verify</a>
                     </div>
+
                     <div class="cert">
                         <div class="cert-left">
                             <img src="google-logo.png" alt="Google Logo" class="cert-logo" loading="lazy" />
@@ -144,8 +230,9 @@
                                 <small>Google · Issued May 2026 · ID: 2HVX7AD55M5G</small>
                             </div>
                         </div>
-                        <a href="https://www.coursera.org/account/accomplishments/verify/2HVX7AD55M5G" wtarget="_blank" rel="noopener noreferrer" class="verify">Verify</a>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/2HVX7AD55M5G" target="_blank" rel="noopener noreferrer" class="verify">Verify</a>
                     </div>
+
                     <div class="cert">
                         <div class="cert-left">
                             <img src="code-cred.jpg" alt="CodeCred Logo" class="cert-logo" loading="lazy" />
@@ -157,6 +244,7 @@
                         <a href="https://www.codecred.dev/verify/9bf28ee4-9af4-4ae7-bde2-7be6ca0adc53" target="_blank" rel="noopener noreferrer" class="verify">Verify</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -322,6 +410,88 @@ document.addEventListener("DOMContentLoaded", function() {
     if (window.lucide) {
         lucide.createIcons();
     }
+
+    // Keep the GitHub year label current.
+    var githubYear = document.getElementById('github-year');
+    if (githubYear) {
+        githubYear.textContent = new Date().getFullYear();
+    }
+
+    // Load public GitHub organizations automatically.
+    function loadGitHubOrganizations() {
+        var organizationsContainer = document.getElementById('github-organizations');
+        if (!organizationsContainer) return;
+
+        fetch('https://api.github.com/users/tarravictor/orgs?per_page=100', {
+            headers: {
+                'Accept': 'application/vnd.github+json'
+            }
+        })
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('GitHub API request failed');
+            }
+            return response.json();
+        })
+        .then(function(organizations) {
+            organizationsContainer.innerHTML = '';
+
+            if (!Array.isArray(organizations) || organizations.length === 0) {
+                organizationsContainer.innerHTML = `
+                    <div class="github-org-status">
+                        <span>No public GitHub organizations to display.</span>
+                    </div>
+                `;
+                return;
+            }
+
+            organizations.forEach(function(org) {
+                var organizationLink = document.createElement('a');
+                organizationLink.className = 'github-org-item';
+                organizationLink.href = 'https://github.com/' + encodeURIComponent(org.login);
+                organizationLink.target = '_blank';
+                organizationLink.rel = 'noopener noreferrer';
+
+                var avatar = document.createElement('img');
+                avatar.className = 'github-org-avatar';
+                avatar.src = org.avatar_url;
+                avatar.alt = org.login + ' organization logo';
+                avatar.loading = 'lazy';
+
+                var info = document.createElement('div');
+                info.className = 'github-org-info';
+
+                var name = document.createElement('strong');
+                name.textContent = org.login;
+
+                var role = document.createElement('span');
+                role.textContent = 'GitHub Organization';
+
+                var arrow = document.createElement('i');
+                arrow.setAttribute('data-lucide', 'chevron-right');
+
+                info.appendChild(name);
+                info.appendChild(role);
+                organizationLink.appendChild(avatar);
+                organizationLink.appendChild(info);
+                organizationLink.appendChild(arrow);
+                organizationsContainer.appendChild(organizationLink);
+            });
+
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        })
+        .catch(function() {
+            organizationsContainer.innerHTML = `
+                <div class="github-org-status">
+                    <span>Organizations could not be loaded right now.</span>
+                </div>
+            `;
+        });
+    }
+
+    loadGitHubOrganizations();
 
     var faders = document.querySelectorAll(".fade");
     var observer = new IntersectionObserver(function(entries) {
