@@ -1244,3 +1244,39 @@ svg {
         transform: none;
     }
 }
+
+/* =========================================
+   CREDENTIALS - MATCH COLUMN HEIGHTS
+========================================= */
+
+#credentials .credentials-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+
+    /* Makes Certificates match the full left column */
+    align-items: stretch;
+}
+
+#credentials .credentials-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#credentials .certificates-card {
+    height: 100%;
+    align-self: stretch;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    #credentials .credentials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #credentials .certificates-card {
+        height: auto;
+    }
+}
