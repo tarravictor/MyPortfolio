@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">APPDAET Project Manager preview</title>
+  <desc id="desc">A project management dashboard with a dark sidebar and task board.</desc>
+  <rect width="1280" height="720" fill="#f5f7fb"/>
+  <rect width="270" height="720" fill="#172033"/>
+  <rect x="38" y="42" width="48" height="48" rx="12" fill="#7c5cff"/>
+  <text x="62" y="73" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">A2</text>
+  <text x="108" y="62" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="700">APPDAET</text>
+  <text x="108" y="84" fill="#aab4c7" font-family="Arial, sans-serif" font-size="13">BTIS2 • GROUP 2</text>
+  <rect x="28" y="142" width="214" height="48" rx="10" fill="#2b3852"/>
+  <text x="58" y="173" fill="#fff" font-family="Arial, sans-serif" font-size="16">▦  Board</text>
+  <text x="58" y="237" fill="#aab4c7" font-family="Arial, sans-serif" font-size="16">☷  Team</text>
+  <text x="58" y="293" fill="#aab4c7" font-family="Arial, sans-serif" font-size="16">▤  Docs</text>
+  <text x="58" y="349" fill="#aab4c7" font-family="Arial, sans-serif" font-size="16">⚿  Privacy</text>
+  <text x="320" y="82" fill="#172033" font-family="Arial, sans-serif" font-size="26" font-weight="700">Project Board</text>
+  <text x="320" y="113" fill="#778198" font-family="Arial, sans-serif" font-size="15">Plan, track, and deliver work together.</text>
+  <rect x="320" y="164" width="280" height="420" rx="14" fill="#e9edf4"/>
+  <rect x="620" y="164" width="280" height="420" rx="14" fill="#e9edf4"/>
+  <rect x="920" y="164" width="280" height="420" rx="14" fill="#e9edf4"/>
+  <text x="348" y="204" fill="#172033" font-family="Arial, sans-serif" font-size="17" font-weight="700">To do</text>
+  <text x="648" y="204" fill="#172033" font-family="Arial, sans-serif" font-size="17" font-weight="700">In progress</text>
+  <text x="948" y="204" fill="#172033" font-family="Arial, sans-serif" font-size="17" font-weight="700">Done</text>
+  <g fill="#fff">
+    <rect x="342" y="230" width="236" height="88" rx="10"/><rect x="342" y="334" width="236" height="88" rx="10"/>
+    <rect x="642" y="230" width="236" height="88" rx="10"/><rect x="642" y="334" width="236" height="88" rx="10"/>
+    <rect x="942" y="230" width="236" height="88" rx="10"/><rect x="942" y="334" width="236" height="88" rx="10"/>
+  </g>
+  <g fill="#34405a" font-family="Arial, sans-serif" font-size="14"><text x="362" y="264">Project planning</text><text x="362" y="368">Write documentation</text><text x="662" y="264">Build dashboard</text><text x="662" y="368">Review requirements</text><text x="962" y="264">Set up team</text><text x="962" y="368">Launch workspace</text></g>
+</svg>
