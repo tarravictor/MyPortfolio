@@ -3,11 +3,61 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Victor Tarra | Portfolio</title>
+
+    <title>Victor Tarra | Information Systems Student &mdash; Portfolio</title>
+    <meta name="description" content="Portfolio of Victor Tarra, an Information Systems student at De La Salle College of Saint Benilde. Selected academic projects, certifications, and GitHub activity." />
+    <meta name="author" content="Victor Tarra" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://tarravictor.github.io/MyPortfolio/" />
 
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta http-equiv="X-Frame-Options" content="DENY" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Victor Tarra" />
+    <meta property="og:title" content="Victor Tarra | Information Systems Student" />
+    <meta property="og:description" content="Selected academic projects, certifications, and GitHub activity." />
+    <meta property="og:url" content="https://tarravictor.github.io/MyPortfolio/" />
+    <meta property="og:image" content="https://tarravictor.github.io/MyPortfolio/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Victor Tarra &mdash; Information Systems Student. Projects, Credentials, Contact." />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Victor Tarra | Information Systems Student" />
+    <meta name="twitter:description" content="Selected academic projects, certifications, and GitHub activity." />
+    <meta name="twitter:image" content="https://tarravictor.github.io/MyPortfolio/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Victor Tarra &mdash; Information Systems Student. Projects, Credentials, Contact." />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Victor Tarra",
+        "url": "https://tarravictor.github.io/MyPortfolio/",
+        "email": "mailto:tarravdc@proton.me",
+        "jobTitle": "Information Systems Student",
+        "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "De La Salle College of Saint Benilde"
+        },
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "San Beda College Alabang"
+        },
+        "knowsAbout": [
+            "Information Systems",
+            "Web Development",
+            "UI/UX Design",
+            "System Design"
+        ],
+        "sameAs": [
+            "https://github.com/tarravictor",
+            "https://linkedin.com/in/tarravictor"
+        ]
+    }
+    </script>
 
     <script>
         if (window.top !== window.self) {
@@ -17,15 +67,20 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="github-credentials.css" />
+    <link rel="stylesheet" href="portfolio.css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <script src="https://unpkg.com/lucide@1.48.0/dist/umd/lucide.min.js"
+            integrity="sha384-Hh7C333mXel+qppGoFs4qAOXp7h67eur4XsQVF2bvHAM3MQ4DX4cQI7oRCzb98J4"
+            crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 </head>
 <body>
-    <header class="nav">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="nav" id="top">
         <div class="nav-container">
-            <div class="logo">VT</div>
-            <nav id="nav-menu">
+            <a class="logo" href="#top" aria-label="Victor Tarra &mdash; back to top">VT</a>
+            <nav id="nav-menu" aria-label="Main navigation">
                 <a href="#about">About Me</a>
                 <a href="#credentials">My Credentials</a>
                 <a href="#projects">My Projects</a>
@@ -34,48 +89,30 @@
         </div>
     </header>
 
-    <main>
-        <section class="hero fade">
+    <main id="main-content" tabindex="-1">
+        <section class="hero fade" aria-labelledby="portfolio-name">
             <div class="container hero-grid">
-                <div>
+                <div class="hero-copy">
                     <p class="tag">Information Systems Student</p>
-                    <h1>Victor Tarra</h1>
+                    <h1 id="portfolio-name">Victor Tarra<span class="name-period" aria-hidden="true">.</span></h1>
+                    <section id="about" class="about-intro" aria-labelledby="about-title" tabindex="-1">
+                        <h2 id="about-title" class="eyebrow">About Me</h2>
+                        <p class="desc">I'm currently pursuing a Bachelor of Science in Information Systems at
+                            <strong>De La Salle College of Saint Benilde</strong>.</p>
+                    </section>
                     <div class="actions">
-                        <a href="#contact" class="btn primary">
-                            <i data-lucide="mail"></i>
-                            <span>Contact</span>
-                        </a>
-                        <a href="#about" class="btn ghost">
-                            <i data-lucide="arrow-right"></i>
-                            <span>Learn More</span>
-                        </a>
+                        <a href="#contact" class="btn primary"><span>Contact</span><i data-lucide="arrow-up-right"></i></a>
+                        <a href="#about" class="btn ghost"><span>Learn More</span><i data-lucide="arrow-right"></i></a>
+                    </div>
+                    <div class="personal-notes">
+                        <div><h3>Focus <span>(Current)</span></h3><p>Certifications, development, and continuous learning.</p></div>
+                        <div><h3>Interests</h3><p>Web development, UI/UX, and system design.</p></div>
                     </div>
                 </div>
-                <div class="hero-img">
-                    <img src="profile(2).png" alt="Victor Tarra profile photo" loading="lazy" />
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section fade">
-            <div class="container">
-                <h2>About Me</h2>
-                <p class="desc">
-                    I'm currently pursuing a Bachelor of Science in Information Systems at
-                    <strong>De La Salle College of Saint Benilde</strong>.
-                </p>
-                <div class="cards">
-                    <div class="card">
-                        <i data-lucide="target"></i>
-                        <h3>Focus (Current)</h3>
-                        <p>Certifications, development, and continuous learning.</p>
-                    </div>
-                    <div class="card">
-                        <i data-lucide="sparkles"></i>
-                        <h3>Interests</h3>
-                        <p>Web development, UI/UX, and system design.</p>
-                    </div>
-                </div>
+                <figure class="hero-portrait">
+                    <div class="portrait-crop"><img src="profile-hero.jpg" srcset="profile-hero-640.jpg 640w, profile-hero.jpg 1000w" sizes="(min-width: 1200px) 30vw, (min-width: 600px) 32vw, 100vw" alt="Portrait of Victor Tarra" fetchpriority="high" decoding="async" width="1000" height="1000" /></div>
+                    <figcaption><span>Learning. Building. Improving.</span><span aria-hidden="true">↘</span></figcaption>
+                </figure>
             </div>
         </section>
 
@@ -91,7 +128,7 @@
                             <h3>Education</h3>
 
                             <div class="school">
-                                <img src="dlscsb.svg" class="school-logo" alt="Benilde logo" loading="lazy" />
+                                <img src="dlscsb.svg" class="school-logo" alt="De La Salle College of Saint Benilde logo" loading="lazy" />
                                 <p>
                                     <strong>De La Salle College of Saint Benilde</strong><br />
                                     Bachelor of Science in Information Systems<br />
@@ -120,7 +157,7 @@
                                 </div>
 
                                 <a href="https://github.com/tarravictor" target="_blank" rel="noopener noreferrer" class="github-profile-icon" aria-label="Open Victor Tarra's GitHub profile">
-                                    <i class="fa fa-github"></i>
+                                    <svg class="brand-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                                 </a>
                             </div>
 
@@ -148,7 +185,7 @@
 
                                 <div id="github-organizations" class="github-org-list">
                                     <a href="https://github.com/CSB-DSTALGO" target="_blank" rel="noopener noreferrer" class="github-org-item">
-                                        <img src="https://avatars.githubusercontent.com/u/307073638?s=200&v=4" alt="CSB-DSTALGO GitHub Organization" class="github-org-avatar">
+                                        <img src="https://avatars.githubusercontent.com/u/307073638?s=200&v=4" alt="CSB-DSTALGO organization avatar" class="github-org-avatar" loading="lazy" decoding="async">
 
                                         <div class="github-org-info">
                                             <strong>CSB-DSTALGO</strong>
@@ -159,7 +196,7 @@
                                     </a>
 
                                     <a href="https://www.facebook.com/profile.php?id=61564322653486" target="_blank" rel="noopener noreferrer" class="github-org-item">
-                                        <img src="BIOS-LOGO.jpg" alt="BIOS-LOGO" class="github-org-avatar">
+                                        <img src="BIOS-LOGO.jpg" alt="Bedan ICT Oriented Society logo" class="github-org-avatar" loading="lazy" decoding="async">
 
                                         <div class="github-org-info">
                                             <strong>Bedan ICT Oriented Society - BIOS</strong>
@@ -179,7 +216,7 @@
 
                         <div class="cert">
                             <div class="cert-left">
-                                <img src="tesda-logo.png" alt="TESDA Logo" class="cert-logo" loading="lazy" />
+                                <img src="tesda-logo.png" alt="TESDA logo" class="cert-logo" loading="lazy" />
                                 <div>
                                     <span>National Certificate II in Computer Systems Servicing</span>
                                     <small>TESDA · Issued Mar 2025</small>
@@ -191,7 +228,7 @@
 
                         <div class="cert">
                             <div class="cert-left">
-                                <img src="anthropic-logo.png" alt="Anthropic Logo" class="cert-logo" loading="lazy" />
+                                <img src="anthropic-logo.png" alt="Anthropic logo" class="cert-logo" loading="lazy" />
                                 <div>
                                     <span>Certificate of Completion: Claude Platform 101</span>
                                     <small>Anthropic · Issued Jul 2026</small>
@@ -203,7 +240,7 @@
 
                         <div class="cert">
                             <div class="cert-left">
-                                <img src="atlassian-logo.svg" alt="Atlassian Logo" class="cert-logo" loading="lazy" />
+                                <img src="atlassian-logo.svg" alt="Atlassian logo" class="cert-logo" loading="lazy" />
                                 <div>
                                     <span>Get started with Agile</span>
                                     <small>Atlassian · Issued Sep 2026</small>
@@ -214,7 +251,7 @@
 
                         <div class="cert">
                             <div class="cert-left">
-                                <img src="google-logo.png" alt="Google Logo" class="cert-logo" loading="lazy" />
+                                <img src="google-logo.png" alt="Google logo" class="cert-logo" loading="lazy" />
                                 <div>
                                     <span>AI Fundamentals</span>
                                     <small>Google · Issued May 2026</small>
@@ -226,7 +263,7 @@
 
                         <div class="cert">
                             <div class="cert-left">
-                                <img src="freecodecamp-logo.svg" alt="freeCodeCamp Logo" class="cert-logo" loading="lazy" />
+                                <img src="freecodecamp-logo.svg" alt="freeCodeCamp logo" class="cert-logo" loading="lazy" />
                                 <div>
                                     <span>Legacy Responsive Web Design V8</span>
                                     <small>freeCodeCamp · Issued Jun 2023</small>
@@ -238,7 +275,7 @@
 
                         <div class="cert">
                             <div class="cert-left">
-                                <img src="code-cred.jpg" alt="CodeCred Logo" class="cert-logo" loading="lazy" />
+                                <img src="code-cred.jpg" alt="CodeCred logo" class="cert-logo" loading="lazy" />
                                 <div>
                                     <span>CodeCred</span>
                                     <small>Sir Bryl Lim · Issued Mar 2026</small>
@@ -309,7 +346,7 @@
                     </div>
                     <div class="card project-card">
                         <div class="project-header">
-                            <i data-lucide="kanban-square"></i>
+                            <i data-lucide="square-kanban"></i>
                             <span class="project-course">APPDAET ( Application Development and Emerging Technologies )</span>
                         </div>
                         <h3>APPDAET Project Manager</h3>
@@ -341,16 +378,10 @@
                 </div>
                 <div class="contact-wrapper">
                     <div class="contact-form" id="jotform-container">
-                        <div id="jotform-loader" style="text-align:center;padding:40px 20px;">
-                            <div style="display:inline-block;width:40px;height:40px;border:4px solid #f3f3f3;border-top:4px solid #3498db;border-radius:50%;animation:spin 1s linear infinite;"></div>
-                            <p style="margin-top:15px;color:#666;">Loading contact form...</p>
+                        <div id="jotform-loader" class="form-fallback">
+                            <a href="https://form.jotform.com/262283000382043" target="_blank" rel="noopener noreferrer">Open the contact form ↗</a>
+                            <p>You can also email me at <a href="mailto:tarravdc@proton.me">tarravdc@proton.me</a>.</p>
                         </div>
-                        <style>
-                            @keyframes spin {
-                                0% { transform: rotate(0deg); }
-                                100% { transform: rotate(360deg); }
-                            }
-                        </style>
                         <div id="jotform-form-wrapper"></div>
                     </div>
                     <div class="contact-links">
@@ -366,7 +397,7 @@
                         </a>
                         <a href="https://linkedin.com/in/tarravictor" target="_blank" rel="noopener noreferrer" class="contact-link">
                             <div class="contact-icon">
-                                <i class="fa fa-linkedin-square" style="font-size:28px;width:28px;text-align:center;"></i>
+                                <svg class="brand-icon brand-icon-lg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 01-2.07-2.06 2.07 2.07 0 112.07 2.06zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.23 0z"/></svg>
                             </div>
                             <div class="contact-info">
                                 <span class="contact-label">LinkedIn</span>
@@ -376,7 +407,7 @@
                         </a>
                         <a href="https://github.com/tarravictor" target="_blank" rel="noopener noreferrer" class="contact-link">
                             <div class="contact-icon">
-                                <i class="fa fa-github" style="font-size:28px;width:28px;text-align:center;"></i>
+                                <svg class="brand-icon brand-icon-lg" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                             </div>
                             <div class="contact-info">
                                 <span class="contact-label">GitHub</span>
@@ -394,171 +425,6 @@
         <p>&copy; 2026 Victor Tarra</p>
     </footer>
 
-    <script>
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I')) {
-                e.preventDefault();
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && (e.key === 'j' || e.key === 'J')) {
-                e.preventDefault();
-                return false;
-            }
-            if (e.key === 'F12') {
-                e.preventDefault();
-                return false;
-            }
-            if (e.ctrlKey && e.key === 's') {
-                e.preventDefault();
-                return false;
-            }
-            if (e.ctrlKey && e.key === 'c') {
-                var tagName = e.target.tagName.toLowerCase();
-                if (tagName !== 'input' && tagName !== 'textarea' && tagName !== 'select') {
-                    e.preventDefault();
-                    return false;
-                }
-            }
-        });
-
-        document.addEventListener("DOMContentLoaded", function() {
-            if (window.lucide) {
-                lucide.createIcons();
-            }
-
-            // Keep the GitHub year label current.
-            var githubYear = document.getElementById('github-year');
-            if (githubYear) {
-                githubYear.textContent = new Date().getFullYear();
-            }
-
-            var faders = document.querySelectorAll(".fade");
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            });
-
-            faders.forEach(function(element) {
-                observer.observe(element);
-            });
-
-            function loadJotForm() {
-                var container = document.getElementById('jotform-container');
-
-                if (container.getAttribute('data-form-loaded') === 'true') {
-                    return;
-                }
-
-                var loader = document.getElementById('jotform-loader');
-                if (loader) {
-                    loader.style.display = 'none';
-                }
-
-                var formWrapper = document.getElementById('jotform-form-wrapper');
-                if (!formWrapper) return;
-
-                var iframe = document.createElement('iframe');
-                iframe.id = 'JotFormIFrame-262283000382043';
-                iframe.title = 'Contact';
-                iframe.allowtransparency = 'true';
-                iframe.allow = 'geolocation; microphone; camera; fullscreen; payment';
-                iframe.src = 'https://form.jotform.com/262283000382043';
-                iframe.frameborder = '0';
-                iframe.style.minWidth = '100%';
-                iframe.style.maxWidth = '100%';
-                iframe.style.height = '539px';
-                iframe.style.border = 'none';
-                iframe.scrolling = 'no';
-                iframe.loading = 'lazy';
-
-                iframe.onload = function() {
-                    window.parent.scrollTo(0, 0);
-                };
-
-                formWrapper.innerHTML = '';
-                formWrapper.appendChild(iframe);
-
-                var script = document.createElement('script');
-                script.src = 'https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js';
-                script.async = true;
-
-                script.onload = function() {
-                    if (window.jotformEmbedHandler) {
-                        window.jotformEmbedHandler(
-                            "iframe[id='JotFormIFrame-262283000382043']",
-                            "https://form.jotform.com/"
-                        );
-                        container.setAttribute('data-form-loaded', 'true');
-                    }
-                };
-
-                script.onerror = function() {
-                    formWrapper.innerHTML = `
-                                    <div style="padding: 20px; text-align: center; background: #f8f9fa; border-radius: 8px;">
-                                        <p style="color: #e74c3c; margin-bottom: 10px;">Could not load contact form</p>
-                                        <p style="color: #666;">Please email me directly at <a href="mailto:tarravdc@proton.me" style="color: #3498db;">tarravdc@proton.me</a></p>
-                                    </div>
-                                `;
-                };
-
-                document.head.appendChild(script);
-            }
-
-            var contactSection = document.getElementById('contact');
-
-            if (contactSection) {
-                var contactObserver = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            setTimeout(loadJotForm, 500);
-                            contactObserver.disconnect();
-                        }
-                    });
-                }, {
-                    threshold: 0.1
-                });
-
-                contactObserver.observe(contactSection);
-            }
-
-            var scrollTimeout;
-            window.addEventListener('scroll', function() {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(function() {
-                    var container = document.getElementById('jotform-container');
-                    if (container && container.getAttribute('data-form-loaded') === 'true') {
-                        return;
-                    }
-                }, 200);
-            });
-
-            document.addEventListener('selectstart', function(e) {
-                var tagName = e.target.tagName.toLowerCase();
-                if (tagName !== 'input' && tagName !== 'textarea' && tagName !== 'select') {
-                    e.preventDefault();
-                }
-            });
-        });
-
-        console.log('%c⚠️ This website is protected. Unauthorized copying or reproduction is prohibited. ⚠️',
-            'color: red; font-size: 16px; font-weight: bold;');
-        console.log('%c© 2026 Victor Tarra. All Rights Reserved.',
-            'color: #666; font-size: 12px;');
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>

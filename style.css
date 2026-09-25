@@ -35,6 +35,18 @@ svg {
     stroke-width: 1.8;
 }
 
+.brand-icon {
+    width: 1em;
+
+    height: 1em;
+
+    flex: none;
+
+    fill: currentColor;
+
+    stroke: none;
+}
+
 /* NAVBAR */
 .nav {
     position: sticky;
@@ -60,9 +72,10 @@ svg {
     font-weight: 800;
     font-size: 18px;
     color: #000000;
+    text-decoration: none;
 }
 
-.nav a {
+#nav-menu a {
     text-decoration: none;
     margin-left: 1.5rem;
     color: var(--muted);
@@ -70,7 +83,7 @@ svg {
     transition: color 0.2s ease;
 }
 
-.nav a:hover {
+#nav-menu a:hover {
     color: var(--text);
 }
 
@@ -130,63 +143,6 @@ svg {
     color: var(--text);
 }
 
-.hero-img {
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-img::before {
-    content: "";
-
-    position: absolute;
-
-    width: 85%;
-    height: 85%;
-
-    border-radius: 36px;
-
-    background: var(--soft-bg);
-
-    transform: rotate(4deg);
-
-    z-index: 0;
-}
-
-.hero-img img {
-    position: relative;
-    z-index: 1;
-
-    width: 100%;
-    max-width: 470px;
-
-    aspect-ratio: 4 / 4.5;
-
-    display: block;
-
-    object-fit: cover;
-    object-position: center top;
-
-    border-radius: 30px;
-
-    box-shadow:
-        0 30px 70px rgba(0, 0, 0, 0.12),
-        0 8px 20px rgba(0, 0, 0, 0.06);
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
-}
-
-.hero-img:hover img {
-    transform: translateY(-6px);
-
-    box-shadow:
-        0 38px 80px rgba(0, 0, 0, 0.15),
-        0 10px 24px rgba(0, 0, 0, 0.07);
-}
 
 /* BUTTONS */
 .actions {
@@ -288,7 +244,6 @@ svg {
 }
 
 /* CARDS */
-.cards,
 .grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -336,20 +291,8 @@ svg {
 
 /* =========================
    CREDENTIALS
+   Grid layout lives in github-credentials.css
 ========================= */
-
-#credentials .grid {
-    display: grid;
-
-    grid-template-columns: 0.95fr 1.05fr;
-
-    gap: 1.5rem;
-
-    margin-top: 2rem;
-
-    /* Makes both columns stretch evenly */
-    align-items: stretch;
-}
 
 #credentials .card {
     padding: 1.6rem;
@@ -816,6 +759,13 @@ svg {
     stroke-width: 1.8;
 }
 
+/* Brand marks are filled glyphs, not stroked line icons. */
+.contact-icon .brand-icon-lg {
+    width: 26px;
+
+    height: 26px;
+}
+
 .contact-link:hover .contact-icon {
     transform: scale(1.05);
 }
@@ -919,10 +869,6 @@ svg {
         gap: 3rem;
     }
 
-    .hero-img img {
-        max-width: 390px;
-    }
-
     /* CONTACT */
     .contact-wrapper {
         grid-template-columns: 1fr;
@@ -1006,29 +952,14 @@ svg {
         margin-top: 1.8rem;
     }
 
-    .hero-img {
-        order: 2;
-    }
-
-    .hero-img::before {
-        width: 75%;
-
-        height: 90%;
-    }
-
-    .hero-img img {
-        width: min(100%, 360px);
-    }
-
     .section {
         padding: 3.5rem 1rem;
     }
 
-    .cards,
-    .grid,
-    #credentials .grid {
+    .grid {
         grid-template-columns: 1fr;
     }
+
 
     #credentials .card {
         padding: 1.4rem;
@@ -1036,12 +967,8 @@ svg {
         height: auto;
     }
 
-    /*
-       On mobile the cards stack,
-       so they should return to their natural height.
-    */
-    #credentials .grid > .card {
-        height: auto;
+    .grid {
+        grid-template-columns: 1fr;
     }
 
     .school {
@@ -1165,16 +1092,6 @@ svg {
         max-width: 300px;
     }
 
-    .hero-img img {
-        max-width: 310px;
-
-        border-radius: 24px;
-    }
-
-    .hero-img::before {
-        border-radius: 28px;
-    }
-
     .section h2 {
         font-size: 1.7rem;
     }
@@ -1247,17 +1164,10 @@ svg {
 
 /* =========================================
    CREDENTIALS - MATCH COLUMN HEIGHTS
+   Grid columns/breakpoints live in
+   github-credentials.css; these only
+   align the two columns to equal height.
 ========================================= */
-
-#credentials .credentials-grid {
-    display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 1.5rem;
-    margin-top: 2rem;
-
-    /* Makes Certificates match the full left column */
-    align-items: stretch;
-}
 
 #credentials .credentials-left {
     display: flex;
@@ -1272,10 +1182,6 @@ svg {
 
 /* MOBILE */
 @media (max-width: 768px) {
-    #credentials .credentials-grid {
-        grid-template-columns: 1fr;
-    }
-
     #credentials .certificates-card {
         height: auto;
     }

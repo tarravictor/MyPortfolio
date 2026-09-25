@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111111"/>
+  <g fill="none" stroke="#3a3a3a" stroke-width="1">
+    <path d="M0 90H1200M0 540H1200"/>
+  </g>
+  <text x="80" y="132" fill="#9a9a9a" font-family="Helvetica, Arial, sans-serif" font-size="20" letter-spacing="4">INFORMATION SYSTEMS STUDENT</text>
+  <text x="80" y="392" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="128" font-weight="700" letter-spacing="-6">Victor Tarra</text>
+  <text x="80" y="470" fill="#c8c8c8" font-family="Helvetica, Arial, sans-serif" font-size="30">Projects &#183; Credentials &#183; Contact</text>
+  <g transform="translate(1010 300)">
+    <rect x="-118" y="-118" width="236" height="236" rx="48" fill="none" stroke="#ffffff" stroke-width="6"/>
+    <text x="0" y="30" fill="#ffffff" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="104">&lt;/&gt;</text>
+  </g>
+  <text x="80" y="588" fill="#6e6e73" font-family="Helvetica, Arial, sans-serif" font-size="22">tarravictor.github.io/MyPortfolio</text>
+</svg>
