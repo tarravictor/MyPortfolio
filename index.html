@@ -87,6 +87,7 @@
     #progress { transform-origin: 0 50%; transform: scaleX(0); }
     .nav-link { position: relative; }
     .nav-link::after { content: ''; position: absolute; left: 50%; bottom: -8px; width: 4px; height: 4px; border-radius: 9999px; background: #000; transform: translateX(-50%) scale(0); transition: transform .3s var(--ease); }
+    @media (min-width: 768px) { .nav-link::after { border-radius: 0; } }
     .nav-link.active { color: #000; }
     .nav-link.active::after { transform: translateX(-50%) scale(1); }
 
@@ -190,10 +191,10 @@
           </div>
         </div>
         <figure class="reveal group order-first flex items-center gap-4 md:order-none md:col-span-4 md:block md:w-full" style="--d:.3s">
-          <div class="relative shrink-0 overflow-hidden rounded-2xl border border-rule bg-smoke p-1.5 md:rounded-3xl md:p-2.5">
+          <div class="relative shrink-0 overflow-hidden rounded-2xl md:rounded-none border border-rule bg-smoke p-1.5 md:p-2.5">
             <img src="profile-hero.jpg" srcset="profile-hero-640.jpg 640w, profile-hero.jpg 1000w" sizes="(min-width: 1152px) 360px, (min-width: 768px) 32vw, 72px"
                  alt="Portrait of Victor Tarra" fetchpriority="high" decoding="async" width="1000" height="1000"
-                 class="mono h-20 w-20 rounded-xl object-cover md:aspect-[4/5] md:h-auto md:w-full md:rounded-2xl" />
+                 class="mono h-20 w-20 rounded-xl md:rounded-none object-cover md:aspect-[4/5] md:h-auto md:w-full md:rounded-none" />
           </div>
           <figcaption class="flex items-center justify-between text-sm text-muted md:mt-3">
             <span>Learning. Building. Improving.</span><i data-lucide="arrow-down-right" class="ml-3 hidden md:block"></i>
@@ -245,7 +246,7 @@
               <span class="title text-[clamp(1.75rem,3.6vw,2.75rem)] font-medium leading-none tracking-tight sm:col-span-7">BeepAlerts.PH</span>
               <span class="flex items-center justify-between gap-4 text-muted sm:col-span-4">
                 <span class="border border-rule px-2.5 py-1 text-xs">ASP.NET Core MVC</span>
-                <span class="icon-box grid h-10 w-10 place-items-center rounded-full border border-rule text-black"><i data-lucide="arrow-up-right" class="nudge"></i></span>
+                <span class="icon-box grid h-10 w-10 place-items-center rounded-full md:rounded-none border border-rule text-black"><i data-lucide="arrow-up-right" class="nudge"></i></span>
               </span>
             </a>
             <details class="pb-2">
@@ -274,7 +275,7 @@
               <span class="title text-[clamp(1.75rem,3.6vw,2.75rem)] font-medium leading-none tracking-tight sm:col-span-7">TommyCo Coffee Shop</span>
               <span class="flex items-center justify-between gap-4 text-muted sm:col-span-4">
                 <span class="border border-rule px-2.5 py-1 text-xs">Information Systems</span>
-                <span class="icon-box grid h-10 w-10 place-items-center rounded-full border border-rule text-black"><i data-lucide="arrow-up-right" class="nudge"></i></span>
+                <span class="icon-box grid h-10 w-10 place-items-center rounded-full md:rounded-none border border-rule text-black"><i data-lucide="arrow-up-right" class="nudge"></i></span>
               </span>
             </a>
             <details class="pb-2">
@@ -302,7 +303,7 @@
               <span class="title text-[clamp(1.75rem,3.6vw,2.75rem)] font-medium leading-none tracking-tight sm:col-span-7">APPDAET Project Manager</span>
               <span class="flex items-center justify-between gap-4 text-muted sm:col-span-4">
                 <span class="border border-rule px-2.5 py-1 text-xs">Project Management</span>
-                <span class="icon-box grid h-10 w-10 place-items-center rounded-full border border-rule text-black"><i data-lucide="arrow-up-right" class="nudge"></i></span>
+                <span class="icon-box grid h-10 w-10 place-items-center rounded-full md:rounded-none border border-rule text-black"><i data-lucide="arrow-up-right" class="nudge"></i></span>
               </span>
             </a>
             <details class="pb-2">
@@ -335,7 +336,7 @@
           <ol class="relative md:col-span-9">
             <span class="absolute bottom-6 left-6 top-6 w-px bg-rule" aria-hidden="true"></span>
             <li class="reveal group relative flex items-center gap-5 pb-8">
-              <img id="seal-dlscsb" src="dlscsb.svg" alt="De La Salle College of Saint Benilde seal" width="48" height="48" loading="lazy" class="seal mono relative h-12 w-12 shrink-0 rounded-full border border-rule bg-white object-contain p-1 transition-transform duration-500 group-hover:scale-110" />
+              <img id="seal-dlscsb" src="dlscsb.svg" alt="De La Salle College of Saint Benilde seal" width="48" height="48" loading="lazy" class="seal mono relative h-12 w-12 shrink-0 rounded-full md:rounded-none border border-rule bg-white object-contain p-1 transition-transform duration-500 group-hover:scale-110" />
               <div class="flex-1">
                 <p class="font-medium">De La Salle College of Saint Benilde</p>
                 <p class="text-muted">Bachelor of Science in Information Systems</p>
@@ -343,7 +344,7 @@
               <span class="flex shrink-0 items-center gap-1.5 bg-black px-2.5 py-1 text-xs text-white tabular-nums"><i data-lucide="calendar"></i>2025–2030</span>
             </li>
             <li class="reveal group relative flex items-center gap-5" style="--d:.1s">
-              <img id="seal-sbca" src="sbca.png" alt="San Beda College Alabang seal" width="48" height="48" loading="lazy" class="seal mono relative h-12 w-12 shrink-0 rounded-full border border-rule bg-white object-contain p-1 transition-transform duration-500 group-hover:scale-110" />
+              <img id="seal-sbca" src="sbca.png" alt="San Beda College Alabang seal" width="48" height="48" loading="lazy" class="seal mono relative h-12 w-12 shrink-0 rounded-full md:rounded-none border border-rule bg-white object-contain p-1 transition-transform duration-500 group-hover:scale-110" />
               <div class="flex-1">
                 <p class="font-medium">San Beda College Alabang</p>
                 <p class="text-muted">TVL–ICT Computer Programming with Computer Systems Servicing</p>
@@ -461,7 +462,7 @@
   </div>
 
   <!-- Back to top with scroll progress ring -->
-  <a id="to-top" href="#top" class="group fixed bottom-6 right-6 z-30 grid h-12 w-12 place-items-center rounded-full bg-white shadow-[0_8px_30px_-8px_rgba(0,0,0,.25)]" aria-label="Back to top">
+  <a id="to-top" href="#top" class="group fixed bottom-6 right-6 z-30 grid h-12 w-12 place-items-center rounded-full md:rounded-none bg-white shadow-[0_8px_30px_-8px_rgba(0,0,0,.25)]" aria-label="Back to top">
     <svg class="absolute inset-0 -rotate-90" viewBox="0 0 48 48" aria-hidden="true">
       <circle cx="24" cy="24" r="22" fill="none" stroke="#EAEAEA" stroke-width="1.5" />
       <circle id="ring" cx="24" cy="24" r="22" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="138.2" stroke-dashoffset="138.2" />

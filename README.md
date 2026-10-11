@@ -23,6 +23,7 @@ Welcome to my personal portfolio website repository. This project showcases my f
 - Sections for About, Projects, Credentials, and Contact
 - Project previews: BeepAlerts.PH, TommyCo Coffee Shop, and APPDAET Project Manager
 - Certifications and GitHub activity chart
+- Sharp square corners on desktop, softly rounded corners on mobile
 - Responsive layout styled with Tailwind CSS (loaded via CDN), no build step
 
 ## Run locally
