@@ -36,4 +36,4 @@ Then open <http://localhost:4173>.
 
 ## Contact
 
-[LinkedIn](https://www.linkedin.com) · [GitHub](https://github.com/tarravictor) · tarravdc@proton.me
+[LinkedIn](https://linkedin.com/in/tarravictor) · [GitHub](https://github.com/tarravictor) · tarravdc@proton.me
