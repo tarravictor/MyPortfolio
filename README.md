@@ -19,10 +19,11 @@ Welcome to my personal portfolio website repository. This project showcases my f
 
 ## Highlights
 
-- Clean, editorial layout with a monochrome portrait and image-led project previews
-- Projects, credentials, and contact details in accessible dialogs
-- Responsive design with reduced-motion support
-- No dependencies and no build step
+- Minimal, editorial design with a large name hero and monochrome portrait
+- Sections for About, Projects, Credentials, and Contact
+- Project previews: BeepAlerts.PH, TommyCo Coffee Shop, and APPDAET Project Manager
+- Certifications and GitHub activity chart
+- Responsive layout styled with Tailwind CSS (loaded via CDN), no build step
 
 ## Run locally
 

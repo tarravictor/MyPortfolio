@@ -1,430 +1,586 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Victor Tarra | Information Systems Student &mdash; Portfolio</title>
-    <meta name="description" content="Portfolio of Victor Tarra, an Information Systems student at De La Salle College of Saint Benilde. Selected academic projects, certifications, and GitHub activity." />
-    <meta name="author" content="Victor Tarra" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="canonical" href="https://tarravictor.github.io/MyPortfolio/" />
+  <title>Victor Tarra | Information Systems Student — Portfolio</title>
+  <meta name="description" content="Portfolio of Victor Tarra, an Information Systems student at De La Salle College of Saint Benilde. Selected academic projects, certifications, and GitHub activity." />
+  <meta name="author" content="Victor Tarra" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://tarravictor.github.io/MyPortfolio/" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Victor Tarra" />
+  <meta property="og:title" content="Victor Tarra | Information Systems Student" />
+  <meta property="og:description" content="Selected academic projects, certifications, and GitHub activity." />
+  <meta property="og:url" content="https://tarravictor.github.io/MyPortfolio/" />
+  <meta property="og:image" content="https://tarravictor.github.io/MyPortfolio/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Victor Tarra — Information Systems Student. Projects, Credentials, Contact." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Victor Tarra | Information Systems Student" />
+  <meta name="twitter:description" content="Selected academic projects, certifications, and GitHub activity." />
+  <meta name="twitter:image" content="https://tarravictor.github.io/MyPortfolio/og-image.jpg" />
+  <meta name="twitter:image:alt" content="Victor Tarra — Information Systems Student. Projects, Credentials, Contact." />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Victor Tarra" />
-    <meta property="og:title" content="Victor Tarra | Information Systems Student" />
-    <meta property="og:description" content="Selected academic projects, certifications, and GitHub activity." />
-    <meta property="og:url" content="https://tarravictor.github.io/MyPortfolio/" />
-    <meta property="og:image" content="https://tarravictor.github.io/MyPortfolio/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Victor Tarra &mdash; Information Systems Student. Projects, Credentials, Contact." />
-    <meta property="og:locale" content="en_US" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Victor Tarra",
+    "url": "https://tarravictor.github.io/MyPortfolio/",
+    "email": "mailto:tarravdc@proton.me",
+    "jobTitle": "Information Systems Student",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "De La Salle College of Saint Benilde" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "San Beda College Alabang" },
+    "knowsAbout": ["Information Systems", "Web Development", "UI/UX Design", "System Design"],
+    "sameAs": ["https://github.com/tarravictor", "https://linkedin.com/in/tarravictor"]
+  }
+  </script>
+  <script>if (window.top !== window.self) window.top.location = window.self.location;</script>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Victor Tarra | Information Systems Student" />
-    <meta name="twitter:description" content="Selected academic projects, certifications, and GitHub activity." />
-    <meta name="twitter:image" content="https://tarravictor.github.io/MyPortfolio/og-image.jpg" />
-    <meta name="twitter:image:alt" content="Victor Tarra &mdash; Information Systems Student. Projects, Credentials, Contact." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Victor Tarra",
-        "url": "https://tarravictor.github.io/MyPortfolio/",
-        "email": "mailto:tarravdc@proton.me",
-        "jobTitle": "Information Systems Student",
-        "affiliation": {
-            "@type": "CollegeOrUniversity",
-            "name": "De La Salle College of Saint Benilde"
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { smoke: '#F5F5F5', rule: '#EAEAEA', muted: '#737373' },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
         },
-        "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "San Beda College Alabang"
-        },
-        "knowsAbout": [
-            "Information Systems",
-            "Web Development",
-            "UI/UX Design",
-            "System Design"
-        ],
-        "sameAs": [
-            "https://github.com/tarravictor",
-            "https://linkedin.com/in/tarravictor"
-        ]
+      },
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@1.48.0/dist/umd/lucide.min.js"
+          integrity="sha384-Hh7C333mXel+qppGoFs4qAOXp7h67eur4XsQVF2bvHAM3MQ4DX4cQI7oRCzb98J4"
+          crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+  <style>
+    :root { --ease: cubic-bezier(.2,.8,.2,1); }
+    html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+    :focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
+    svg.lucide { width: 1em; height: 1em; stroke-width: 1.5; flex-shrink: 0; }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s); }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* Hero name: letters rise in */
+    .split .ch { display: inline-block; transform: translateY(110%); transition: transform 1s var(--ease); transition-delay: calc(var(--i) * 35ms + .1s); }
+    .split .line { display: block; overflow: hidden; padding-bottom: .04em; }
+    .loaded .split .ch { transform: none; }
+
+    /* Nav */
+    #site-nav { transition: transform .4s var(--ease), border-color .3s; }
+    #site-nav.hide { transform: translateY(-100%); }
+    #progress { transform-origin: 0 50%; transform: scaleX(0); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; left: 50%; bottom: -8px; width: 4px; height: 4px; border-radius: 9999px; background: #000; transform: translateX(-50%) scale(0); transition: transform .3s var(--ease); }
+    .nav-link.active { color: #000; }
+    .nav-link.active::after { transform: translateX(-50%) scale(1); }
+
+    /* Draw-in underline */
+    .u { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .4s var(--ease); }
+    .u:hover, .group:hover .u { background-size: 100% 1px; }
+
+    /* Arrows / icons */
+    .nudge { transition: transform .35s var(--ease); }
+    .group:hover .nudge { transform: translate(3px, -3px); }
+    .group:hover .nudge-r { transform: translateX(4px); }
+    .group:hover .nudge-d { transform: translateY(3px); }
+    .icon-box { transition: background-color .3s, color .3s, border-color .3s, transform .35s var(--ease); }
+    .group:hover .icon-box { background: #000; color: #fff; border-color: #000; transform: rotate(-6deg); }
+
+    /* Buttons: fill slides up on hover */
+    .btn { position: relative; isolation: isolate; overflow: hidden; }
+    .btn::before { content: ''; position: absolute; inset: 0; z-index: -1; transform: translateY(101%); transition: transform .45s var(--ease); }
+    .btn:hover::before { transform: none; }
+    .btn-dark { background: #000; color: #fff; }
+    .btn-dark::before { background: #262626; }
+    .btn-line { box-shadow: inset 0 0 0 1px #000; transition: color .3s; }
+    .btn-line::before { background: #000; }
+    .btn-line:hover { color: #fff; }
+
+    .mono { filter: grayscale(1); transition: filter .5s ease, transform .8s var(--ease); }
+    .group:hover .mono { filter: none; }
+
+    /* List rows slide on hover */
+    .row { transition: padding .35s var(--ease), background-color .3s; }
+    @media (hover: hover) { .row:hover { padding-left: .75rem; padding-right: .75rem; background: #F5F5F5; } }
+
+    /* Projects: floating preview follows the cursor */
+    #preview { position: fixed; top: 0; left: 0; z-index: 30; width: 340px; aspect-ratio: 16/10; pointer-events: none; opacity: 0; transform: translate(-50%, -50%) scale(.85); transition: opacity .3s ease, transform .4s var(--ease); overflow: hidden; box-shadow: 0 30px 60px -20px rgba(0,0,0,.35); }
+    #preview.show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    #preview img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .3s; }
+    #preview img.on { opacity: 1; }
+    .project .title { transition: transform .5s var(--ease), color .3s; }
+    @media (hover: hover) {
+      .projects:hover .project .title { color: #c4c4c4; }
+      .projects .project:hover .title { color: #000; transform: translateX(1rem); }
     }
-    </script>
 
-    <script>
-        if (window.top !== window.self) {
-            window.top.location = window.self.location;
-        }
-    </script>
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    .plus { transition: transform .35s var(--ease); }
+    details[open] > summary .plus { transform: rotate(45deg); }
+    details[open] > div { animation: open .45s var(--ease); }
+    @keyframes open { from { opacity: 0; transform: translateY(-6px); } }
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="github-credentials.css" />
-    <link rel="stylesheet" href="portfolio.css" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <script src="https://unpkg.com/lucide@1.48.0/dist/umd/lucide.min.js"
-            integrity="sha384-Hh7C333mXel+qppGoFs4qAOXp7h67eur4XsQVF2bvHAM3MQ4DX4cQI7oRCzb98J4"
-            crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    /* Back-to-top with progress ring */
+    #to-top { opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .3s, transform .4s var(--ease); }
+    #to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+    #ring { transition: stroke-dashoffset .1s linear; }
+
+    #toast { opacity: 0; transform: translate(-50%, 12px); transition: opacity .3s, transform .4s var(--ease); }
+    #toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal, .split .ch { opacity: 1; transform: none; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+    }
+  </style>
 </head>
-<body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
-    <header class="nav" id="top">
-        <div class="nav-container">
-            <a class="logo" href="#top" aria-label="Victor Tarra &mdash; back to top">VT</a>
-            <nav id="nav-menu" aria-label="Main navigation">
-                <a href="#about">About Me</a>
-                <a href="#credentials">My Credentials</a>
-                <a href="#projects">My Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
+<body class="overflow-x-clip bg-white font-sans text-[15px] text-black antialiased selection:bg-black selection:text-white">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-black focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+
+  <!-- Nav -->
+  <header id="site-nav" class="fixed inset-x-0 top-0 z-40 border-b border-transparent bg-white/85 backdrop-blur-md">
+    <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6" aria-label="Main navigation">
+      <a href="#top" class="group flex items-center gap-2.5 font-medium" aria-label="Victor Tarra — back to top">
+        <span class="grid h-7 w-7 place-items-center bg-black text-[11px] font-semibold text-white transition-transform duration-500 group-hover:rotate-90">VT</span>
+        <span class="hidden sm:inline">Victor Tarra</span>
+      </a>
+      <ul class="flex items-center gap-6 text-muted sm:gap-8">
+        <li class="hidden sm:block"><a href="#about" class="nav-link transition-colors hover:text-black">About</a></li>
+        <li><a href="#projects" class="nav-link transition-colors hover:text-black">Projects</a></li>
+        <li class="hidden sm:block"><a href="#credentials" class="nav-link transition-colors hover:text-black">Credentials</a></li>
+        <li><a href="#contact" class="btn btn-dark group flex items-center gap-1.5 px-4 py-2 text-sm">Contact <i data-lucide="arrow-up-right" class="nudge"></i></a></li>
+      </ul>
+    </nav>
+    <div id="progress" class="h-px bg-black"></div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <div class="mx-auto max-w-6xl px-6">
+      <!-- Hero -->
+      <section id="top" class="grid min-h-[92svh] content-center gap-10 pb-16 pt-28 md:grid-cols-12 md:items-end md:gap-12" aria-labelledby="portfolio-name">
+        <div class="md:col-span-8">
+          <p class="reveal mb-8 inline-flex items-center gap-2 text-muted"><i data-lucide="graduation-cap"></i>Information Systems Student</p>
+          <h1 id="portfolio-name" class="split text-[clamp(4rem,17vw,10rem)] font-semibold leading-[0.88] tracking-[-0.055em]" aria-label="Victor Tarra.">
+            <span class="line" aria-hidden="true">Victor</span><span class="line" aria-hidden="true">Tarra.</span>
+          </h1>
+          <p class="reveal mt-10 max-w-md text-lg leading-relaxed text-neutral-600" style="--d:.5s">
+            Information Systems student at <span class="text-black underline decoration-1 underline-offset-4">De La Salle College of Saint Benilde</span>, interested in web development, UI/UX, and system design.
+          </p>
+          <div class="reveal mt-10 flex flex-wrap items-center gap-3" style="--d:.6s">
+            <a href="#contact" class="btn btn-dark group flex items-center gap-2 px-6 py-3.5">Get in touch <i data-lucide="arrow-up-right" class="nudge"></i></a>
+            <a href="#projects" class="btn btn-line group flex items-center gap-2 px-6 py-3.5">View projects <i data-lucide="arrow-down" class="nudge nudge-d"></i></a>
+          </div>
         </div>
-    </header>
+        <figure class="reveal group order-first flex items-center gap-4 md:order-none md:col-span-4 md:block md:w-full" style="--d:.3s">
+          <div class="relative shrink-0 overflow-hidden rounded-2xl border border-rule bg-smoke p-1.5 md:rounded-3xl md:p-2.5">
+            <img src="profile-hero.jpg" srcset="profile-hero-640.jpg 640w, profile-hero.jpg 1000w" sizes="(min-width: 1152px) 360px, (min-width: 768px) 32vw, 72px"
+                 alt="Portrait of Victor Tarra" fetchpriority="high" decoding="async" width="1000" height="1000"
+                 class="mono h-20 w-20 rounded-xl object-cover md:aspect-[4/5] md:h-auto md:w-full md:rounded-2xl" />
+          </div>
+          <figcaption class="flex items-center justify-between text-sm text-muted md:mt-3">
+            <span>Learning. Building. Improving.</span><i data-lucide="arrow-down-right" class="ml-3 hidden md:block"></i>
+          </figcaption>
+        </figure>
+      </section>
 
-    <main id="main-content" tabindex="-1">
-        <section class="hero fade" aria-labelledby="portfolio-name">
-            <div class="container hero-grid">
-                <div class="hero-copy">
-                    <p class="tag">Information Systems Student</p>
-                    <h1 id="portfolio-name">Victor Tarra<span class="name-period" aria-hidden="true">.</span></h1>
-                    <section id="about" class="about-intro" aria-labelledby="about-title" tabindex="-1">
-                        <h2 id="about-title" class="eyebrow">About Me</h2>
-                        <p class="desc">I'm currently pursuing a Bachelor of Science in Information Systems at
-                            <strong>De La Salle College of Saint Benilde</strong>.</p>
-                    </section>
-                    <div class="actions">
-                        <a href="#contact" class="btn primary"><span>Contact</span><i data-lucide="arrow-up-right"></i></a>
-                        <a href="#about" class="btn ghost"><span>Learn More</span><i data-lucide="arrow-right"></i></a>
-                    </div>
-                    <div class="personal-notes">
-                        <div><h3>Focus <span>(Current)</span></h3><p>Certifications, development, and continuous learning.</p></div>
-                        <div><h3>Interests</h3><p>Web development, UI/UX, and system design.</p></div>
-                    </div>
-                </div>
-                <figure class="hero-portrait">
-                    <div class="portrait-crop"><img src="profile-hero.jpg" srcset="profile-hero-640.jpg 640w, profile-hero.jpg 1000w" sizes="(min-width: 1200px) 30vw, (min-width: 600px) 32vw, 100vw" alt="Portrait of Victor Tarra" fetchpriority="high" decoding="async" width="1000" height="1000" /></div>
-                    <figcaption><span>Learning. Building. Improving.</span><span aria-hidden="true">↘</span></figcaption>
-                </figure>
+      <!-- About -->
+      <section id="about" class="grid gap-8 border-t border-rule py-24 md:grid-cols-12" aria-labelledby="about-title">
+        <h2 id="about-title" class="flex items-center gap-2 self-start text-muted md:sticky md:top-24 md:col-span-3"><span class="tabular-nums">01</span><span class="h-px w-6 bg-rule"></span>About</h2>
+        <div class="md:col-span-9">
+          <p class="reveal max-w-3xl text-[clamp(1.5rem,3vw,2.25rem)] leading-snug tracking-tight">
+            I'm currently pursuing a Bachelor of Science in Information Systems at
+            <span class="underline decoration-1 underline-offset-[0.2em]">De La Salle College of Saint Benilde</span>.
+          </p>
+          <div class="mt-16 grid gap-10 sm:grid-cols-2">
+            <div class="reveal">
+              <h3 class="mb-3 text-muted">Focus</h3>
+              <ul>
+                <li class="group row flex items-center gap-4 border-b border-rule py-3"><span class="icon-box grid h-9 w-9 place-items-center border border-rule"><i data-lucide="badge-check"></i></span>Certifications</li>
+                <li class="group row flex items-center gap-4 border-b border-rule py-3"><span class="icon-box grid h-9 w-9 place-items-center border border-rule"><i data-lucide="terminal"></i></span>Development</li>
+                <li class="group row flex items-center gap-4 py-3"><span class="icon-box grid h-9 w-9 place-items-center border border-rule"><i data-lucide="infinity"></i></span>Continuous learning</li>
+              </ul>
             </div>
-        </section>
-
-        <section id="credentials" class="section alt fade">
-            <div class="container">
-                <h2> My Credentials</h2>
-
-                <div class="credentials-grid">
-                    <!-- LEFT COLUMN -->
-                    <div class="credentials-left">
-                        <!-- EDUCATION -->
-                        <div class="card">
-                            <h3>Education</h3>
-
-                            <div class="school">
-                                <img src="dlscsb.svg" class="school-logo" alt="De La Salle College of Saint Benilde logo" loading="lazy" />
-                                <p>
-                                    <strong>De La Salle College of Saint Benilde</strong><br />
-                                    Bachelor of Science in Information Systems<br />
-                                    2025–2030
-                                </p>
-                            </div>
-
-                            <div class="edu-divider"></div>
-
-                            <div class="school">
-                                <img src="sbca.png" class="school-logo" alt="San Beda College Alabang logo" loading="lazy" />
-                                <p>
-                                    <strong>San Beda College Alabang</strong><br />
-                                    TVL–ICT Computer Programming with Computer Systems Servicing<br />
-                                    2022–2025
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- GITHUB ACTIVITY -->
-                        <div class="card github-card">
-                            <div class="github-title-row">
-                                <div>
-                                    <h3>GitHub Activity</h3>
-                                    <p class="github-subtitle">Live contribution activity for <strong>@tarravictor</strong></p>
-                                </div>
-
-                                <a href="https://github.com/tarravictor" target="_blank" rel="noopener noreferrer" class="github-profile-icon" aria-label="Open Victor Tarra's GitHub profile">
-                                    <svg class="brand-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                                </a>
-                            </div>
-
-                            <div class="github-year-line">
-                                <span>Contribution Calendar</span>
-                                <span id="github-year"></span>
-                            </div>
-
-                            <a href="https://github.com/tarravictor" target="_blank" rel="noopener noreferrer" class="github-chart-link" aria-label="View GitHub contribution activity">
-                                <img src="https://ghchart.rshah.org/tarravictor" alt="GitHub contribution graph for tarravictor" class="github-chart" loading="lazy" />
-                            </a>
-
-                            <div class="github-card-actions">
-                                <a href="https://github.com/tarravictor" target="_blank" rel="noopener noreferrer" class="verify github-view-profile">
-                                    View GitHub Profile
-                                    <i data-lucide="arrow-up-right"></i>
-                                </a>
-                            </div>
-
-                            <div class="github-org-section">
-                                <div class="github-org-heading">
-                                    <h4>Organizations</h4>
-                                    <span>My Organizations</span>
-                                </div>
-
-                                <div id="github-organizations" class="github-org-list">
-                                    <a href="https://github.com/CSB-DSTALGO" target="_blank" rel="noopener noreferrer" class="github-org-item">
-                                        <img src="https://avatars.githubusercontent.com/u/307073638?s=200&v=4" alt="CSB-DSTALGO organization avatar" class="github-org-avatar" loading="lazy" decoding="async">
-
-                                        <div class="github-org-info">
-                                            <strong>CSB-DSTALGO</strong>
-                                            <span>GitHub Organization</span>
-                                        </div>
-
-                                        <i data-lucide="external-link"></i>
-                                    </a>
-
-                                    <a href="https://www.facebook.com/profile.php?id=61564322653486" target="_blank" rel="noopener noreferrer" class="github-org-item">
-                                        <img src="BIOS-LOGO.jpg" alt="Bedan ICT Oriented Society logo" class="github-org-avatar" loading="lazy" decoding="async">
-
-                                        <div class="github-org-info">
-                                            <strong>Bedan ICT Oriented Society - BIOS</strong>
-                                            <span>A.Y 2024-2025 - Treasurer (SBCA-THS) </span>
-                                        </div>
-
-                                        <i data-lucide="external-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- RIGHT COLUMN: CERTIFICATES -->
-                    <div class="card certificates-card">
-                        <h3>Certificates</h3>
-
-                        <div class="cert">
-                            <div class="cert-left">
-                                <img src="tesda-logo.png" alt="TESDA logo" class="cert-logo" loading="lazy" />
-                                <div>
-                                    <span>National Certificate II in Computer Systems Servicing</span>
-                                    <small>TESDA · Issued Mar 2025</small>
-                                    <small>Expires Mar 2030</small>
-                                </div>
-                            </div>
-                            <a href="https://t2mis.tesda.gov.ph/Learners/S/770052006700780058007600450079003900550037006C00720079007100320031006800420035002B007700710030006400460075007A0074004F0064004900770078006500450046006200630058005A0075006B003D00" target="_blank" rel="noopener noreferrer" class="verify">Verify</a>
-                        </div>
-
-                        <div class="cert">
-                            <div class="cert-left">
-                                <img src="anthropic-logo.png" alt="Anthropic logo" class="cert-logo" loading="lazy" />
-                                <div>
-                                    <span>Certificate of Completion: Claude Platform 101</span>
-                                    <small>Anthropic · Issued Jul 2026</small>
-                                    <small>Credential ID: xs5cea5qj36u</small>
-                                </div>
-                            </div>
-                            <a href="https://verify.skilljar.com/c/xs5cea5qj36u" target="_blank" rel="noopener noreferrer" class="verify">Verify</a>
-                        </div>
-
-                        <div class="cert">
-                            <div class="cert-left">
-                                <img src="atlassian-logo.svg" alt="Atlassian logo" class="cert-logo" loading="lazy" />
-                                <div>
-                                    <span>Get started with Agile</span>
-                                    <small>Atlassian · Issued Sep 2026</small>
-                                </div>
-                            </div>
-                            <a href="https://community.atlassian.com/learning/course/learn-agile-fundamentals" target="_blank" rel="noopener noreferrer" class="verify">Verify</a>
-                        </div>
-
-                        <div class="cert">
-                            <div class="cert-left">
-                                <img src="google-logo.png" alt="Google logo" class="cert-logo" loading="lazy" />
-                                <div>
-                                    <span>AI Fundamentals</span>
-                                    <small>Google · Issued May 2026</small>
-                                    <small>Credential ID: 2HVX7AD55M5G</small>
-                                </div>
-                            </div>
-                            <a href="https://www.coursera.org/account/accomplishments/verify/2HVX7AD55M5G" target="_blank" rel="noopener noreferrer" class="verify">Verify</a>
-                        </div>
-
-                        <div class="cert">
-                            <div class="cert-left">
-                                <img src="freecodecamp-logo.svg" alt="freeCodeCamp logo" class="cert-logo" loading="lazy" />
-                                <div>
-                                    <span>Legacy Responsive Web Design V8</span>
-                                    <small>freeCodeCamp · Issued Jun 2023</small>
-                                    <small>Credential ID: tarravictor-rwd</small>
-                                </div>
-                            </div>
-                            <a href="https://www.freecodecamp.org/certification/tarravictor/responsive-web-design" target="_blank" rel="noopener noreferrer" class="verify">Verify</a>
-                        </div>
-
-                        <div class="cert">
-                            <div class="cert-left">
-                                <img src="code-cred.jpg" alt="CodeCred logo" class="cert-logo" loading="lazy" />
-                                <div>
-                                    <span>CodeCred</span>
-                                    <small>Sir Bryl Lim · Issued Mar 2026</small>
-                                    <small>Credential ID: 9bf28ee4</small>
-                                </div>
-                            </div>
-                            <a href="https://www.codecred.dev/verify/9bf28ee4-9af4-4ae7-bde2-7be6ca0adc53" target="_blank" rel="noopener noreferrer" class="verify">Verify</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="reveal" style="--d:.1s">
+              <h3 class="mb-3 text-muted">Interests</h3>
+              <ul>
+                <li class="group row flex items-center gap-4 border-b border-rule py-3"><span class="icon-box grid h-9 w-9 place-items-center border border-rule"><i data-lucide="code-xml"></i></span>Web development</li>
+                <li class="group row flex items-center gap-4 border-b border-rule py-3"><span class="icon-box grid h-9 w-9 place-items-center border border-rule"><i data-lucide="pen-tool"></i></span>UI/UX</li>
+                <li class="group row flex items-center gap-4 py-3"><span class="icon-box grid h-9 w-9 place-items-center border border-rule"><i data-lucide="monitor"></i></span>System design</li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="projects" class="section fade">
-            <div class="container">
-                <h2>My Projects</h2>
-                <p class="desc">
-                    Selected academic projects developed as part of my Information Systems coursework.
-                </p>
-                <div class="grid">
-                    <div class="card project-card">
-                        <div class="project-header">
-                            <i data-lucide="tram-front"></i>
-                            <span class="project-course">ENTPROG ( Enterprise Programming )</span>
-                        </div>
-                        <h3>BeepAlerts.PH</h3>
-                        <p>
-                            A web-based LRT-1 platform for commuter incident reporting and transportation alerts.
-                            <strong>Disclaimer:</strong> BeepAlerts.PH is a student prototype from De La Salle-College of Saint Benilde and is not affiliated with LRTA, LRMC, or any government agency.
-                        </p>
-                        <div class="project-preview">
-                            <img src="beepalerts-preview.png" alt="BeepAlerts.PH website preview" loading="lazy" />
-                        </div>
-                        <a href="http://beepalertsph.runasp.net/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
-                            <i data-lucide="external-link"></i>
-                            <span>Visit Website</span>
-                        </a>
-                        <div class="project-tags">
-                            <span>ASP.NET Core MVC</span>
-                            <span>Hosted by: MonsterASP.NET</span>
-                            <span>Developed by: Victor Tarra, Shawn Grefaldeo, and Ronan Dalida</span>
-                        </div>
-                    </div>
-                    <div class="card project-card">
-                        <div class="project-header">
-                            <i data-lucide="coffee"></i>
-                            <span class="project-course">FUNDSYS ( Fundamentals of Information Systems )</span>
-                        </div>
-                        <h3>TommyCo Coffee Shop</h3>
-                        <p>
-                            A website developed for a local coffee shop in Manila,
-                            designed to showcase its products, services, and business information
-                            while demonstrating how technology can support daily operations
-                            and improve customer experience.
-                        </p>
-                        <div class="project-preview">
-                            <img src="tommyco-preview.png" alt="TommyCo Coffee Shop website preview" loading="lazy" />
-                        </div>
-                        <a href="https://tarravictor.github.io/TommyCo_FUNDSYS/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
-                            <i data-lucide="external-link"></i>
-                            <span>Visit Website</span>
-                        </a>
-                        <div class="project-tags">
-                            <span>Information Systems</span>
-                            <span>Business Process &amp; System Design</span>
-                            <span>Developed by: Victor Tarra, Ethan Manalili, and Keon Lauzon</span>
-                        </div>
-                    </div>
-                    <div class="card project-card">
-                        <div class="project-header">
-                            <i data-lucide="square-kanban"></i>
-                            <span class="project-course">APPDAET ( Application Development and Emerging Technologies )</span>
-                        </div>
-                        <h3>APPDAET Project Manager</h3>
-                        <p>
-                            A collaborative project management dashboard for organizing tasks, documenting project work, and keeping the APPDAET team aligned.
-                        </p>
-                        <div class="project-preview">
-                            <img src="appdaet-preview.svg" alt="APPDAET Project Manager website preview" loading="lazy" />
-                        </div>
-                        <a href="https://tarravictor.github.io/APPDAET-BTIS2-GROUP02/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">
-                            <i data-lucide="external-link"></i>
-                            <span>Visit Website</span>
-                        </a>
-                        <div class="project-tags">
-                            <span>Project Management</span>
-                            <span>Web Application</span>
-                            <span>Developed by: Victor Tarra</span>
-                        </div>
-                    </div>
+      <!-- Projects -->
+      <section id="projects" class="border-t border-rule py-24" aria-labelledby="projects-title">
+        <div class="grid gap-8 md:grid-cols-12">
+          <h2 id="projects-title" class="flex items-center gap-2 self-start text-muted md:sticky md:top-24 md:col-span-3"><span class="tabular-nums">02</span><span class="h-px w-6 bg-rule"></span>Projects</h2>
+          <p class="max-w-md text-neutral-600 md:col-span-9">Selected academic projects developed as part of my Information Systems coursework.</p>
+        </div>
+
+        <ul class="projects mt-12">
+          <!-- BeepAlerts -->
+          <li class="reveal border-t border-rule">
+            <a href="http://beepalertsph.runasp.net/" target="_blank" rel="noopener noreferrer" data-preview="0" class="project group grid items-center gap-3 py-8 sm:grid-cols-12">
+              <span class="flex items-center gap-2 text-muted sm:col-span-1"><i data-lucide="tram-front"></i><span class="tabular-nums">01</span></span>
+              <span class="title text-[clamp(1.75rem,3.6vw,2.75rem)] font-medium leading-none tracking-tight sm:col-span-7">BeepAlerts.PH</span>
+              <span class="flex items-center justify-between gap-4 text-muted sm:col-span-4">
+                <span class="border border-rule px-2.5 py-1 text-xs">ASP.NET Core MVC</span>
+                <span class="icon-box grid h-10 w-10 place-items-center rounded-full border border-rule text-black"><i data-lucide="arrow-up-right" class="nudge"></i></span>
+              </span>
+            </a>
+            <details class="pb-2">
+              <summary class="group flex items-center justify-between pb-6 text-muted transition-colors hover:text-black sm:ml-[8.333%]">
+                <span class="flex items-center gap-2"><i data-lucide="book-open"></i>ENTPROG — Enterprise Programming</span><i data-lucide="plus" class="plus text-lg"></i>
+              </summary>
+              <div class="grid gap-8 pb-10 sm:ml-[8.333%] md:grid-cols-2">
+                <img src="beepalerts-preview.png" alt="BeepAlerts.PH website preview" loading="lazy" class="w-full border border-rule" />
+                <div class="space-y-5 text-neutral-700">
+                  <p>A web-based LRT-1 platform for commuter incident reporting and transportation alerts.</p>
+                  <p class="flex gap-2 text-sm text-muted"><i data-lucide="info" class="mt-0.5"></i><span>Disclaimer: BeepAlerts.PH is a student prototype from De La Salle-College of Saint Benilde and is not affiliated with LRTA, LRMC, or any government agency.</span></p>
+                  <dl class="space-y-2 text-sm">
+                    <div class="flex items-center gap-3"><dt class="flex w-28 shrink-0 items-center gap-2 text-muted"><i data-lucide="server"></i>Hosted by</dt><dd>MonsterASP.NET</dd></div>
+                    <div class="flex items-start gap-3"><dt class="flex w-28 shrink-0 items-center gap-2 text-muted"><i data-lucide="users"></i>Team</dt><dd>Victor Tarra, Shawn Grefaldeo, Ronan Dalida</dd></div>
+                  </dl>
+                  <a href="http://beepalertsph.runasp.net/" target="_blank" rel="noopener noreferrer" class="btn btn-dark group inline-flex items-center gap-2 px-5 py-3 text-sm">Visit website <i data-lucide="arrow-up-right" class="nudge"></i></a>
                 </div>
+              </div>
+            </details>
+          </li>
+
+          <!-- TommyCo -->
+          <li class="reveal border-t border-rule">
+            <a href="https://tarravictor.github.io/TommyCo_FUNDSYS/" target="_blank" rel="noopener noreferrer" data-preview="1" class="project group grid items-center gap-3 py-8 sm:grid-cols-12">
+              <span class="flex items-center gap-2 text-muted sm:col-span-1"><i data-lucide="coffee"></i><span class="tabular-nums">02</span></span>
+              <span class="title text-[clamp(1.75rem,3.6vw,2.75rem)] font-medium leading-none tracking-tight sm:col-span-7">TommyCo Coffee Shop</span>
+              <span class="flex items-center justify-between gap-4 text-muted sm:col-span-4">
+                <span class="border border-rule px-2.5 py-1 text-xs">Information Systems</span>
+                <span class="icon-box grid h-10 w-10 place-items-center rounded-full border border-rule text-black"><i data-lucide="arrow-up-right" class="nudge"></i></span>
+              </span>
+            </a>
+            <details class="pb-2">
+              <summary class="group flex items-center justify-between pb-6 text-muted transition-colors hover:text-black sm:ml-[8.333%]">
+                <span class="flex items-center gap-2"><i data-lucide="book-open"></i>FUNDSYS — Fundamentals of Information Systems</span><i data-lucide="plus" class="plus text-lg"></i>
+              </summary>
+              <div class="grid gap-8 pb-10 sm:ml-[8.333%] md:grid-cols-2">
+                <img src="tommyco-preview.png" alt="TommyCo Coffee Shop website preview" loading="lazy" class="w-full border border-rule" />
+                <div class="space-y-5 text-neutral-700">
+                  <p>A website developed for a local coffee shop in Manila, designed to showcase its products, services, and business information while demonstrating how technology can support daily operations and improve customer experience.</p>
+                  <dl class="space-y-2 text-sm">
+                    <div class="flex items-center gap-3"><dt class="flex w-28 shrink-0 items-center gap-2 text-muted"><i data-lucide="workflow"></i>Scope</dt><dd>Business Process &amp; System Design</dd></div>
+                    <div class="flex items-start gap-3"><dt class="flex w-28 shrink-0 items-center gap-2 text-muted"><i data-lucide="users"></i>Team</dt><dd>Victor Tarra, Ethan Manalili, Keon Lauzon</dd></div>
+                  </dl>
+                  <a href="https://tarravictor.github.io/TommyCo_FUNDSYS/" target="_blank" rel="noopener noreferrer" class="btn btn-dark group inline-flex items-center gap-2 px-5 py-3 text-sm">Visit website <i data-lucide="arrow-up-right" class="nudge"></i></a>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <!-- APPDAET -->
+          <li class="reveal border-y border-rule">
+            <a href="https://tarravictor.github.io/APPDAET-BTIS2-GROUP02/" target="_blank" rel="noopener noreferrer" data-preview="2" class="project group grid items-center gap-3 py-8 sm:grid-cols-12">
+              <span class="flex items-center gap-2 text-muted sm:col-span-1"><i data-lucide="square-kanban"></i><span class="tabular-nums">03</span></span>
+              <span class="title text-[clamp(1.75rem,3.6vw,2.75rem)] font-medium leading-none tracking-tight sm:col-span-7">APPDAET Project Manager</span>
+              <span class="flex items-center justify-between gap-4 text-muted sm:col-span-4">
+                <span class="border border-rule px-2.5 py-1 text-xs">Project Management</span>
+                <span class="icon-box grid h-10 w-10 place-items-center rounded-full border border-rule text-black"><i data-lucide="arrow-up-right" class="nudge"></i></span>
+              </span>
+            </a>
+            <details class="pb-2">
+              <summary class="group flex items-center justify-between gap-4 pb-6 text-muted transition-colors hover:text-black sm:ml-[8.333%]">
+                <span class="flex items-center gap-2"><i data-lucide="book-open"></i>APPDAET — Application Development and Emerging Technologies</span><i data-lucide="plus" class="plus text-lg"></i>
+              </summary>
+              <div class="grid gap-8 pb-10 sm:ml-[8.333%] md:grid-cols-2">
+                <img src="appdaet-preview.svg" alt="APPDAET Project Manager website preview" loading="lazy" class="w-full border border-rule" />
+                <div class="space-y-5 text-neutral-700">
+                  <p>A collaborative project management dashboard for organizing tasks, documenting project work, and keeping the APPDAET team aligned.</p>
+                  <dl class="space-y-2 text-sm">
+                    <div class="flex items-center gap-3"><dt class="flex w-28 shrink-0 items-center gap-2 text-muted"><i data-lucide="layout-dashboard"></i>Type</dt><dd>Web Application</dd></div>
+                    <div class="flex items-start gap-3"><dt class="flex w-28 shrink-0 items-center gap-2 text-muted"><i data-lucide="user"></i>Team</dt><dd>Victor Tarra</dd></div>
+                  </dl>
+                  <a href="https://tarravictor.github.io/APPDAET-BTIS2-GROUP02/" target="_blank" rel="noopener noreferrer" class="btn btn-dark group inline-flex items-center gap-2 px-5 py-3 text-sm">Visit website <i data-lucide="arrow-up-right" class="nudge"></i></a>
+                </div>
+              </div>
+            </details>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Credentials -->
+      <section id="credentials" class="border-t border-rule py-24" aria-labelledby="cred-title">
+        <h2 id="cred-title" class="mb-16 flex items-center gap-2 text-muted"><span class="tabular-nums">03</span><span class="h-px w-6 bg-rule"></span>Credentials</h2>
+
+        <!-- Education -->
+        <div class="grid gap-8 md:grid-cols-12">
+          <h3 class="flex items-center gap-2 self-start text-muted md:sticky md:top-24 md:col-span-3"><i data-lucide="graduation-cap"></i>Education</h3>
+          <ol class="relative md:col-span-9">
+            <span class="absolute bottom-6 left-6 top-6 w-px bg-rule" aria-hidden="true"></span>
+            <li class="reveal group relative flex items-center gap-5 pb-8">
+              <img id="seal-dlscsb" src="dlscsb.svg" alt="De La Salle College of Saint Benilde seal" width="48" height="48" loading="lazy" class="seal mono relative h-12 w-12 shrink-0 rounded-full border border-rule bg-white object-contain p-1 transition-transform duration-500 group-hover:scale-110" />
+              <div class="flex-1">
+                <p class="font-medium">De La Salle College of Saint Benilde</p>
+                <p class="text-muted">Bachelor of Science in Information Systems</p>
+              </div>
+              <span class="flex shrink-0 items-center gap-1.5 bg-black px-2.5 py-1 text-xs text-white tabular-nums"><i data-lucide="calendar"></i>2025–2030</span>
+            </li>
+            <li class="reveal group relative flex items-center gap-5" style="--d:.1s">
+              <img id="seal-sbca" src="sbca.png" alt="San Beda College Alabang seal" width="48" height="48" loading="lazy" class="seal mono relative h-12 w-12 shrink-0 rounded-full border border-rule bg-white object-contain p-1 transition-transform duration-500 group-hover:scale-110" />
+              <div class="flex-1">
+                <p class="font-medium">San Beda College Alabang</p>
+                <p class="text-muted">TVL–ICT Computer Programming with Computer Systems Servicing</p>
+              </div>
+              <span class="flex shrink-0 items-center gap-1.5 border border-rule px-2.5 py-1 text-xs text-muted tabular-nums"><i data-lucide="calendar"></i>2022–2025</span>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Certificates -->
+        <div class="mt-20 grid gap-8 md:grid-cols-12">
+          <h3 class="flex items-center gap-2 self-start text-muted md:sticky md:top-24 md:col-span-3"><i data-lucide="award"></i>Certificates <span class="text-neutral-400">(6)</span></h3>
+          <ul class="reveal md:col-span-9">
+            <li><a href="https://t2mis.tesda.gov.ph/Learners/S/770052006700780058007600450079003900550037006C00720079007100320031006800420035002B007700710030006400460075007A0074004F0064004900770078006500450046006200630058005A0075006B003D00" target="_blank" rel="noopener noreferrer" class="group row flex items-center gap-5 border-b border-rule py-5">
+              <img src="tesda-logo.png" alt="" loading="lazy" class="mono h-8 w-8 shrink-0 object-contain" />
+              <span class="flex-1"><span class="u">National Certificate II in Computer Systems Servicing</span><span class="block text-muted">TESDA · Mar 2025 · Expires Mar 2030</span></span>
+              <span class="flex items-center gap-1.5 text-sm text-muted transition-colors group-hover:text-black"><span class="hidden sm:inline">Verify</span><i data-lucide="arrow-up-right" class="nudge"></i></span></a></li>
+            <li><a href="https://verify.skilljar.com/c/xs5cea5qj36u" target="_blank" rel="noopener noreferrer" class="group row flex items-center gap-5 border-b border-rule py-5">
+              <img src="anthropic-logo.png" alt="" loading="lazy" class="mono h-8 w-8 shrink-0 object-contain" />
+              <span class="flex-1"><span class="u">Claude Platform 101</span><span class="block text-muted">Anthropic · Jul 2026 · xs5cea5qj36u</span></span>
+              <span class="flex items-center gap-1.5 text-sm text-muted transition-colors group-hover:text-black"><span class="hidden sm:inline">Verify</span><i data-lucide="arrow-up-right" class="nudge"></i></span></a></li>
+            <li><a href="https://community.atlassian.com/learning/course/learn-agile-fundamentals" target="_blank" rel="noopener noreferrer" class="group row flex items-center gap-5 border-b border-rule py-5">
+              <img src="atlassian-logo.svg" alt="" loading="lazy" class="mono h-8 w-8 shrink-0 object-contain" />
+              <span class="flex-1"><span class="u">Get started with Agile</span><span class="block text-muted">Atlassian · Sep 2026</span></span>
+              <span class="flex items-center gap-1.5 text-sm text-muted transition-colors group-hover:text-black"><span class="hidden sm:inline">Verify</span><i data-lucide="arrow-up-right" class="nudge"></i></span></a></li>
+            <li><a href="https://www.coursera.org/account/accomplishments/verify/2HVX7AD55M5G" target="_blank" rel="noopener noreferrer" class="group row flex items-center gap-5 border-b border-rule py-5">
+              <img src="google-logo.png" alt="" loading="lazy" class="mono h-8 w-8 shrink-0 object-contain" />
+              <span class="flex-1"><span class="u">AI Fundamentals</span><span class="block text-muted">Google · May 2026 · 2HVX7AD55M5G</span></span>
+              <span class="flex items-center gap-1.5 text-sm text-muted transition-colors group-hover:text-black"><span class="hidden sm:inline">Verify</span><i data-lucide="arrow-up-right" class="nudge"></i></span></a></li>
+            <li><a href="https://www.freecodecamp.org/certification/tarravictor/responsive-web-design" target="_blank" rel="noopener noreferrer" class="group row flex items-center gap-5 border-b border-rule py-5">
+              <img src="freecodecamp-logo.svg" alt="" loading="lazy" class="mono h-8 w-8 shrink-0 object-contain" />
+              <span class="flex-1"><span class="u">Legacy Responsive Web Design V8</span><span class="block text-muted">freeCodeCamp · Jun 2023 · tarravictor-rwd</span></span>
+              <span class="flex items-center gap-1.5 text-sm text-muted transition-colors group-hover:text-black"><span class="hidden sm:inline">Verify</span><i data-lucide="arrow-up-right" class="nudge"></i></span></a></li>
+            <li><a href="https://www.codecred.dev/verify/9bf28ee4-9af4-4ae7-bde2-7be6ca0adc53" target="_blank" rel="noopener noreferrer" class="group row flex items-center gap-5 py-5">
+              <img src="code-cred.jpg" alt="" loading="lazy" class="mono h-8 w-8 shrink-0 object-contain" />
+              <span class="flex-1"><span class="u">CodeCred</span><span class="block text-muted">Sir Bryl Lim · Mar 2026 · 9bf28ee4</span></span>
+              <span class="flex items-center gap-1.5 text-sm text-muted transition-colors group-hover:text-black"><span class="hidden sm:inline">Verify</span><i data-lucide="arrow-up-right" class="nudge"></i></span></a></li>
+          </ul>
+        </div>
+
+        <!-- GitHub -->
+        <div class="mt-20 grid gap-8 md:grid-cols-12">
+          <h3 class="flex items-center gap-2 self-start text-muted md:sticky md:top-24 md:col-span-3"><svg class="lucide" viewBox="0 0 16 16" fill="currentColor" stroke="none" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 012-.27c.68 0 1.360.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</h3>
+          <div class="reveal min-w-0 md:col-span-9">
+            <a href="https://github.com/tarravictor" target="_blank" rel="noopener noreferrer" class="group flex items-baseline justify-between">
+              <span class="flex items-center gap-1.5"><span class="u">@tarravictor</span><i data-lucide="arrow-up-right" class="nudge text-muted"></i></span><span class="text-muted">Contributions · <span id="github-year">2026</span></span>
+            </a>
+            <a href="https://github.com/tarravictor" target="_blank" rel="noopener noreferrer" class="mt-5 block overflow-x-auto border border-rule p-4 transition-colors hover:border-black" aria-label="View GitHub contribution activity">
+              <img src="https://ghchart.rshah.org/000000/tarravictor" alt="GitHub contribution graph for tarravictor" loading="lazy" class="w-full min-w-[600px]" />
+            </a>
+            <h4 class="mb-2 mt-10 flex items-center gap-2 text-muted"><i data-lucide="users"></i>Organizations</h4>
+            <ul>
+              <li><a href="https://github.com/CSB-DSTALGO" target="_blank" rel="noopener noreferrer" class="group row flex items-center gap-5 border-b border-rule py-5">
+                <img src="https://avatars.githubusercontent.com/u/307073638?s=200&v=4" alt="" loading="lazy" decoding="async" class="mono h-8 w-8 shrink-0 object-cover" />
+                <span class="flex-1"><span class="u">CSB-DSTALGO</span><span class="block text-muted">GitHub Organization</span></span>
+                <i data-lucide="arrow-up-right" class="nudge text-muted group-hover:text-black"></i></a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=61564322653486" target="_blank" rel="noopener noreferrer" class="group row flex items-center gap-5 py-5">
+                <img src="BIOS-LOGO.jpg" alt="" loading="lazy" decoding="async" class="mono h-8 w-8 shrink-0 object-cover" />
+                <span class="flex-1"><span class="u">Bedan ICT Oriented Society — BIOS</span><span class="block text-muted">Treasurer (SBCA-THS) · A.Y. 2024–2025</span></span>
+                <i data-lucide="arrow-up-right" class="nudge text-muted group-hover:text-black"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="border-t border-rule py-24" aria-labelledby="contact-title">
+        <div class="grid gap-8 md:grid-cols-12">
+          <h2 id="contact-title" class="flex items-center gap-2 self-start text-muted md:sticky md:top-24 md:col-span-3"><span class="tabular-nums">04</span><span class="h-px w-6 bg-rule"></span>Contact</h2>
+          <div class="md:col-span-9">
+            <p class="reveal text-neutral-600">Have a project, collaboration, or something else in mind? Feel free to reach out.</p>
+            <div class="reveal mt-6 flex flex-wrap items-center gap-x-6 gap-y-4">
+              <a href="mailto:tarravdc@proton.me" class="group inline-flex items-center gap-3 break-all text-[clamp(1.75rem,5.5vw,4.5rem)] font-medium leading-none tracking-[-0.04em]">
+                <span class="u">tarravdc@proton.me</span><i data-lucide="arrow-up-right" class="nudge text-neutral-400 group-hover:text-black"></i>
+              </a>
+              <button id="copy-email" type="button" class="btn btn-line group flex items-center gap-2 px-4 py-2 text-sm" aria-label="Copy email address">
+                <i data-lucide="copy"></i><span>Copy</span>
+              </button>
             </div>
-        </section>
 
-        <section id="contact" class="section fade">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Contact</h2>
-                    <p>Have a project, collaboration, or something else in mind? Feel free to reach out.</p>
-                </div>
-                <div class="contact-wrapper">
-                    <div class="contact-form" id="jotform-container">
-                        <div id="jotform-loader" class="form-fallback">
-                            <a href="https://form.jotform.com/262283000382043" target="_blank" rel="noopener noreferrer">Open the contact form ↗</a>
-                            <p>You can also email me at <a href="mailto:tarravdc@proton.me">tarravdc@proton.me</a>.</p>
-                        </div>
-                        <div id="jotform-form-wrapper"></div>
-                    </div>
-                    <div class="contact-links">
-                        <a href="mailto:tarravdc@proton.me" class="contact-link">
-                            <div class="contact-icon">
-                                <i data-lucide="mail"></i>
-                            </div>
-                            <div class="contact-info">
-                                <span class="contact-label">Email</span>
-                                <span class="contact-value">tarravdc@proton.me</span>
-                            </div>
-                            <i data-lucide="arrow-up-right" class="contact-arrow"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/tarravictor" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <div class="contact-icon">
-                                <svg class="brand-icon brand-icon-lg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 01-2.07-2.06 2.07 2.07 0 112.07 2.06zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.23 0z"/></svg>
-                            </div>
-                            <div class="contact-info">
-                                <span class="contact-label">LinkedIn</span>
-                                <span class="contact-value">linkedin.com/in/tarravictor</span>
-                            </div>
-                            <i data-lucide="arrow-up-right" class="contact-arrow"></i>
-                        </a>
-                        <a href="https://github.com/tarravictor" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <div class="contact-icon">
-                                <svg class="brand-icon brand-icon-lg" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                            </div>
-                            <div class="contact-info">
-                                <span class="contact-label">GitHub</span>
-                                <span class="contact-value">github.com/tarravictor</span>
-                            </div>
-                            <i data-lucide="arrow-up-right" class="contact-arrow"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+            <ul class="reveal mt-12 grid gap-px border border-rule bg-rule sm:grid-cols-3">
+              <li><a href="https://linkedin.com/in/tarravictor" target="_blank" rel="noopener noreferrer" class="group flex h-full items-center gap-4 bg-white p-5 transition-colors hover:bg-black hover:text-white">
+                <svg class="lucide text-xl" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 01-2.07-2.06 2.07 2.07 0 112.07 2.06zm1.78 13.02H3.56V9h3.56v11.45zM22.230 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.23 0z"/></svg><span class="flex-1">LinkedIn</span><i data-lucide="arrow-up-right" class="nudge"></i></a></li>
+              <li><a href="https://github.com/tarravictor" target="_blank" rel="noopener noreferrer" class="group flex h-full items-center gap-4 bg-white p-5 transition-colors hover:bg-black hover:text-white">
+                <svg class="lucide text-xl" viewBox="0 0 16 16" fill="currentColor" stroke="none" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 012-.27c.68 0 1.360.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span class="flex-1">GitHub</span><i data-lucide="arrow-up-right" class="nudge"></i></a></li>
+              <li><a href="https://form.jotform.com/262283000382043" target="_blank" rel="noopener noreferrer" class="group flex h-full items-center gap-4 bg-white p-5 transition-colors hover:bg-black hover:text-white">
+                <i data-lucide="file-text" class="text-xl"></i><span class="flex-1">Contact form</span><i data-lucide="arrow-up-right" class="nudge"></i></a></li>
+            </ul>
 
-    <footer class="footer">
-        <p>&copy; 2026 Victor Tarra</p>
-    </footer>
+            <details id="form-details" class="mt-12 border-t border-rule">
+              <summary class="group flex items-center justify-between py-5 text-muted transition-colors hover:text-black">
+                <span class="flex items-center gap-2"><i data-lucide="send"></i>Or send a message here</span><i data-lucide="plus" class="plus text-lg"></i>
+              </summary>
+              <div id="jotform-container" class="pb-4"></div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 
-    <script src="script.js" defer></script>
+  <footer class="mx-auto flex max-w-6xl flex-col gap-4 border-t border-rule px-6 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+    <p>© <span class="js-year">2026</span> Victor Tarra</p>
+    <div class="flex items-center gap-6">
+      <a href="https://linkedin.com/in/tarravictor" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-1 hover:text-black"><span class="u">LinkedIn</span><i data-lucide="arrow-up-right" class="nudge"></i></a>
+      <a href="https://github.com/tarravictor" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-1 hover:text-black"><span class="u">GitHub</span><i data-lucide="arrow-up-right" class="nudge"></i></a>
+    </div>
+  </footer>
+
+  <!-- Floating project preview (desktop) -->
+  <div id="preview" aria-hidden="true">
+    <img src="beepalerts-preview.png" alt="" />
+    <img src="tommyco-preview.png" alt="" />
+    <img src="appdaet-preview.svg" alt="" />
+  </div>
+
+  <!-- Back to top with scroll progress ring -->
+  <a id="to-top" href="#top" class="group fixed bottom-6 right-6 z-30 grid h-12 w-12 place-items-center rounded-full bg-white shadow-[0_8px_30px_-8px_rgba(0,0,0,.25)]" aria-label="Back to top">
+    <svg class="absolute inset-0 -rotate-90" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="22" fill="none" stroke="#EAEAEA" stroke-width="1.5" />
+      <circle id="ring" cx="24" cy="24" r="22" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="138.2" stroke-dashoffset="138.2" />
+    </svg>
+    <i data-lucide="arrow-up" class="relative transition-transform duration-300 group-hover:-translate-y-0.5"></i>
+  </a>
+
+  <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 left-1/2 z-50 flex items-center gap-2 bg-black px-4 py-2.5 text-sm text-white"></div>
+
+  <script>
+    addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const year = new Date().getFullYear();
+      document.getElementById('github-year').textContent = year;
+      document.querySelectorAll('.js-year').forEach(el => el.textContent = year);
+
+      // Split hero name into letters
+      let i = 0;
+      document.querySelectorAll('.split .line').forEach(line => {
+        line.innerHTML = [...line.textContent].map(c => `<span class="ch" style="--i:${i++}">${c}</span>`).join('');
+      });
+      requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('loaded')));
+
+      // Scroll: hide/show nav, progress bar, back-to-top ring
+      const nav = document.getElementById('site-nav');
+      const bar = document.getElementById('progress');
+      const toTop = document.getElementById('to-top');
+      const ring = document.getElementById('ring');
+      let lastY = scrollY;
+      const onScroll = () => {
+        const y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
+        const p = max > 0 ? y / max : 0;
+        nav.classList.toggle('hide', y > lastY && y > 160);
+        nav.classList.toggle('border-rule', y > 10);
+        bar.style.transform = `scaleX(${p})`;
+        ring.style.strokeDashoffset = 138.2 * (1 - p);
+        toTop.classList.toggle('show', y > 700);
+        lastY = y;
+      };
+      addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Active nav link
+      const links = [...document.querySelectorAll('.nav-link')];
+      const spy = new IntersectionObserver(entries => entries.forEach(e => {
+        if (e.isIntersecting) links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+      }), { rootMargin: '-45% 0px -50% 0px' });
+      ['about', 'projects', 'credentials', 'contact'].forEach(id => spy.observe(document.getElementById(id)));
+
+      // Reveal on scroll
+      const io = new IntersectionObserver(entries => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      }), { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+      // Floating project preview follows the cursor
+      const preview = document.getElementById('preview');
+      const imgs = preview.querySelectorAll('img');
+      if (matchMedia('(hover: hover) and (min-width: 768px)').matches) {
+        let x = 0, y = 0, px = 0, py = 0, raf = null;
+        const loop = () => {
+          px += (x - px) * (reduced ? 1 : 0.15); py += (y - py) * (reduced ? 1 : 0.15);
+          preview.style.left = px + 'px'; preview.style.top = py + 'px';
+          raf = requestAnimationFrame(loop);
+        };
+        document.querySelectorAll('[data-preview]').forEach(a => {
+          a.addEventListener('mouseenter', e => {
+            imgs.forEach((im, n) => im.classList.toggle('on', n == a.dataset.preview));
+            if (!preview.classList.contains('show')) { px = x = e.clientX + 180; py = y = e.clientY; }
+            preview.classList.add('show');
+            if (!raf) loop();
+          });
+          a.addEventListener('mousemove', e => { x = e.clientX + 180; y = e.clientY; });
+          a.addEventListener('mouseleave', () => { preview.classList.remove('show'); cancelAnimationFrame(raf); raf = null; });
+        });
+      }
+
+      // Magnetic buttons
+      if (matchMedia('(hover: hover)').matches && !reduced) {
+        document.querySelectorAll('.btn').forEach(b => {
+          b.addEventListener('mousemove', e => {
+            const r = b.getBoundingClientRect();
+            b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .15}px, ${(e.clientY - r.top - r.height / 2) * .25}px)`;
+          });
+          b.addEventListener('mouseleave', () => b.style.transform = '');
+          b.style.transition = 'transform .4s cubic-bezier(.2,.8,.2,1), color .3s';
+        });
+      }
+
+      // Copy email + toast
+      const toast = document.getElementById('toast');
+      let t;
+      document.getElementById('copy-email').addEventListener('click', async e => {
+        const btn = e.currentTarget;
+        try { await navigator.clipboard.writeText('tarravdc@proton.me'); } catch { return location.href = 'mailto:tarravdc@proton.me'; }
+        btn.querySelector('span').textContent = 'Copied';
+        toast.textContent = 'Email copied to clipboard';
+        toast.classList.add('show');
+        clearTimeout(t);
+        t = setTimeout(() => { toast.classList.remove('show'); btn.querySelector('span').textContent = 'Copy'; }, 2000);
+      });
+
+      // Load Jotform only when opened
+      document.getElementById('form-details').addEventListener('toggle', e => {
+        const box = document.getElementById('jotform-container');
+        if (!e.target.open || box.childElementCount) return;
+        const iframe = document.createElement('iframe');
+        iframe.title = 'Contact Victor Tarra';
+        iframe.src = 'https://form.jotform.com/262283000382043';
+        iframe.className = 'block h-[640px] w-full border border-rule';
+        box.append(iframe);
+      });
+
+      // Seal fallback
+      document.querySelectorAll('.seal').forEach(img => img.addEventListener('error', () => {
+        img.src = `https://placehold.co/96x96/F5F5F5/000000?text=${img.id === 'seal-sbca' ? 'SBCA' : 'CSB'}`;
+      }, { once: true }));
+    });
+  </script>
 </body>
 </html>
