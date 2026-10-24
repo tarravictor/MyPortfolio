@@ -19,12 +19,12 @@ Welcome to my personal portfolio website repository. This project showcases my f
 
 ## Highlights
 
-- Minimal, editorial design with a large name hero and monochrome portrait
+- Transit-map design: the page is one route line and each section is a station; the line fills as you scroll
+- Overpass typeface, one blue accent, light/dark theme toggle
 - Sections for About, Projects, Credentials, and Contact
-- Project previews: BeepAlerts.PH, TommyCo Coffee Shop, and APPDAET Project Manager
-- Certifications and GitHub activity chart
-- Sharp square corners on desktop, softly rounded corners on mobile
-- Responsive layout styled with Tailwind CSS (loaded via CDN), no build step
+- Projects: BeepAlerts.PH, TommyCo Coffee Shop, and APPDAET Project Manager
+- Certifications, education timeline, and GitHub activity chart
+- Plain HTML, CSS (`style.css`) and JavaScript (`script.js`), no framework or build step
 
 ## Run locally
 

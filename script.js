@@ -1,183 +1,171 @@
-/* Keep the original document usable if JavaScript is unavailable. */
+// Victor Tarra — Portfolio
 (() => {
-    const main = document.querySelector('main');
-    const sections = ['credentials', 'projects', 'contact'];
-    const overview = document.createElement('section');
-    overview.className = 'work-overview';
-    overview.setAttribute('aria-label', 'Credentials and selected projects');
-    overview.innerHTML = `
-        <aside class="credentials-summary" aria-labelledby="credentials-summary-title">
-            <h2 id="credentials-summary-title" class="eyebrow">My Credentials</h2>
-            <p class="degree">BS Information Systems</p>
-            <p class="institution">De La Salle–College of Saint Benilde</p>
-            <a class="text-link certificate-link" href="#credentials">${document.querySelectorAll('.cert').length} certificates <span aria-hidden="true">↗</span></a>
-            <p class="credential-note">Education, certifications<br> &amp; GitHub activity</p>
-            <a class="text-link" href="#credentials">Explore credentials <span aria-hidden="true">↗</span></a>
-        </aside>
-        <section class="selected-work" id="selected-work" aria-labelledby="selected-work-title" tabindex="-1">
-            <div class="work-heading"><h2 id="selected-work-title">My Projects</h2><span>Selected academic work / 01—03</span></div>
-            <div class="project-list"></div>
-        </section>`;
-    document.querySelectorAll('.project-card').forEach((card, index) => {
-        card.id = `project-${index + 1}`;
-        const link = document.createElement('a');
-        link.href = '#projects';
-        link.dataset.project = card.id;
-        link.className = 'project-item';
-        link.setAttribute('aria-haspopup', 'dialog');
-        const image = card.querySelector('.project-preview img').cloneNode();
-        image.alt = '';
-        image.loading = 'eager';
-        const preview = document.createElement('div');
-        preview.className = 'work-image';
-        const prompt = document.createElement('span');
-        prompt.className = 'work-prompt';
-        prompt.textContent = 'View project ↗';
-        preview.append(image, prompt);
-        const caption = document.createElement('div');
-        caption.className = 'work-caption';
-        const number = document.createElement('span');
-        number.className = 'work-number';
-        number.textContent = String(index + 1).padStart(2, '0');
-        const title = document.createElement('h3');
-        title.textContent = card.querySelector('h3').textContent;
-        const arrow = document.createElement('span');
-        arrow.className = 'work-arrow';
-        arrow.textContent = '↗';
-        arrow.setAttribute('aria-hidden', 'true');
-        caption.append(number, title, arrow);
-        const category = document.createElement('p');
-        category.className = 'work-category';
-        category.textContent = card.querySelector('.project-tags span').textContent;
-        link.append(preview, caption, category);
-        overview.querySelector('.project-list').append(link);
-    });
-    main.append(overview);
+  const year = new Date().getFullYear();
+  const ghYear = document.getElementById('github-year');
+  if (ghYear) ghYear.textContent = year;
 
-    const footer = document.querySelector('.footer');
-    const copyright = footer.querySelector('p');
-    copyright.className = 'copyright';
-    const footerInner = document.createElement('div');
-    footerInner.className = 'footer-inner';
-    const contactLine = document.createElement('div');
-    contactLine.className = 'contact-line';
-    const contactPrompt = document.createElement('span');
-    contactPrompt.textContent = 'Have a project in mind?';
-    const email = document.createElement('a');
-    email.className = 'text-link email-link';
-    email.href = 'mailto:tarravdc@proton.me';
-    email.innerHTML = 'tarravdc@proton.me <span aria-hidden="true">↗</span>';
-    contactLine.append(contactPrompt, email);
-    const footerMeta = document.createElement('div');
-    footerMeta.className = 'footer-meta';
-    const socialLinks = document.createElement('div');
-    socialLinks.className = 'social-links';
-    footerMeta.append(socialLinks, copyright);
-    footerInner.append(contactLine, footerMeta);
-    footer.replaceChildren(footerInner);
-    document.querySelectorAll('.contact-links a:not([href^="mailto"])').forEach(link => {
-        const copy = document.createElement('a');
-        copy.className = 'text-link';
-        copy.href = link.href;
-        copy.target = '_blank';
-        copy.rel = 'noopener noreferrer';
-        copy.textContent = link.querySelector('.contact-label').textContent + ' ↗';
-        socialLinks.append(copy);
-    });
+  // ----- Route line: fill with scroll, mark passed + current station -----
+  const fill = document.getElementById('route-fill');
+  const links = [...document.querySelectorAll('.route a[data-station]')];
+  const stations = links.map(a => document.getElementById(a.dataset.station));
+  const vertical = matchMedia('(min-width: 1000px)');
 
-    const dialogs = new Map();
-    sections.forEach(id => {
-        const section = document.getElementById(id);
-        const dialog = document.createElement('dialog');
-        dialog.className = 'detail-dialog';
-        dialog.id = `${id}-dialog`;
-        document.querySelectorAll(`a[href="#${id}"]`).forEach(link => {
-            if (id !== 'projects' || link.dataset.project) {
-                link.setAttribute('aria-haspopup', 'dialog');
-                link.setAttribute('aria-controls', dialog.id);
-            }
-        });
-        dialog.setAttribute('aria-labelledby', `${id}-title`);
-        section.querySelector('h2').id = `${id}-title`;
-        const toolbar = document.createElement('div');
-        toolbar.className = 'dialog-toolbar';
-        const label = document.createElement('span');
-        label.textContent = 'VT / ' + section.querySelector('h2').textContent.trim();
-        const close = document.createElement('button');
-        close.type = 'button';
-        close.className = 'dialog-close';
-        close.textContent = 'Close ×';
-        close.setAttribute('aria-label', `Close ${section.querySelector('h2').textContent.trim()}`);
-        close.autofocus = true;
-        close.addEventListener('click', () => dialog.close());
-        toolbar.append(label, close);
-        dialog.append(toolbar, section);
-        document.body.append(dialog);
-        dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
-        dialog.addEventListener('close', () => {
-            document.body.classList.remove('dialog-open');
-            document.querySelectorAll('[aria-current]').forEach(link => link.removeAttribute('aria-current'));
-            if (location.hash === '#' + id) history.replaceState(null, '', location.pathname + location.search);
-        });
-        dialogs.set(id, dialog);
-    });
+  let ticking = false;
+  let lastCurrent = -1;
+  const update = () => {
+    ticking = false;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const mark = innerHeight * 0.4;
+    const tops = stations.map(s => (s ? s.getBoundingClientRect().top : Infinity) - mark);
+    tops[0] = -scrollY; // the line starts moving with the first scroll
 
-    function openSection(id, project) {
-        const dialog = dialogs.get(id);
-        if (!dialog) {
-            // A hash with no dialog (e.g. the wordmark's #top) means "leave detail view".
-            dialogs.forEach(other => { if (other.open) other.close(); });
-            return;
-        }
-        if (dialog.open) return;
-        dialogs.forEach(other => { if (other.open && other !== dialog) other.close(); });
-        dialog.showModal();
-        document.body.classList.add('dialog-open');
-        document.querySelectorAll('#nav-menu a').forEach(link => {
-            if (link.hash === '#' + id) link.setAttribute('aria-current', 'page');
-        });
-        dialog.scrollTop = 0;
-        if (project) document.getElementById(project)?.scrollIntoView({ block: 'start' });
-        if (id === 'contact') loadContactForm();
+    // Current station = last section whose top has crossed 40% of the viewport
+    let current = 0;
+    tops.forEach((t, i) => { if (t <= 0) current = i; });
+    if (scrollY >= max - 2) current = stations.length - 1;
+
+    // Fill the line between evenly spaced dots, proportional to progress toward the next station
+    let frac = 0;
+    if (current < stations.length - 1 && scrollY < max - 2) {
+      const span = tops[current + 1] - tops[current];
+      frac = span > 0 ? Math.min(1, Math.max(0, -tops[current] / span)) : 0;
     }
-    document.addEventListener('click', event => {
-        const link = event.target.closest('a[href^="#"]');
-        if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-        const id = link.hash.slice(1);
-        if (id === 'about' || (id === 'projects' && !link.dataset.project)) {
-            event.preventDefault();
-            const target = document.getElementById(id === 'about' ? 'about' : 'selected-work');
-            document.querySelectorAll('#nav-menu a').forEach(item => item.removeAttribute('aria-current'));
-            document.querySelector(`#nav-menu a[href="#${id}"]`)?.setAttribute('aria-current', 'location');
-            target.focus({ preventScroll: true });
-            if (window.matchMedia('(max-width: 1199px), (max-height: 679px)').matches) target.scrollIntoView({ block: 'center', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
-            target.classList.remove('section-highlight');
-            requestAnimationFrame(() => target.classList.add('section-highlight'));
-        } else if (dialogs.has(id)) {
-            event.preventDefault();
-            openSection(id, link.dataset.project);
-        }
-    });
-    window.addEventListener('hashchange', () => openSection(location.hash.slice(1)));
-
-    function loadContactForm() {
-        const wrapper = document.getElementById('jotform-form-wrapper');
-        if (wrapper.childElementCount) return;
-        const iframe = document.createElement('iframe');
-        iframe.title = 'Contact Victor Tarra';
-        iframe.src = 'https://form.jotform.com/262283000382043';
-        iframe.className = 'contact-iframe';
-        // Native iframe scrolling preserves access to long forms and validation messages.
-        wrapper.append(iframe);
-        document.getElementById('jotform-loader').hidden = true;
-        const fallback = document.createElement('p');
-        fallback.className = 'form-fallback';
-        fallback.innerHTML = 'Prefer a separate page? <a href="https://form.jotform.com/262283000382043" target="_blank" rel="noopener noreferrer">Open the contact form ↗</a>';
-        wrapper.append(fallback);
+    const p = (current + frac) / (stations.length - 1);
+    if (fill) fill.style.transform = vertical.matches ? `scaleY(${p})` : `scaleX(${p})`;
+    if (current !== lastCurrent) {
+      const a = links[current];
+      if (lastCurrent !== -1 && a) { a.classList.remove('arrive'); void a.offsetWidth; a.classList.add('arrive'); }
+      lastCurrent = current;
     }
-    document.body.classList.add('portfolio');
-    document.querySelectorAll('.fade').forEach(element => element.classList.add('show'));
-    document.getElementById('github-year').textContent = new Date().getFullYear();
-    if (window.lucide) window.lucide.createIcons();
-    openSection(location.hash.slice(1));
+    links.forEach((a, i) => {
+      a.classList.toggle('active', i === current);
+      a.classList.toggle('passed', i < current);
+      if (i === current) a.setAttribute('aria-current', 'location');
+      else a.removeAttribute('aria-current');
+    });
+  };
+  const nowAt = document.getElementById('now-at');
+  let lastName = 'Start';
+  const wayfind = () => {
+    const active = links.find(a => a.classList.contains('active'));
+    const name = active ? active.querySelector('.label').textContent : 'Start';
+    if (nowAt && name !== lastName) {
+      lastName = name;
+      nowAt.textContent = name;
+      nowAt.classList.remove('swap'); void nowAt.offsetWidth; nowAt.classList.add('swap');
+          }
+  };
+  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { update(); wayfind(); }); } };
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', onScroll);
+  update();
+  wayfind();
+
+  // ----- Scroll reveals: things appear as you reach them, once -----
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!calm && 'IntersectionObserver' in window) {
+    const groups = [
+      '.station > h2', '.statement', '.about-list > div', '.intro',
+      '.project .shot', '.project-body > *', '.timeline', '.timeline li',
+      '.sub', '.certs tbody tr', '.gh-head', '.gh-chart', '.orgs li',
+      '.email-row', '.socials', '.form-details', '.footer-inner > *'
+    ];
+    const targets = new Set();
+    groups.forEach(sel => document.querySelectorAll(sel).forEach(el => targets.add(el)));
+    targets.forEach(el => {
+      // stagger siblings that share a parent (rows, list items, project text)
+      const sibs = [...el.parentElement.children].filter(c => targets.has(c));
+      el.style.setProperty('--i', Math.min(sibs.indexOf(el), 8));
+      el.setAttribute('data-reveal', '');
+    });
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    targets.forEach(el => io.observe(el));
+    // anything above the fold on load (e.g. deep link) shows right away
+    addEventListener('load', () => targets.forEach(el => {
+      if (el.getBoundingClientRect().bottom < 0) el.classList.add('is-in');
+    }));
+  }
+
+  // ----- Theme toggle (remembers choice; otherwise follows the device) -----
+  const root = document.documentElement;
+  const darkQuery = matchMedia('(prefers-color-scheme: dark)');
+  const themeBtns = document.querySelectorAll('.js-theme');
+  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : darkQuery.matches;
+  const paintTheme = () => {
+    const dark = isDark();
+    themeBtns.forEach(btn => {
+      btn.classList.toggle('is-dark', dark);
+      btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+      const label = btn.querySelector('.theme-label');
+      if (label) label.textContent = dark ? 'Light theme' : 'Dark theme';
+    });
+    document.querySelectorAll('meta[name="theme-color"]').forEach(m => m.setAttribute('content', dark ? '#0E131C' : '#F6F7F9'));
+  };
+  themeBtns.forEach(btn => btn.addEventListener('click', () => {
+    root.dataset.theme = isDark() ? 'light' : 'dark';
+    try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+    paintTheme();
+  }));
+  darkQuery.addEventListener?.('change', paintTheme);
+  paintTheme();
+
+  // ----- Screenshot lightbox -----
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  const lbTitle = document.getElementById('lightbox-title');
+  const lbVisit = document.getElementById('lightbox-visit');
+  let opener = null;
+  document.querySelectorAll('button.shot').forEach(btn => btn.addEventListener('click', () => {
+    const img = btn.querySelector('img');
+    opener = btn;
+    lbImg.src = btn.dataset.full || img.currentSrc || img.src;
+    lbImg.alt = img.alt;
+    lbTitle.textContent = btn.dataset.title;
+    lbVisit.href = btn.dataset.href;
+    lbVisit.setAttribute('aria-label', `Visit ${btn.dataset.title} (opens in a new tab)`);
+    if (lb.showModal) lb.showModal(); else window.open(btn.dataset.href, '_blank', 'noopener');
+  }));
+  document.getElementById('lightbox-close')?.addEventListener('click', () => lb.close());
+  lb?.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+  lb?.addEventListener('close', () => opener?.focus());
+
+  // ----- Copy email -----
+  const toast = document.getElementById('toast');
+  const copyBtn = document.getElementById('copy-email');
+  let timer;
+  copyBtn?.addEventListener('click', async () => {
+    const label = copyBtn;
+    try {
+      await navigator.clipboard.writeText('tarravdc@proton.me');
+    } catch {
+      location.href = 'mailto:tarravdc@proton.me';
+      return;
+    }
+    label.textContent = 'Copied';
+    toast.textContent = 'Email copied';
+    toast.classList.add('show');
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      toast.classList.remove('show');
+      label.textContent = 'Copy';
+    }, 3000);
+  });
+
+  // ----- Load Jotform only when opened -----
+  document.getElementById('form-details')?.addEventListener('toggle', e => {
+    const box = document.getElementById('jotform-container');
+    if (!e.target.open || box.childElementCount) return;
+    const iframe = document.createElement('iframe');
+    iframe.title = 'Contact Victor Tarra';
+    iframe.src = 'https://form.jotform.com/262283000382043';
+    iframe.loading = 'lazy';
+    box.append(iframe);
+  });
+
+  // ----- Seal fallback -----
+  document.querySelectorAll('.seal').forEach(img => img.addEventListener('error', () => {
+    img.src = `https://placehold.co/96x96/FFFFFF/17202A?text=${img.id === 'seal-sbca' ? 'SBCA' : 'CSB'}`;
+  }, { once: true }));
 })();
