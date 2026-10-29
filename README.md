@@ -64,13 +64,6 @@ The site is static, with no backend or stored data of its own, and it is hardene
 - External links use `rel="noopener noreferrer"`
 - CodeQL scanning and Dependabot are enabled
 
-## Run locally
-
-```bash
-git clone https://github.com/tarravictor/MyPortfolio.git
-cd MyPortfolio
-python3 -m http.server 4173
-```
 
 Open <http://localhost:4173>.
 
