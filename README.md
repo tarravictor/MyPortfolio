@@ -14,10 +14,6 @@
 
 <br />
 
-[![Portfolio screenshot](docs/screenshot.png)](https://tarravictor.github.io/MyPortfolio/)
-
-<br />
-
 ![HTML5](https://img.shields.io/badge/HTML5-213C91?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-2D4FB8?style=flat-square&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-213C91?style=flat-square&logo=javascript&logoColor=white)
