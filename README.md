@@ -51,22 +51,3 @@ The page is drawn as a transit map. The line fills in as you scroll, and each se
 | **Theme** | light and dark, with a manual toggle |
 | **Stack** | plain HTML, CSS and JavaScript. No framework, no build |
 
-## Security
-
-The site is static, with no backend or stored data of its own, and it is hardened accordingly:
-
-- Content-Security-Policy on every page, with inline scripts allowed by hash instead of `'unsafe-inline'`
-- No third-party scripts. The only external requests are fonts, the contact form frame and a few images
-- External links use `rel="noopener noreferrer"`
-- CodeQL scanning and Dependabot are enabled
-
-
-Open <http://localhost:4173>.
-
-<br />
-
-<div align="center">
-
-**[LinkedIn](https://linkedin.com/in/tarravictor)** &nbsp;·&nbsp; **[GitHub](https://github.com/tarravictor)** &nbsp;·&nbsp; **tarravdc@proton.me**
-
-</div>
